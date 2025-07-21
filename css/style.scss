@@ -165,6 +165,72 @@ section {
             }
         }
     }
+
+    .contact {
+        .joinas-image {
+            max-width: 840px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
+
+        .contact-btn {
+            display: flex;
+            justify-content: center;
+
+            .line-btn-wrapper {
+                margin-right: 80px;
+
+                .btn-text {
+                    text-align: center;
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+
+                .line-btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 380px;
+                    height: 180px;
+                    background-color: #06C655;
+                    border-radius: 999px;
+
+                    .line-logo {
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    p {
+                        font-size: 40px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+
+            .metaleaf-btn-wrapper {
+                .btn-text {
+                    text-align: center;
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+
+                .metaleaf-btn {
+                    width: 380px;
+                    height: 180px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 7px solid #06C655;
+                    border-radius: 999px;
+
+                    img {
+                        width: 280px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
