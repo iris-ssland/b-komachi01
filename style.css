@@ -184,3 +184,138 @@ section {
         transform: rotate(0deg);
     }
 }
+
+
+
+
+
+
+/* -----------------------------
+CONTENT
+----------------------------- */
+
+/* ——— Header ——— */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+.header .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.logo img {
+    height: 32px;
+}
+.nav {
+    display: flex;
+    gap: 32px;
+    margin-left: auto;
+}
+.nav a {
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 4px;
+}
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #0abf6f;
+    transition: width 0.3s ease;
+}
+.nav a:hover::after {
+    width: 100%;
+}
+.cta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 24px;
+    background: #0abf6f;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+/* Main Visual */
+.main-visual {
+    margin-top: 70px;
+    height: 260px;
+    background: linear-gradient(180deg, #a4e4b8 0%, #d7e864 100%);
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+.main-visual::before {
+    content: "CONTENTS";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.06);
+}
+.main-visual h1 {
+    position: relative;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 32px 24px;
+}
+
+
+/* ——— Section ——— */
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 24px 120px;
+}
+.item {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 120px;
+    align-items: flex-start;
+}
+.item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.item-img {
+    flex: 0 0 320px;
+}
+.item-body {
+    flex: 1;
+    min-width: 260px;
+}
+.item-number {
+    display: block;
+    font-size: 12px;
+    color: #0abf6f;
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.item-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+.item-body p {
+    margin-bottom: 18px;
+    font-size: 14px;
+}
