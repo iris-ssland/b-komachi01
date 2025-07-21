@@ -116,22 +116,18 @@ section {
   align-items: center;
   margin-bottom: 0;
 }
-
 .joinus .joinus-start .start-text {
   font-size: 64px;
   text-align: center;
   margin-bottom: 150px;
 }
-
 .joinus .joinus-start .start-avatar {
   display: flex;
   justify-content: center;
 }
-
 .joinus .joinus-start .start-avatar li {
   margin-right: 30px;
 }
-
 .joinus .joinus-start .start-avatar img {
   height: 100px;
   -webkit-animation: joinus 2s steps(1) infinite;
