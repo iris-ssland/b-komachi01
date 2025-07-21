@@ -130,7 +130,26 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  animation: joinus 2s steps(1) infinite;
+  -webkit-animation: joinus 2s steps(1) infinite;
+          animation: joinus 2s steps(1) infinite;
+}
+
+@-webkit-keyframes joinus {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes joinus {
@@ -256,21 +275,21 @@ section {
   margin-bottom: 120px;
   align-items: flex-start;
 }
-
 .item:nth-child(even) {
   flex-direction: row-reverse;
 }
-
-.item-img {
+.item .item-img {
   flex: 0 0 320px;
 }
-
-.item-body {
+.item .item-body {
   flex: 1;
   min-width: 260px;
 }
-
-.item-number {
+.item .item-body p {
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+.item .item-body .item-number {
   display: block;
   font-size: 12px;
   color: #0abf6f;
@@ -278,15 +297,10 @@ section {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-
-.item-title {
+.item .item-body .item-title {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 24px;
   line-height: 1.5;
 }
-
-.item-body p {
-  margin-bottom: 18px;
-  font-size: 14px;
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
