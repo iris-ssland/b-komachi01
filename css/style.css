@@ -130,26 +130,59 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  -webkit-animation: joinus 2s steps(1) infinite;
-          animation: joinus 2s steps(1) infinite;
+  animation: joinus 2s steps(1) infinite;
 }
-
-@-webkit-keyframes joinus {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.joinus .contact .joinas-image {
+  max-width: 840px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.joinus .contact .contact-btn {
+  display: flex;
+  justify-content: center;
+}
+.joinus .contact .contact-btn .line-btn-wrapper {
+  margin-right: 80px;
+}
+.joinus .contact .contact-btn .line-btn-wrapper .btn-text {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.joinus .contact .contact-btn .line-btn-wrapper .line-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 180px;
+  background-color: #06C655;
+  border-radius: 999px;
+}
+.joinus .contact .contact-btn .line-btn-wrapper .line-btn .line-logo {
+  width: 100px;
+  height: 100px;
+}
+.joinus .contact .contact-btn .line-btn-wrapper .line-btn p {
+  font-size: 40px;
+  color: #FFFFFF;
+}
+.joinus .contact .contact-btn .metaleaf-btn-wrapper .btn-text {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.joinus .contact .contact-btn .metaleaf-btn-wrapper .metaleaf-btn {
+  width: 380px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 7px solid #06C655;
+  border-radius: 999px;
+}
+.joinus .contact .contact-btn .metaleaf-btn-wrapper .metaleaf-btn img {
+  width: 280px;
 }
 
 @keyframes joinus {
@@ -302,5 +335,4 @@ section {
   font-weight: 700;
   margin-bottom: 24px;
   line-height: 1.5;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
