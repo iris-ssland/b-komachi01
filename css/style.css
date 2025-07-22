@@ -193,22 +193,7 @@ section {
 .mv .scroll-indicator .arrow {
   font-size: 16px;
   margin-top: 6px;
-  -webkit-animation: scroll-arrow 1.5s infinite;
-          animation: scroll-arrow 1.5s infinite;
-}
-@-webkit-keyframes scroll-arrow {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(6px);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  animation: scroll-arrow 1.5s infinite;
 }
 @keyframes scroll-arrow {
   0% {
@@ -425,6 +410,9 @@ section {
 }
 
 /* =======joinus========================================= */
+.joinus {
+  margin-bottom: 0;
+}
 .joinus .joinus-start {
   height: 100vh;
   display: flex;
@@ -447,19 +435,18 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  -webkit-animation: joinus 2s steps(1) infinite;
-          animation: joinus 2s steps(1) infinite;
+  animation: joinus 2s steps(1) infinite;
 }
 .joinus .contact .joinas-image {
-  max-width: 840px;
+  max-width: 800px;
   display: block;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .joinus .contact .contact-btn {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .joinus .contact .contact-btn .line-btn-wrapper {
   margin-right: 80px;
@@ -474,7 +461,7 @@ section {
   justify-content: center;
   align-items: center;
   width: 380px;
-  height: 180px;
+  height: 150px;
   background-color: #06C655;
   border-radius: 999px;
 }
@@ -496,7 +483,7 @@ section {
 }
 .joinus .contact .contact-btn .metaleaf-btn-wrapper .metaleaf-btn {
   width: 380px;
-  height: 180px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -515,7 +502,6 @@ section {
   list-style: none;
   padding: 0;
 }
-
 .joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item {
   width: 5vw;
 }
@@ -528,24 +514,6 @@ section {
 }
 .joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
   animation: infinity-scroll-right 80s infinite linear 0.5s both;
-}
-
-@-webkit-keyframes joinus {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 
 @keyframes joinus {
@@ -563,14 +531,6 @@ section {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-@-webkit-keyframes infinity-scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
   }
 }
 @keyframes infinity-scroll-left {
@@ -660,5 +620,4 @@ CONTENT
   font-weight: 700;
   margin-bottom: 50px;
   line-height: 1.5;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
