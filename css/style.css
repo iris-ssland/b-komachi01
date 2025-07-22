@@ -300,7 +300,6 @@ section {
   font-weight: 700;
   color: #007f3e;
   background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 8px;
@@ -444,6 +443,7 @@ section {
 .joinus .contact .contact-btn {
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 }
 .joinus .contact .contact-btn .line-btn-wrapper {
   margin-right: 80px;
@@ -490,23 +490,27 @@ section {
 .joinus .contact .contact-btn .metaleaf-btn-wrapper .metaleaf-btn img {
   width: 280px;
 }
-.joinus .contact .scroll-avatar-wrap {
+.joinus .contact .scroll-avatar .scroll-avatar-wrap {
   display: flex;
   overflow: hidden;
 }
-.joinus .contact .scroll-avatar-list {
+.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list {
   display: flex;
   list-style: none;
   padding: 0;
 }
-.joinus .contact .scroll-avatar-list-left {
-  animation: infinity-scroll-left 80s infinite linear 0.5s both;
-}
-.joinus .contact .scroll-avatar-item {
+.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item {
   width: 5vw;
 }
-.joinus .contact .scroll-avatar-item > img {
+.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item img {
   width: 100%;
+}
+.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
+  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+  margin-bottom: 30px;
+}
+.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
+  animation: infinity-scroll-right 80s infinite linear 0.5s both;
 }
 
 @keyframes joinus {
@@ -532,6 +536,14 @@ section {
   }
   to {
     transform: translateX(-100%);
+  }
+}
+@keyframes infinity-scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 /* -----------------------------
