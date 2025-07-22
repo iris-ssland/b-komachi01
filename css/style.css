@@ -98,6 +98,123 @@ header .header-inner .arrow-circle .arrow {
   line-height: 1;
 }
 
+/* =======mv========================================= */
+.mv {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
+  position: relative;
+  overflow: hidden;
+}
+.mv .mv-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.mv .mv-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.mv .mv-row.row-top {
+  justify-content: flex-end;
+  margin-bottom: 60px;
+}
+.mv .mv-row.row-bottom {
+  justify-content: flex-start;
+}
+.mv .mv-row .mv-text {
+  font-size: 120px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 0.15em;
+}
+.mv .mv-row .mv-video {
+  width: 60%;
+  height: 180px;
+  background: #ddd;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mv .avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.mv .avatar img {
+  position: absolute;
+  width: 100px;
+  z-index: 20;
+}
+.mv .avatar img.avatar1 {
+  top: 11%;
+  left: -4%;
+}
+.mv .avatar img.avatar2 {
+  top: 95%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+.mv .avatar img.avatar3 {
+  top: 53%;
+  right: -7%;
+}
+.mv .scroll-indicator {
+  position: fixed;
+  right: 16px;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+.mv .scroll-indicator .text {
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  color: #333;
+  letter-spacing: 0.2em;
+}
+.mv .scroll-indicator .arrow {
+  font-size: 16px;
+  margin-top: 6px;
+  -webkit-animation: scroll-arrow 1.5s infinite;
+          animation: scroll-arrow 1.5s infinite;
+}
+@-webkit-keyframes scroll-arrow {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes scroll-arrow {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* =======faq========================================= */
 .faq .faq-items .faq-item {
   margin-bottom: 20px;
