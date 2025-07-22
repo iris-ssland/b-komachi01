@@ -10,30 +10,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- haruka作成のに差し替え予定 -->
-    <header class="header">
-        <div class="inner">
-            <h1>
-                <a href="#" class="logo">
-                    <img src="img/logo.png" alt="MetaLeaf Logo" />
-                </a>
+    <header id="header">
+        <div class="header-inner">
+            <h1 class="site-title">
+                <a href="index.html"><img src="./img/logo.png" alt="site-logo"></a>
             </h1>
-            <nav class="nav">
-                <a href="#">MetaLeafとは</a>
-                <a href="#">コンテンツ</a>
-                <a href="#">みんなの声</a>
-                <a href="#">よくある質問</a>
+            <nav id="nav" class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#mv">MetaLeafとは</a></li>
+                    <li><a href="#contents">コンテンツ</a></li>
+                    <li><a href="#voice">みんなの声</a></li>
+                    <li><a href="#faq">よくある質問</a></li>
+                </ul>
             </nav>
-            <a href="#" class="cta">
-                参加
+            <a href="#" class="contact-btn">今すぐ参加
+                <span class="arrow-circle">
+                    <span class="arrow">→</span>
+                </span>
             </a>
         </div>
+
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mask" class="mask"></div>
     </header>
 
     <main>
         <!-- Main Visual -->
         <div class="main-visual">
-            <h1>コンテンツ</h1>
+            <h2>コンテンツ</h2>
         </div>
 
         <!-- Contents -->
