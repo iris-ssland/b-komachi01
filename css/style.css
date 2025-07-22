@@ -574,7 +574,7 @@ CONTENT
 }
 
 /* ——— Section ——— */
-section {
+.detail-contents {
   padding: 80px 24px 120px;
 }
 
@@ -606,10 +606,11 @@ section {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.item .item-body .item-title {
+
+.item-title {
   font-size: 22px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 50px;
   line-height: 1.5;
 }
 /*# sourceMappingURL=style.css.map */
