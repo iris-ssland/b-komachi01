@@ -72,6 +72,18 @@ section {
                 &a:hover {
                     opacity: 0.7;
                 }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 2px;
+                    background: #0abf6f;
+                    transition: width 0.3s ease;
+                }
+
             }
         }
 
@@ -288,6 +300,93 @@ section {
         }
     }
 }
+
+/* =======content========================================= */
+.contents {
+    text-align: center;
+    padding: 80px 20px;
+
+    .contents-title {
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 24px;
+            font-weight: 500;
+
+            strong {
+                font-weight: 700;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .contents-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .content-item {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #007f3e;
+            background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
+            width: fit-content;
+            margin-bottom: 8px;
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .image-box {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+
+    .more-link {
+        margin-top: 40px;
+        font-size: 14px;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s ease;
+        }
+    }
+}
+
+
 
 /* =======faq========================================= */
 

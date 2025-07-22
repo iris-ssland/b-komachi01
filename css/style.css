@@ -69,6 +69,16 @@ section {
 #header .header-inner .nav-menu .nav aa:hover {
   opacity: 0.7;
 }
+#header .header-inner .nav-menu .nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #0abf6f;
+  transition: width 0.3s ease;
+}
 #header .header-inner .contact-btn {
   background-color: #189A3B;
   color: #fff;
@@ -266,6 +276,82 @@ section {
 .about .about-text .highlight {
   color: #189A3A;
   font-weight: bold;
+}
+
+/* =======content========================================= */
+.contents {
+  text-align: center;
+  padding: 80px 20px;
+}
+.contents .contents-title {
+  margin-bottom: 40px;
+}
+.contents .contents-title h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.contents .contents-title h2 strong {
+  font-weight: 700;
+}
+.contents .contents-title p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.contents .contents-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.contents .content-item {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contents .content-item .number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #007f3e;
+  background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 8px;
+}
+.contents .content-item .text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.contents .content-item .image-box {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.contents .content-item .image-box img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.contents .more-link {
+  margin-top: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.contents .more-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #333;
+  transition: width 0.3s ease;
 }
 
 /* =======faq========================================= */
