@@ -279,70 +279,84 @@ section {
 }
 
 /* =======content========================================= */
-.contents {
+.content {
   text-align: center;
   padding: 80px 20px;
 }
-.contents .contents-title {
+.content .content-title {
   margin-bottom: 40px;
 }
-.contents .contents-title h2 {
-  font-size: 24px;
+.content .content-title h2 {
+  font-size: 32px;
   font-weight: 500;
 }
-.contents .contents-title h2 strong {
+.content .content-title h2 strong {
   font-weight: 700;
 }
-.contents .contents-title p {
-  font-size: 18px;
+.content .content-title p {
+  font-size: 24px;
   margin-bottom: 8px;
 }
-.contents .contents-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+.content-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 40px;
-  max-width: 960px;
   margin: 0 auto;
 }
-.contents .content-item {
-  text-align: left;
+
+.content-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  width: calc(50% - 20px);
 }
-.contents .content-item .number {
-  font-size: 32px;
-  font-weight: 700;
-  color: #007f3e;
-  background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 8px;
-}
-.contents .content-item .text {
-  font-size: 14px;
-  line-height: 1.6;
+
+.text-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 12px;
 }
-.contents .content-item .image-box {
+.text-wrap .number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007f3e;
+  background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.text-wrap .text {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.image-box {
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
 }
-.contents .content-item .image-box img {
+.image-box img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-.contents .more-link {
+
+.more-link {
   margin-top: 40px;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
   position: relative;
 }
-.contents .more-link::after {
+.more-link::after {
   content: "";
   position: absolute;
   left: 0;
