@@ -476,7 +476,8 @@ section {
 /* =======joinus========================================= */
 
 .joinus {
-    margin-bottom: 0;
+    margin-bottom: 50px;
+
     .joinus-start {
         height: 100vh;
         display: flex;
@@ -484,11 +485,85 @@ section {
         justify-content: center;
         align-items: center;
         margin-bottom: 0;
+        background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
 
         .start-text {
-            font-size: 64px;
-            text-align: center;
+            // text-align: center;
+                        padding-top: 2em;
             margin-bottom: 150px;
+            display: flex;
+            overflow: hidden;
+
+
+            p {
+                font-size: 64px;
+                transform: translateY(2em);
+                animation: textanimation 1s forwards;
+            }
+
+            p:nth-child(1) {
+                animation-delay: 0.2s
+            }
+
+            p:nth-child(2) {
+                animation-delay: 0.4s
+            }
+
+            p:nth-child(3) {
+                animation-delay: 0.6s
+            }
+
+            p:nth-child(4) {
+                animation-delay: 0.8s
+            }
+
+            p:nth-child(5) {
+                animation-delay: 1.0s
+            }
+
+            p:nth-child(6) {
+                animation-delay: 1.2s
+            }
+
+            p:nth-child(7) {
+                animation-delay: 1.4s
+            }
+
+            p:nth-child(8) {
+                animation-delay: 1.6s
+            }
+
+            p:nth-child(9) {
+                animation-delay: 1.8s
+            }
+
+            p:nth-child(10) {
+                animation-delay: 2.0s
+            }
+
+            p:nth-child(11) {
+                animation-delay: 2.2s
+            }
+
+            p:nth-child(12) {
+                animation-delay: 2.4s
+            }
+
+            p:nth-child(13) {
+                animation-delay: 2.6s
+            }
+
+            p:nth-child(14) {
+                animation-delay: 2.8s
+            }
+
+            p:nth-child(15) {
+                animation-delay: 3.0s
+            }
+
+            p:nth-child(16) {
+                animation-delay: 3.2s
+            }
         }
 
         .start-avatar {
@@ -517,11 +592,10 @@ section {
         .contact-btn {
             display: flex;
             justify-content: center;
+            gap: 5%;
             margin-bottom: 80px;
 
             .line-btn-wrapper {
-                margin-right: 80px;
-
                 .btn-text {
                     text-align: center;
                     font-size: 28px;
@@ -532,17 +606,17 @@ section {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 380px;
+                    max-width: 380px;
                     height: 150px;
                     background-color: #06C655;
                     border-radius: 999px;
 
                     .line-logo {
-                        width: 100px;
-                        height: 100px;
-                        border: 2px solid #FFFFFF;
-                        border-radius: 20px;
-                        margin-right: 10px;
+                        width: 80px;
+                        height: 80px;
+                        // border: 2px solid #FFFFFF;
+                        // border-radius: 20px;
+                        margin-right: 20px;
                     }
 
                     p {
@@ -569,7 +643,7 @@ section {
                     border-radius: 999px;
 
                     img {
-                        width: 280px;
+                        max-width: 280px;
                     }
                 }
             }
@@ -605,6 +679,20 @@ section {
                 }
             }
         }
+    }
+}
+
+@keyframes textanimation {
+    0% {
+        transform: translateY(2em);
+    }
+
+    50% {
+        transform: translateY(-0.5em);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -801,5 +889,17 @@ CONTENT
         font-weight: 700;
         margin-bottom: 50px;
         line-height: 1.5;
+    }
+}
+
+
+
+
+// =====footer=======================
+footer {
+    text-align: center;
+
+    p {
+        font-size: 14px;
     }
 }
