@@ -193,22 +193,7 @@ section {
 .mv .scroll-indicator .arrow {
   font-size: 16px;
   margin-top: 6px;
-  -webkit-animation: scroll-arrow 1.5s infinite;
-          animation: scroll-arrow 1.5s infinite;
-}
-@-webkit-keyframes scroll-arrow {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(6px);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  animation: scroll-arrow 1.5s infinite;
 }
 @keyframes scroll-arrow {
   0% {
@@ -448,8 +433,7 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  -webkit-animation: joinus 2s steps(1) infinite;
-          animation: joinus 2s steps(1) infinite;
+  animation: joinus 2s steps(1) infinite;
 }
 .joinus .contact .joinas-image {
   max-width: 840px;
@@ -481,6 +465,9 @@ section {
 .joinus .contact .contact-btn .line-btn-wrapper .line-btn .line-logo {
   width: 100px;
   height: 100px;
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 .joinus .contact .contact-btn .line-btn-wrapper .line-btn p {
   font-size: 40px;
@@ -503,23 +490,23 @@ section {
 .joinus .contact .contact-btn .metaleaf-btn-wrapper .metaleaf-btn img {
   width: 280px;
 }
-
-@-webkit-keyframes joinus {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.joinus .contact .scroll-avatar-wrap {
+  display: flex;
+  overflow: hidden;
+}
+.joinus .contact .scroll-avatar-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.joinus .contact .scroll-avatar-list-left {
+  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+.joinus .contact .scroll-avatar-item {
+  width: 5vw;
+}
+.joinus .contact .scroll-avatar-item > img {
+  width: 100%;
 }
 
 @keyframes joinus {
@@ -537,6 +524,14 @@ section {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 /* -----------------------------
@@ -611,5 +606,4 @@ section {
   font-weight: 700;
   margin-bottom: 24px;
   line-height: 1.5;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
