@@ -840,10 +840,10 @@ CONTENT
 }
 .main-visual h2 {
   position: relative;
-  top: -90px;
+  top: -70px;
   left: 1%;
   z-index: 1;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   margin: 0 0 32px 15%;
 }
@@ -860,27 +860,24 @@ CONTENT
 
 /* ——— Section ——— */
 .detail-contents {
-  padding: 80px 24px 120px;
+  padding: 400px 24px 120px;
 }
 .detail-contents .item {
   display: flex;
-  gap: 48px;
-  margin-bottom: 120px;
-  align-items: flex-start;
-}
-.detail-contents .item:nth-child(even) {
-  flex-direction: row-reverse;
+  justify-content: center;
+  margin-bottom: 200px;
 }
 .detail-contents .item .item-img {
-  flex: 0 0 320px;
+  width: 50%;
 }
 .detail-contents .item .item-body {
-  flex: 1;
-  min-width: 260px;
+  width: 50%;
+  display: flex;
+  align-items: center;
 }
 .detail-contents .item .item-body p {
   margin-bottom: 18px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .detail-contents .item .item-body .item-number {
   display: block;
@@ -891,17 +888,80 @@ CONTENT
   text-transform: uppercase;
 }
 .detail-contents .item-title {
+  position: relative;
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 50px;
   line-height: 1.5;
+  padding-left: 6.5rem;
+}
+.detail-contents .item-title::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+.detail-contents .item-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 2px;
+  background: currentColor;
+}
+.detail-contents .ellipse.blur {
+  width: 260px;
+  height: 260px;
+  background: url("../img/green_ellipse_1.png") center/contain no-repeat;
+}
+.detail-contents .ellipse.outline {
+  width: 420px;
+  height: 420px;
+  background: url("../img/green_ellipse_2.png") center/contain no-repeat;
+}
+.detail-contents .ellipse.solid {
+  width: 200px;
+  height: 200px;
+  background: url("../img/green_ellipse_3.png") center/contain no-repeat;
+}
+.detail-contents .con-1 {
+  position: relative;
+}
+.detail-contents .con-1 .item .item-img .con1_img1 {
+  width: 80%;
+}
+.detail-contents .con-1 .item .item-img .con1_img2 {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+.detail-contents .con-1 .ellipse.blur {
+  position: absolute;
+  top: 5%;
+  left: 55%;
+}
+.detail-contents .con-1 .ellipse.outline {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+}
+.detail-contents .con-1 .ellipse.solid {
+  position: absolute;
+  top: 55%;
+  left: 0;
 }
 
 /* ---------- ヒーロー（グラデ） ---------- */
-
 footer {
   text-align: center;
 }
 footer p {
   font-size: 14px;
 }
+/*# sourceMappingURL=style.css.map */
