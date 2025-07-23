@@ -279,7 +279,7 @@ section {
 .about {
     background-color: #fff;
 
-    .about-text {
+    .about-title {
         text-align: center;
         margin-bottom: 100px;
 
@@ -309,12 +309,17 @@ section {
 
     .about-image {
         flex: 1 1 50%;
-        display: inline-block;
         position: relative;
 
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         &::after {
-            position: absolute;
             content: '';
+            position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
@@ -328,6 +333,9 @@ section {
         font-size: 24px;
         line-height: 2;
         text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         .highlight {
             color: #189A3A;
