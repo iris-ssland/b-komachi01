@@ -1022,6 +1022,133 @@ CONTENT
         margin-bottom: 50px;
         line-height: 1.5;
     }
+
+
+    // Content1
+    .con-1 {
+        .item {
+            .item-img {
+                .con1_img2 {
+                    
+                } 
+            }
+        }
+    }
+}
+
+
+// 参考！！！！
+/* ---------- ヒーロー（グラデ） ---------- */
+// .hero {
+//     padding: 6rem 5vw 3rem;
+//     background: linear-gradient(180deg, #b5e79a 0%, #d1f17a 40%, transparent 100%);
+//     position: relative;
+//     overflow: hidden;
+// }
+
+// .hero h1.big {
+//     font-size: 10vw;
+//     /* ビューポート幅に応じて可変 */
+//     font-weight: 900;
+//     color: rgba(0, 0, 0, .06);
+//     letter-spacing: .1em;
+// }
+
+// .hero h2.sub {
+//     font-size: 1.2rem;
+//     font-weight: 700;
+//     position: absolute;
+//     top: calc(6rem + 5vw);
+//     /* h1 の左上に重ねる */
+//     left: 5vw;
+// }
+
+// /* ---------- セクション 01 ---------- */
+// .section {
+//     position: relative;
+//     padding: 6rem 5vw;
+// }
+
+// .section .index {
+//     font-size: .9rem;
+//     letter-spacing: .2em;
+//     color: #666;
+// }
+
+// .section h3 {
+//     margin: .5rem 0 3rem;
+//     font-size: 1.35rem;
+//     font-weight: 600;
+// }
+
+// .section .inner {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 3rem;
+// }
+
+// /* ---------- 画像エリア ---------- */
+// .mockups {
+//     flex: 1 1 340px;
+//     position: relative;
+// }
+
+// .mockups img:nth-child(2) {
+//     position: absolute;
+//     bottom: -2rem;
+//     left: 4rem;
+//     width: 75%;
+//     box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+// }
+
+// .mockups img {
+//     border-radius: 12px;
+//     box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+// }
+
+// /* ---------- テキストブロック ---------- */
+// .copy {
+//     flex: 1 1 280px;
+//     font-size: .95rem;
+//     position: relative;
+// }
+
+// .copy p:first-of-type::first-letter {
+//     font-size: 180%;
+//     line-height: 1;
+// }
+
+// /* ---------- 装飾エリプス（添付 PNG） ---------- */
+// .ellipse {
+//     position: absolute;
+//     pointer-events: none;
+//     z-index: -1;
+// }
+
+// .ellipse.blur {
+//     width: 420px;
+//     height: 420px;
+//     background: url("img/green_ellipse_1.png") center/contain no-repeat;
+//     top: -140px;
+//     right: -120px;
+// }
+
+// .ellipse.outline {
+//     width: 560px;
+//     height: 560px;
+//     background: url("img/green_ellipse_2.png") center/contain no-repeat;
+//     top: 260px;
+//     left: -200px;
+// }
+
+// .ellipse.solid {
+//     width: 260px;
+//     height: 260px;
+//     background: url("img/green_ellipse_2.png") center/contain no-repeat;
+//     top: 180px;
+//     right: 18%;
+// }
+
 }
 
 
