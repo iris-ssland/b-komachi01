@@ -166,7 +166,7 @@ section {
   z-index: 20;
 }
 .mv .avatar img.avatar1 {
-  top: 11%;
+  top: -11%;
   left: -3%;
 }
 .mv .avatar img.avatar2 {
@@ -354,11 +354,7 @@ section {
   width: 48%;
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s;
   height: auto;
-}
-.content .content-list .content-link:hover {
-  opacity: 0.8;
 }
 .content .content-list .content-link .content-item {
   display: flex;
@@ -369,7 +365,7 @@ section {
 .content .content-list .content-link .text-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   margin-bottom: 12px;
 }
 .content .content-list .content-link .text-wrap .number {
@@ -383,12 +379,23 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+.content .content-list .content-link .text-wrap .number:hover {
+  background: #007f3e;
+  color: #fff;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .content .content-list .content-link .text-wrap .text {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.6;
   text-align: left;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.content .content-list .content-link .text-wrap .text:hover {
+  transform: scale(1.05);
 }
 .content .content-list .content-link .image-box {
   width: 100%;
@@ -401,9 +408,15 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.content .content-list .content-link .image-box img:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
 }
 .content .more-link {
-  margin-top: 40px;
+  margin-top: 60px;
   font-size: 24px;
   cursor: pointer;
   position: relative;
