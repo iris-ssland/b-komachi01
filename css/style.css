@@ -315,6 +315,7 @@ section {
   font-weight: 700;
   color: #007f3e;
   background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 8px;
@@ -515,7 +516,6 @@ section {
   list-style: none;
   padding: 0;
 }
-
 .joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item {
   width: 5vw;
 }
@@ -523,11 +523,13 @@ section {
   width: 100%;
 }
 .joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
-  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+  -webkit-animation: infinity-scroll-left 80s infinite linear 0.5s both;
+          animation: infinity-scroll-left 80s infinite linear 0.5s both;
   margin-bottom: 30px;
 }
 .joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
-  animation: infinity-scroll-right 80s infinite linear 0.5s both;
+  -webkit-animation: infinity-scroll-right 80s infinite linear 0.5s both;
+          animation: infinity-scroll-right 80s infinite linear 0.5s both;
 }
 
 @-webkit-keyframes joinus {
@@ -579,6 +581,14 @@ section {
   }
   to {
     transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes infinity-scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 @keyframes infinity-scroll-right {
@@ -661,4 +671,5 @@ CONTENT
   margin-bottom: 50px;
   line-height: 1.5;
 }
+/* ---------- ヒーロー（グラデ） ---------- */
 /*# sourceMappingURL=style.css.map */
