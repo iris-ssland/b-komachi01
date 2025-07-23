@@ -4,17 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const items = gsap.utils.toArray(".voice-item");
   const itemDuration = 1;
-  const showDuration = 1000;
-  const holdAfterLast = 1000;
   const headerHeight = document.querySelector("#header").offsetHeight;
 
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#voice",
-      start: "top-=98 top",
-      end: "+=2000",
+      start: () => `top-=${headerHeight} top`,
+      end: () => `+=${items.length * 1000 + 500}`,
       pin: true,
       scrub: true,
+      markers: false
     }
   });
 
@@ -25,5 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
       index * itemDuration
     );
   });
-  tl.to({}, { duration: 5 });
+  tl.to({}, { duration: 3 });
 });

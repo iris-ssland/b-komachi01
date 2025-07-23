@@ -113,17 +113,19 @@ section {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
-  margin-top: 98px;
   @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
 }
 .mv .mv-inner {
-  position: relative;
   width: 100%;
   max-width: 1140px;
+  padding: 0 20px;
   margin: 0 auto;
-  padding-top: 100px;
+  position: relative;
 }
 .mv .mv-row {
   display: flex;
@@ -140,7 +142,6 @@ section {
 .mv .mv-row .mv-text {
   font-size: 120px;
   font-weight: bold;
-  color: #333;
   letter-spacing: 0.15em;
 }
 .mv .mv-row .mv-video {
@@ -166,16 +167,16 @@ section {
 }
 .mv .avatar img.avatar1 {
   top: 11%;
-  left: -4%;
+  left: -3%;
 }
 .mv .avatar img.avatar2 {
   top: 95%;
-  left: 62%;
+  left: 61%;
   transform: translate(-50%, -50%);
 }
 .mv .avatar img.avatar3 {
-  top: 53%;
-  right: -7%;
+  top: 40%;
+  right: -5%;
 }
 .mv .scroll_down {
   position: fixed;
@@ -339,29 +340,40 @@ section {
   font-size: 32px;
   margin-bottom: 8px;
 }
-
-.content-list {
+.content .content-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
+  max-width: 1140px;
   margin: 0 auto;
 }
-
-.content-item {
+.content .content-list .content-link {
   display: flex;
   flex-direction: column;
-  width: calc(50% - 20px);
+  width: 48%;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+  height: auto;
 }
-
-.text-wrap {
+.content .content-list .content-link:hover {
+  opacity: 0.8;
+}
+.content .content-list .content-link .content-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+}
+.content .content-list .content-link .text-wrap {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
 }
-.text-wrap .number {
-  font-size: 36px;
+.content .content-list .content-link .text-wrap .number {
+  font-size: 60px;
   font-weight: bold;
   color: #007f3e;
   background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
@@ -372,33 +384,32 @@ section {
   align-items: center;
   justify-content: center;
 }
-.text-wrap .text {
+.content .content-list .content-link .text-wrap .text {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.6;
   text-align: left;
 }
-
-.image-box {
+.content .content-list .content-link .image-box {
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
 }
-.image-box img {
+.content .content-list .content-link .image-box img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-
-.more-link {
+.content .more-link {
   margin-top: 40px;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
   position: relative;
+  display: inline-block;
 }
-.more-link::after {
+.content .more-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -407,6 +418,9 @@ section {
   height: 2px;
   background: #333;
   transition: width 0.3s ease;
+}
+.content .more-link:hover::after {
+  width: 100%;
 }
 
 /* =======voice========================================= */
@@ -956,7 +970,6 @@ CONTENT
   top: 55%;
   left: 0;
 }
-
 /* ---------- ヒーロー（グラデ） ---------- */
 footer {
   text-align: center;
