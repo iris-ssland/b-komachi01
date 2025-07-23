@@ -22,7 +22,7 @@ li {
 }
 
 section {
-  margin-bottom: 150px;
+  padding-bottom: 150px;
 }
 
 .container {
@@ -202,8 +202,7 @@ section {
   height: 11px;
   border-radius: 50%;
   background: #333;
-  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
-          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+  animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
 }
 .mv .scroll_down span {
   position: absolute;
@@ -217,34 +216,12 @@ section {
   text-decoration: none;
   text-transform: uppercase;
 }
-@-webkit-keyframes circlemove {
-  0% {
-    bottom: 160px;
-  }
-  100% {
-    bottom: 0px;
-  }
-}
 @keyframes circlemove {
   0% {
     bottom: 160px;
   }
   100% {
     bottom: 0px;
-  }
-}
-@-webkit-keyframes cirlemovehide {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes cirlemovehide {
@@ -324,7 +301,7 @@ section {
 /* =======content========================================= */
 .content {
   text-align: center;
-  margin-bottom: 150px;
+  background-color: #FFFFFF;
 }
 .content .content-title {
   margin-bottom: 100px;
@@ -514,6 +491,10 @@ section {
 }
 
 /* =======faq========================================= */
+.faq {
+  background-color: #FFFFFF;
+  padding-top: 150px;
+}
 .faq .faq-items .faq-item {
   margin-bottom: 20px;
   border: 1px solid #189a3a;
@@ -586,7 +567,8 @@ section {
 
 /* =======joinus========================================= */
 .joinus {
-  margin-bottom: 50px;
+  padding-bottom: 0;
+  margin-bottom: 100vh;
 }
 .joinus .joinus-start {
   height: 100vh;
@@ -606,72 +588,55 @@ section {
 .joinus .joinus-start .start-text p {
   font-size: 64px;
   transform: translateY(2em);
-  -webkit-animation: textanimation 1s forwards;
-          animation: textanimation 1s forwards;
+  animation: textanimation 1s forwards;
 }
 .joinus .joinus-start .start-text p:nth-child(1) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .joinus .joinus-start .start-text p:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .joinus .joinus-start .start-text p:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .joinus .joinus-start .start-text p:nth-child(4) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 .joinus .joinus-start .start-text p:nth-child(5) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 .joinus .joinus-start .start-text p:nth-child(6) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 .joinus .joinus-start .start-text p:nth-child(7) {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 .joinus .joinus-start .start-text p:nth-child(8) {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
 .joinus .joinus-start .start-text p:nth-child(9) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 .joinus .joinus-start .start-text p:nth-child(10) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 .joinus .joinus-start .start-text p:nth-child(11) {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
+  animation-delay: 2.2s;
 }
 .joinus .joinus-start .start-text p:nth-child(12) {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 .joinus .joinus-start .start-text p:nth-child(13) {
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
+  animation-delay: 2.6s;
 }
 .joinus .joinus-start .start-text p:nth-child(14) {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
+  animation-delay: 2.8s;
 }
 .joinus .joinus-start .start-text p:nth-child(15) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation-delay: 3s;
 }
 .joinus .joinus-start .start-text p:nth-child(16) {
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
+  animation-delay: 3.2s;
 }
 .joinus .joinus-start .start-avatar {
   display: flex;
@@ -682,27 +647,41 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  -webkit-animation: joinus 2s steps(1) infinite;
-          animation: joinus 2s steps(1) infinite;
+  animation: joinus 2s steps(1) infinite;
 }
-.joinus .contact .joinas-image {
+
+.contact {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  padding-top: 200px;
+  padding-bottom: 0;
+  z-index: -1;
+}
+.contact .container .joinas-image {
   max-width: 800px;
+  max-height: 35vh;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   margin: 0 auto;
   margin-bottom: 40px;
 }
-.joinus .contact .contact-btn {
+.contact .container .contact-btn {
   display: flex;
   justify-content: center;
   gap: 5%;
   margin-bottom: 80px;
 }
-.joinus .contact .contact-btn .line-btn-wrapper .btn-text {
+.contact .container .contact-btn .line-btn-wrapper .btn-text {
   text-align: center;
   font-size: 28px;
   margin-bottom: 30px;
 }
-.joinus .contact .contact-btn .line-btn-wrapper .line-btn {
+.contact .container .contact-btn .line-btn-wrapper .line-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -711,21 +690,21 @@ section {
   background-color: #06C655;
   border-radius: 999px;
 }
-.joinus .contact .contact-btn .line-btn-wrapper .line-btn .line-logo {
+.contact .container .contact-btn .line-btn-wrapper .line-btn .line-logo {
   width: 80px;
   height: 80px;
   margin-right: 20px;
 }
-.joinus .contact .contact-btn .line-btn-wrapper .line-btn p {
+.contact .container .contact-btn .line-btn-wrapper .line-btn p {
   font-size: 40px;
   color: #FFFFFF;
 }
-.joinus .contact .contact-btn .metaleaf-btn-wrapper .btn-text {
+.contact .container .contact-btn .metaleaf-btn-wrapper .btn-text {
   text-align: center;
   font-size: 28px;
   margin-bottom: 30px;
 }
-.joinus .contact .contact-btn .metaleaf-btn-wrapper .metaleaf-btn {
+.contact .container .contact-btn .metaleaf-btn-wrapper .metaleaf-btn {
   width: 380px;
   height: 150px;
   display: flex;
@@ -734,44 +713,29 @@ section {
   border: 7px solid #06C655;
   border-radius: 999px;
 }
-.joinus .contact .contact-btn .metaleaf-btn-wrapper .metaleaf-btn img {
+.contact .container .contact-btn .metaleaf-btn-wrapper .metaleaf-btn img {
   max-width: 280px;
 }
-.joinus .contact .scroll-avatar .scroll-avatar-wrap {
+.contact .scroll-avatar .scroll-avatar-wrap {
   display: flex;
   overflow: hidden;
 }
-.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list {
+.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list {
   display: flex;
-  list-style: none;
   padding: 0;
 }
-.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item {
-  width: 5vw;
+.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item {
+  width: 3.3333333333vw;
 }
-.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item img {
+.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item img {
   width: 100%;
 }
-.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
-  -webkit-animation: infinity-scroll-left 80s infinite linear 0.5s both;
-          animation: infinity-scroll-left 80s infinite linear 0.5s both;
+.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
+  animation: infinity-scroll-left 50s infinite linear 0.5s both;
   margin-bottom: 30px;
 }
-.joinus .contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
-  -webkit-animation: infinity-scroll-right 80s infinite linear 0.5s both;
-          animation: infinity-scroll-right 80s infinite linear 0.5s both;
-}
-
-@-webkit-keyframes textanimation {
-  0% {
-    transform: translateY(2em);
-  }
-  50% {
-    transform: translateY(-0.5em);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
+  animation: infinity-scroll-right 50s infinite linear 0.5s both;
 }
 
 @keyframes textanimation {
@@ -783,23 +747,6 @@ section {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes joinus {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes joinus {
@@ -819,28 +766,12 @@ section {
     transform: rotate(0deg);
   }
 }
-@-webkit-keyframes infinity-scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 @keyframes infinity-scroll-left {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
-  }
-}
-@-webkit-keyframes infinity-scroll-right {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
   }
 }
 @keyframes infinity-scroll-right {
@@ -989,5 +920,4 @@ footer {
 }
 footer p {
   font-size: 14px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

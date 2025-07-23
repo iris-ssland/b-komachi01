@@ -23,7 +23,7 @@ li {
 }
 
 section {
-    margin-bottom: 150px;
+    padding-bottom: 150px;
 }
 
 .container {
@@ -348,7 +348,8 @@ section {
 /* =======content========================================= */
 .content {
     text-align: center;
-    margin-bottom: 150px;
+    // margin-bottom: 150px;
+    background-color: #FFFFFF;
 
     .content-title {
         margin-bottom: 100px;
@@ -568,6 +569,9 @@ section {
 /* =======faq========================================= */
 
 .faq {
+    background-color: #FFFFFF;
+    padding-top: 150px;
+
     .faq-items {
         .faq-item {
             margin-bottom: 20px;
@@ -653,7 +657,8 @@ section {
 /* =======joinus========================================= */
 
 .joinus {
-    margin-bottom: 50px;
+    padding-bottom: 0;
+    margin-bottom: 100vh;
 
     .joinus-start {
         height: 100vh;
@@ -757,10 +762,28 @@ section {
             }
         }
     }
+}
 
-    .contact {
+
+// =====contact=====================================
+
+.contact {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    padding-top: 200px;
+    padding-bottom: 0;
+    z-index: -1;
+
+
+    .container {
         .joinas-image {
             max-width: 800px;
+            max-height: 35vh;
+            object-fit: contain;
             display: block;
             margin: 0 auto;
             margin-bottom: 40px;
@@ -825,39 +848,40 @@ section {
                 }
             }
         }
+    }
 
 
-        .scroll-avatar {
-            .scroll-avatar-wrap {
+    .scroll-avatar {
+        .scroll-avatar-wrap {
+            display: flex;
+            overflow: hidden;
+
+            .scroll-avatar-list {
                 display: flex;
-                overflow: hidden;
+                padding: 0;
 
-                .scroll-avatar-list {
-                    display: flex;
-                    list-style: none;
-                    padding: 0;
+                .scroll-avatar-item {
+                    width: calc(100vw / 30);
 
-                    .scroll-avatar-item {
-                        width: calc(100vw / 20);
-
-                        img {
-                            width: 100%;
-                        }
+                    img {
+                        width: 100%;
                     }
                 }
+            }
 
-                .scroll-avatar-list-left {
-                    animation: infinity-scroll-left 80s infinite linear 0.5s both;
-                    margin-bottom: 30px;
-                }
+            .scroll-avatar-list-left {
+                animation: infinity-scroll-left 50s infinite linear 0.5s both;
+                margin-bottom: 30px;
+            }
 
-                .scroll-avatar-list-right {
-                    animation: infinity-scroll-right 80s infinite linear 0.5s both;
-                }
+            .scroll-avatar-list-right {
+                animation: infinity-scroll-right 50s infinite linear 0.5s both;
             }
         }
     }
 }
+
+
 
 @keyframes textanimation {
     0% {
