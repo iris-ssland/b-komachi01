@@ -113,17 +113,19 @@ section {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
-  margin-top: 98px;
   @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
 }
 .mv .mv-inner {
-  position: relative;
   width: 100%;
   max-width: 1140px;
+  padding: 0 20px;
   margin: 0 auto;
-  padding-top: 100px;
+  position: relative;
 }
 .mv .mv-row {
   display: flex;
@@ -140,7 +142,6 @@ section {
 .mv .mv-row .mv-text {
   font-size: 120px;
   font-weight: bold;
-  color: #333;
   letter-spacing: 0.15em;
 }
 .mv .mv-row .mv-video {
@@ -896,12 +897,11 @@ CONTENT
   margin-bottom: 50px;
   line-height: 1.5;
 }
-
 /* ---------- ヒーロー（グラデ） ---------- */
-
 footer {
   text-align: center;
 }
 footer p {
   font-size: 14px;
 }
+/*# sourceMappingURL=style.css.map */
