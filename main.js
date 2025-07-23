@@ -1,17 +1,29 @@
 // voice
-document.addEventListener("DOMContentLoaded", function () {
-  const fadeElems = document.querySelectorAll(".fade-in");
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1
+  const items = gsap.utils.toArray(".voice-item");
+  const itemDuration = 1;
+  const showDuration = 1000;
+  const holdAfterLast = 1000;
+  const headerHeight = document.querySelector("#header").offsetHeight;
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#voice",
+      start: "top-=98 top",
+      end: "+=2000",
+      pin: true,
+      scrub: true,
+    }
   });
 
-  fadeElems.forEach(elem => observer.observe(elem));
+  items.forEach((item, index) => {
+    tl.fromTo(item,
+      { opacity: 0, x: 300 },
+      { opacity: 1, x: 0, duration: itemDuration, ease: "power2.out" },
+      index * itemDuration
+    );
+  });
+  tl.to({}, { duration: 5 });
 });

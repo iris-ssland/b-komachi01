@@ -413,9 +413,10 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .voice .voice-title {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   color: #fff;
 }
 .voice .voice-title p {
@@ -432,21 +433,29 @@ section {
 .voice .voice-list {
   display: flex;
   gap: 24px;
+  justify-content: center;
+  flex-wrap: nowrap;
   width: 100%;
-  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
 }
 .voice .voice-item {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 24px;
+  padding: 34px;
   text-align: center;
-  transition: transform 0.3s;
-  height: 43vh;
+  height: 420px;
   width: 360px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  opacity: 0;
+  transform: translateX(300px);
+  transition: all 0.8s ease-out;
+}
+.voice .voice-item.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .voice .voice-item img {
   width: 150px;
@@ -454,28 +463,20 @@ section {
   -o-object-fit: contain;
      object-fit: contain;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 .voice .voice-item h3 {
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 .voice .voice-item p {
   font-size: 16px;
   line-height: 2;
   text-align: left;
-  margin-bottom: 20px;
 }
 .voice .voice-item:hover {
   transform: translateY(-4px);
-}
-.voice .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
-}
-.voice .fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* =======faq========================================= */
