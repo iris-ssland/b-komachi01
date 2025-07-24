@@ -3,7 +3,7 @@
 
 @include m.sp {}
 
-.html {
+html {
     font-size: 100%;
     color: #333333;
     height: 100%;
@@ -809,13 +809,15 @@ section {
     margin-bottom: 100vh;
 
     .joinus-start {
-        height: 100vh;
+        height: 110vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 0;
-        background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
+        // background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
+        background: #A0DCA0;
+        background: linear-gradient(180deg, rgba(160, 220, 160, 1) 0%, rgba(249, 246, 162, 1) 60%, rgba(255, 255, 255, 0.2) 100%);
 
         .start-text {
             // text-align: center;
@@ -920,9 +922,9 @@ section {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     background-color: #FFFFFF;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 0;
     z-index: -1;
 
@@ -930,105 +932,129 @@ section {
     .container {
         .joinas-image {
             max-width: 800px;
-            max-height: 35vh;
+            max-height: 40vh;
             object-fit: contain;
             display: block;
             margin: 0 auto;
-            margin-bottom: 40px;
-        }
-
-        .contact-btn {
-            display: flex;
-            justify-content: center;
-            gap: 5%;
-            margin-bottom: 80px;
-
-            .line-btn-wrapper {
-                .btn-text {
-                    text-align: center;
-                    font-size: 28px;
-                    margin-bottom: 30px;
-                }
-
-                .line-btn {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    max-width: 380px;
-                    height: 150px;
-                    background-color: #06C655;
-                    border-radius: 999px;
-
-                    .line-logo {
-                        width: 80px;
-                        height: 80px;
-                        // border: 2px solid #FFFFFF;
-                        // border-radius: 20px;
-                        margin-right: 20px;
-                    }
-
-                    p {
-                        font-size: 40px;
-                        color: #FFFFFF;
-                    }
-                }
-            }
-
-            .metaleaf-btn-wrapper {
-                .btn-text {
-                    text-align: center;
-                    font-size: 28px;
-                    margin-bottom: 30px;
-                }
-
-                .metaleaf-btn {
-                    width: 380px;
-                    height: 150px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border: 7px solid #06C655;
-                    border-radius: 999px;
-
-                    img {
-                        max-width: 280px;
-                    }
-                }
-            }
+            margin-bottom: 30vh;
         }
     }
 
+    .avatar-line {
+        margin-bottom: 70px;
 
-    .scroll-avatar {
-        .scroll-avatar-wrap {
-            display: flex;
-            overflow: hidden;
-
-            .scroll-avatar-list {
+        .scroll-avatar {
+            .scroll-avatar-wrap {
                 display: flex;
-                padding: 0;
+                overflow: hidden;
 
-                .scroll-avatar-item {
-                    width: calc(100vw / 30);
+                .scroll-avatar-list {
+                    display: flex;
+                    padding: 0;
 
-                    img {
-                        width: 100%;
+                    .scroll-avatar-item {
+                        width: calc(100vw / 30);
+
+                        img {
+                            width: 100%;
+                        }
                     }
                 }
-            }
 
-            .scroll-avatar-list-left {
-                animation: infinity-scroll-left 50s infinite linear 0.5s both;
-                margin-bottom: 30px;
-            }
+                .scroll-avatar-list-left {
+                    animation: infinity-scroll-left 50s infinite linear 0.5s both;
+                    margin-bottom: 30px;
+                }
 
-            .scroll-avatar-list-right {
-                animation: infinity-scroll-right 50s infinite linear 0.5s both;
+                .scroll-avatar-list-right {
+                    animation: infinity-scroll-right 50s infinite linear 0.5s both;
+                }
             }
         }
     }
 }
 
+.contact-btn-area {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.contact-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    .line-btn-wrapper {
+        .btn-text {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .line-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 380px;
+            height: 150px;
+            background-color: #06C655;
+            border-radius: 999px;
+
+            .line-logo {
+                width: 80px;
+                height: 80px;
+                // border: 2px solid #FFFFFF;
+                // border-radius: 20px;
+                margin-right: 20px;
+            }
+
+            p {
+                font-size: 40px;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .metaleaf-btn-wrapper {
+        .btn-text {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .metaleaf-btn {
+            width: 380px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFFFFF;
+            border: 7px solid #06C655;
+            border-radius: 999px;
+
+            img {
+                max-width: 280px;
+            }
+        }
+    }
+}
+
+.fadein {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+}
 
 
 @keyframes textanimation {
@@ -1087,7 +1113,6 @@ section {
         transform: translateX(0%);
     }
 }
-
 
 
 
@@ -1515,6 +1540,7 @@ CONTENT
 // =====footer=======================
 footer {
     text-align: center;
+    padding-bottom: 10px;
 
     p {
         font-size: 14px;

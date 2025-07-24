@@ -56,3 +56,32 @@ $(window).scroll(function () {
     $(".scroll_down").fadeIn();
   }
 });
+
+
+// contactセクションが画面内にある間だけ.fadein要素を表示する
+$(window).on('load scroll', function () {
+  const scroll = $(window).scrollTop();
+  const windowHeight = $(window).height();
+
+  const contact = $('.contact');
+  const contactTop = contact.offset().top;
+  const contactBottom = contactTop + contact.outerHeight();
+
+  // .fadein 要素をひとつずつ処理
+  $(".fadein").each(function () {
+    const targetTop = $(this).offset().top;
+    const targetBottom = targetTop + $(this).outerHeight();
+
+    // contactセクションが画面に表示されている間だけ処理
+    if ((scroll + windowHeight > contactTop) && (scroll < contactBottom)) {
+      // その中で、個別要素が画面に表示されていれば .show を追加
+      if (scroll + windowHeight > targetTop) {
+        $(this).addClass("show");
+      }
+    } else {
+      // contactセクションが画面外にある場合は全ての.fadeinから.showを外す
+      $(this).removeClass("show");
+    }
+  });
+});
+

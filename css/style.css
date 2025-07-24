@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.html {
+html {
   font-size: 100%;
   color: #333333;
   height: 100%;
@@ -330,8 +330,7 @@ section {
   height: 11px;
   border-radius: 50%;
   background: #333;
-  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
-          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+  animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
 }
 .mv .scroll_down span {
   position: absolute;
@@ -345,34 +344,12 @@ section {
   text-decoration: none;
   text-transform: uppercase;
 }
-@-webkit-keyframes circlemove {
-  0% {
-    bottom: 160px;
-  }
-  100% {
-    bottom: 0px;
-  }
-}
 @keyframes circlemove {
   0% {
     bottom: 160px;
   }
   100% {
     bottom: 0px;
-  }
-}
-@-webkit-keyframes cirlemovehide {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes cirlemovehide {
@@ -726,13 +703,14 @@ section {
   margin-bottom: 100vh;
 }
 .joinus .joinus-start {
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 0;
-  background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
+  background: #A0DCA0;
+  background: linear-gradient(180deg, rgb(160, 220, 160) 0%, rgb(249, 246, 162) 60%, rgba(255, 255, 255, 0.2) 100%);
 }
 .joinus .joinus-start .start-text {
   padding-top: 2em;
@@ -743,72 +721,55 @@ section {
 .joinus .joinus-start .start-text p {
   font-size: 64px;
   transform: translateY(2em);
-  -webkit-animation: textanimation 1s forwards;
-          animation: textanimation 1s forwards;
+  animation: textanimation 1s forwards;
 }
 .joinus .joinus-start .start-text p:nth-child(1) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .joinus .joinus-start .start-text p:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .joinus .joinus-start .start-text p:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .joinus .joinus-start .start-text p:nth-child(4) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 .joinus .joinus-start .start-text p:nth-child(5) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 .joinus .joinus-start .start-text p:nth-child(6) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 .joinus .joinus-start .start-text p:nth-child(7) {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 .joinus .joinus-start .start-text p:nth-child(8) {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
 .joinus .joinus-start .start-text p:nth-child(9) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 .joinus .joinus-start .start-text p:nth-child(10) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 .joinus .joinus-start .start-text p:nth-child(11) {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
+  animation-delay: 2.2s;
 }
 .joinus .joinus-start .start-text p:nth-child(12) {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 .joinus .joinus-start .start-text p:nth-child(13) {
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
+  animation-delay: 2.6s;
 }
 .joinus .joinus-start .start-text p:nth-child(14) {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
+  animation-delay: 2.8s;
 }
 .joinus .joinus-start .start-text p:nth-child(15) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation-delay: 3s;
 }
 .joinus .joinus-start .start-text p:nth-child(16) {
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
+  animation-delay: 3.2s;
 }
 .joinus .joinus-start .start-avatar {
   display: flex;
@@ -819,8 +780,7 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  -webkit-animation: joinus 2s steps(1) infinite;
-          animation: joinus 2s steps(1) infinite;
+  animation: joinus 2s steps(1) infinite;
 }
 
 .contact {
@@ -828,101 +788,112 @@ section {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
   background-color: #FFFFFF;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 0;
   z-index: -1;
 }
 .contact .container .joinas-image {
   max-width: 800px;
-  max-height: 35vh;
+  max-height: 40vh;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 30vh;
 }
-.contact .container .contact-btn {
+.contact .avatar-line {
+  margin-bottom: 70px;
+}
+.contact .avatar-line .scroll-avatar .scroll-avatar-wrap {
+  display: flex;
+  overflow: hidden;
+}
+.contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list {
+  display: flex;
+  padding: 0;
+}
+.contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item {
+  width: 3.3333333333vw;
+}
+.contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item img {
+  width: 100%;
+}
+.contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
+  animation: infinity-scroll-left 50s infinite linear 0.5s both;
+  margin-bottom: 30px;
+}
+.contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
+  animation: infinity-scroll-right 50s infinite linear 0.5s both;
+}
+
+.contact-btn-area {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.contact-btn-wrapper {
   display: flex;
   justify-content: center;
-  gap: 5%;
-  margin-bottom: 80px;
+  gap: 10%;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
 }
-.contact .container .contact-btn .line-btn-wrapper .btn-text {
+.contact-btn-wrapper .line-btn-wrapper .btn-text {
   text-align: center;
   font-size: 28px;
   margin-bottom: 30px;
 }
-.contact .container .contact-btn .line-btn-wrapper .line-btn {
+.contact-btn-wrapper .line-btn-wrapper .line-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 380px;
+  width: 380px;
   height: 150px;
   background-color: #06C655;
   border-radius: 999px;
 }
-.contact .container .contact-btn .line-btn-wrapper .line-btn .line-logo {
+.contact-btn-wrapper .line-btn-wrapper .line-btn .line-logo {
   width: 80px;
   height: 80px;
   margin-right: 20px;
 }
-.contact .container .contact-btn .line-btn-wrapper .line-btn p {
+.contact-btn-wrapper .line-btn-wrapper .line-btn p {
   font-size: 40px;
   color: #FFFFFF;
 }
-.contact .container .contact-btn .metaleaf-btn-wrapper .btn-text {
+.contact-btn-wrapper .metaleaf-btn-wrapper .btn-text {
   text-align: center;
   font-size: 28px;
   margin-bottom: 30px;
+  height: 80px;
+  line-height: 80px;
 }
-.contact .container .contact-btn .metaleaf-btn-wrapper .metaleaf-btn {
+.contact-btn-wrapper .metaleaf-btn-wrapper .metaleaf-btn {
   width: 380px;
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #FFFFFF;
   border: 7px solid #06C655;
   border-radius: 999px;
 }
-.contact .container .contact-btn .metaleaf-btn-wrapper .metaleaf-btn img {
+.contact-btn-wrapper .metaleaf-btn-wrapper .metaleaf-btn img {
   max-width: 280px;
 }
-.contact .scroll-avatar .scroll-avatar-wrap {
-  display: flex;
-  overflow: hidden;
-}
-.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list {
-  display: flex;
-  padding: 0;
-}
-.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item {
-  width: 3.3333333333vw;
-}
-.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item img {
-  width: 100%;
-}
-.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
-  -webkit-animation: infinity-scroll-left 50s infinite linear 0.5s both;
-          animation: infinity-scroll-left 50s infinite linear 0.5s both;
-  margin-bottom: 30px;
-}
-.contact .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
-  -webkit-animation: infinity-scroll-right 50s infinite linear 0.5s both;
-          animation: infinity-scroll-right 50s infinite linear 0.5s both;
+
+.fadein {
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 
-@-webkit-keyframes textanimation {
-  0% {
-    transform: translateY(2em);
-  }
-  50% {
-    transform: translateY(-0.5em);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.show {
+  opacity: 1;
 }
 
 @keyframes textanimation {
@@ -934,23 +905,6 @@ section {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes joinus {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes joinus {
@@ -970,28 +924,12 @@ section {
     transform: rotate(0deg);
   }
 }
-@-webkit-keyframes infinity-scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 @keyframes infinity-scroll-left {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
-  }
-}
-@-webkit-keyframes infinity-scroll-right {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
   }
 }
 @keyframes infinity-scroll-right {
@@ -1134,7 +1072,6 @@ CONTENT
   top: 55%;
   left: 0;
 }
-
 .detail-contents .con-2 {
   position: relative;
 }
@@ -1205,8 +1142,8 @@ CONTENT
 /* ---------- ヒーロー（グラデ） ---------- */
 footer {
   text-align: center;
+  padding-bottom: 10px;
 }
 footer p {
   font-size: 14px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
