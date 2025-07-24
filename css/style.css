@@ -970,6 +970,73 @@ CONTENT
   top: 55%;
   left: 0;
 }
+.detail-contents .con-2 {
+  position: relative;
+}
+.detail-contents .con-2 .item .item-img .con2_img1 {
+  width: 80%;
+}
+.detail-contents .con-2 .item .item-img .con2_img2 {
+  width: 60%;
+  margin-left: 15%;
+  margin-top: -10px;
+}
+.detail-contents .con-2 .ellipse.blur {
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.detail-contents .con-2 .ellipse.outline {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+}
+.detail-contents .con-3 {
+  position: relative;
+}
+.detail-contents .con-3 .img-title {
+  margin-bottom: 5%;
+}
+.detail-contents .con-3 .item1 {
+  margin-bottom: 0;
+}
+.detail-contents .con-3 .item1 .item-img .con3_img1 {
+  margin-left: 10%;
+  width: 80%;
+}
+.detail-contents .con-3 .item1 .item-img .con3_img2 {
+  margin-left: 10%;
+  width: 80%;
+}
+.detail-contents .con-3 .item1 .item-text {
+  margin-bottom: 10%;
+}
+.detail-contents .con-3 .item2 .ite-body {
+  margin-left: 10%;
+}
+.detail-contents .con-3 .item2 .item-img .con3_img2 {
+  margin-top: -10%;
+  width: 80%;
+}
+.detail-contents .con-3 .item2 .item-text {
+  margin-left: 10%;
+}
+.detail-contents .con-3 .ellipse.blur {
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.detail-contents .con-3 .ellipse.outline {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+}
+.detail-contents .con-3 .ellipse.solid {
+  position: absolute;
+  top: 5%;
+  left: 55%;
+}
+
 /* ---------- ヒーロー（グラデ） ---------- */
 footer {
   text-align: center;
