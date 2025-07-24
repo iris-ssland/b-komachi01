@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use './parts/mixin' as m;
 
 .html {
     font-size: 100%;
@@ -131,6 +132,7 @@ section {
     align-items: center;
     position: relative;
     overflow: hidden;
+    margin-top: 98px;
 
     .mv-inner {
         width: 100%;
@@ -337,6 +339,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-left: 30px;
 
         .highlight {
             color: #189A3A;
@@ -400,13 +403,13 @@ section {
                 margin-bottom: 12px;
 
                 .number {
-                    font-size: 60px;
+                    font-size: 50px;
                     font-weight: bold;
                     color: #007f3e;
                     background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
                     border-radius: 50%;
-                    width: 150px;
-                    height: 150px;
+                    width: 130px;
+                    height: 130px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -484,11 +487,12 @@ section {
     padding: 80px 20px;
     background-color: #fff;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     background-image: url("../img/voice_bgimg.png");
     background-size: cover;
-    background-position: center;
+    background-position: left center;
     background-repeat: no-repeat;
     overflow: hidden;
 
