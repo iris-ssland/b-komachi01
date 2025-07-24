@@ -1315,6 +1315,108 @@ CONTENT
             left: 0;
         }
     }
+
+    // Content2
+    .con-2 {
+        position: relative;
+
+        .item {
+            .item-img {
+                .con2_img1 {
+                    width: 80%;
+                }
+
+                .con2_img2 {
+                    width: 60%;
+                    margin-left: 15%;
+                    margin-top: -10px;
+                }
+            }
+        }
+
+        .ellipse.blur {
+            position: absolute;
+            top: 30%;
+            left: 0;
+        }
+
+        .ellipse.outline {
+            position: absolute;
+            top: 55%;
+            left: 40%;
+        }
+
+        // .ellipse.solid {
+        //     position: absolute;
+        //     top: 5%;
+        //     left: 55%;
+        // }
+    }
+
+    // Content3
+    .con-3 {
+        position: relative;
+
+        .img-title {
+            margin-bottom: 5%;
+        }
+
+        .item1 {
+            margin-bottom: 0;
+
+            .item-img {
+                .con3_img1 {
+                    margin-left: 10%;
+                    width: 80%;
+                }
+
+                .con3_img2 {
+                    margin-left: 10%;
+                    width: 80%;
+                }
+            }
+
+            .item-text {
+                margin-bottom: 10%;
+            }
+        }
+
+        .item2 {
+            .ite-body {
+                // margin-right: 0;
+                margin-left: 10%;
+            }
+
+            .item-img {
+                .con3_img2 {
+                    margin-top: -10%;
+                    width: 80%;
+                }
+            }
+
+            .item-text {
+                margin-left: 10%;
+            }
+        }
+
+        .ellipse.blur {
+            position: absolute;
+            top: 30%;
+            left: 0;
+        }
+
+        .ellipse.outline {
+            position: absolute;
+            top: 55%;
+            left: 40%;
+        }
+
+        .ellipse.solid {
+            position: absolute;
+            top: 5%;
+            left: 55%;
+        }
+    }
 }
 
 
