@@ -1,3 +1,16 @@
+// ハンバーガーメニュー
+$(".hamburger").on("click", function () {
+  $("#header").toggleClass("open");
+});
+
+$("#mask").on("click", function () {
+  $("#header").removeClass("open");
+});
+
+$("#nav a").on("click", function () {
+  $("#header").removeClass("open");
+});
+
 // voice
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -25,4 +38,21 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
   tl.to({}, { duration: 3 });
+});
+
+// スクロールバーとヘッダー
+$(window).scroll(function () {
+  let scroll = $(window).scrollTop(); // 現在のスクロール位置
+  let joinusOffset = $(".joinus").offset().top; // .joinusの位置
+  let windowHeight = $(window).height(); // 画面の高さ
+
+  if (scroll + windowHeight > joinusOffset + 100) {
+    // joinusが画面内に入ったら
+    $("#header").fadeOut();
+    $(".scroll_down").fadeOut();
+  } else {
+    // joinusから離れたら表示
+    $("#header").fadeIn();
+    $(".scroll_down").fadeIn();
+  }
 });
