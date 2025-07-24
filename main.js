@@ -1,3 +1,16 @@
+// ハンバーガーメニュー
+$(".hamburger").on("click", function () {
+  $("#header").toggleClass("open");
+});
+
+$("#mask").on("click", function () {
+  $("#header").removeClass("open");
+});
+
+$("#nav a").on("click", function () {
+  $("#header").removeClass("open");
+});
+
 // voice
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);

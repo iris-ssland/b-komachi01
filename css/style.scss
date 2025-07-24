@@ -1,11 +1,14 @@
 @charset "UTF-8";
 @use './parts/mixin' as m;
 
+@include m.sp {}
+
 .html {
     font-size: 100%;
     color: #333333;
     height: 100%;
     font-family: "Noto Sans JP", sans-serif;
+    overflow-x: hidden;
 }
 
 img {
@@ -60,65 +63,200 @@ section {
 
         .site-title {
             margin-right: auto;
+
+            img {
+                @include m.sp {
+                    height: 40px;
+                }
+            }
         }
 
-        .nav-menu {
+        .nav {
             display: flex;
+            align-items: center;
             gap: 32px;
 
-            .nav a {
-                line-height: 1;
-                transition: opacity 0.2s;
-
-                &a:hover {
-                    opacity: 0.7;
-                }
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    width: 0;
-                    height: 2px;
-                    background: #0abf6f;
-                    transition: width 0.3s ease;
-                }
-
+            @include m.sp {
+                flex-direction: column;
+                align-items: flex-start;
+                transform: translateX(-100%);
+                width: 300px;
+                background: #fff;
+                padding: 25px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                opacity: 0;
+                overflow-y: auto;
+                transition: 0.5s;
+                z-index: 20;
             }
-        }
 
-        .contact-btn {
-            background-color: #189A3B;
-            color: #fff;
-            padding: 16px 30px 16px 40px;
-            border-radius: 9999px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            transition: background-color 0.3s;
-            gap: 12px;
-            margin-right: 20px;
+            .nav-menu {
+                display: flex;
+                gap: 32px;
 
-            &:hover {
+                @include m.sp {
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    gap: 5px;
+                }
+
+                li {
+                    @include m.sp {
+                        padding: 10px 0;
+                    }
+                }
+
+                a {
+                    line-height: 1;
+                    transition: opacity 0.2s;
+                    position: relative;
+
+                    &a:hover {
+                        opacity: 0.7;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 2px;
+                        background: #0abf6f;
+                        transition: width 0.3s ease;
+                    }
+                }
+            }
+
+            .contact-btn {
                 background-color: #189A3B;
+                color: #fff;
+                padding: 16px 30px 16px 40px;
+                border-radius: 9999px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                transition: background-color 0.3s;
+                gap: 12px;
+                margin-left: 32px;
+
+                &:hover {
+                    background-color: #148232;
+                }
+
+                @include m.sp {
+                    margin: 0 auto;
+                }
+            }
+
+            .arrow-circle {
+                width: 36px;
+                height: 36px;
+                border: 2px solid white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .arrow {
+                    font-size: 18px;
+                    line-height: 1;
+                }
             }
         }
+    }
 
-        .arrow-circle {
-            width: 36px;
-            height: 36px;
-            border: 2px solid white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    .hamburger {
+        @include m.sp {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: relative;
+            position: fixed;
+            top: 22px;
+            right: 18px;
+            transition: all 0.5s;
+            z-index: 20;
 
-            .arrow {
-                font-size: 18px;
-                line-height: 1;
+            span {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #121212;
+                transition: all 0.5s;
+            }
+
+            span:nth-child(1) {
+                top: 10%;
+            }
+
+            span:nth-child(2) {
+                top: 47%;
+            }
+
+            span:nth-child(3) {
+                bottom: 10%;
             }
         }
+    }
+
+    .mask {
+        display: none;
+        transition: 0.5s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.8;
+        z-index: 10;
+
+
+        @include m.sp {
+            cursor: pointer;
+        }
+    }
+}
+
+#header.open {
+    .nav {
+        @include m.sp {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .hamburger {
+        @include m.sp {
+            span {
+                background: #fff;
+            }
+
+            span:nth-child(1) {
+                transform: rotate(-45deg);
+                top: 50%;
+            }
+
+            span:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(3) {
+                transform: rotate(45deg);
+                top: 50%;
+            }
+        }
+    }
+
+    .mask {
+        display: block;
+        opacity: 0.8;
     }
 }
 
@@ -133,6 +271,10 @@ section {
     position: relative;
     overflow: hidden;
     margin-top: 98px;
+
+    @include m.sp {
+        margin-top: 78px;
+    }
 
     .mv-inner {
         width: 100%;
@@ -281,6 +423,7 @@ section {
 /* =======about========================================= */
 .about {
     background-color: #fff;
+    scroll-margin-top: 120px;
 
     .about-title {
         text-align: center;
@@ -352,8 +495,8 @@ section {
 /* =======content========================================= */
 .content {
     text-align: center;
-    // margin-bottom: 150px;
     background-color: #FFFFFF;
+    scroll-margin-top: 120px;
 
     .content-title {
         margin-bottom: 100px;
