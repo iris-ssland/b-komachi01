@@ -85,3 +85,27 @@ $(window).on('load scroll', function () {
   });
 });
 
+
+
+// fadein
+
+$(window).on('load scroll', function () {
+    const windowHeight = $(window).height();
+
+  $(".btn-fadein").each(function () {
+    const $this = $(this); 
+    const scroll = $(window).scrollTop(); 
+    const targetTop = $this.offset().top; 
+    const targetBottom = targetTop + $this.outerHeight(); 
+
+    const shouldShow = scroll > targetTop - windowHeight;
+
+    const isCompletelyOutOfView = (scroll > targetBottom) || (scroll + windowHeight < targetTop);
+
+    if (shouldShow && !isCompletelyOutOfView) {
+      $this.addClass("btn-show");
+    } else {
+      $this.removeClass("btn-show");
+    }
+  });
+});
