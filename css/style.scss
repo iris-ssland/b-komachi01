@@ -816,7 +816,7 @@ section {
         margin-bottom: 0;
         // background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
         background: #A0DCA0;
-        background: linear-gradient(180deg, rgba(160, 220, 160, 1) 0%, rgba(249, 246, 162, 1) 60%, rgba(255, 255, 255, 0.2) 100%);
+        background: linear-gradient(180deg, rgba(160, 220, 160, 1) 0%, rgba(249, 246, 162, 1) 70%, rgba(255, 255, 255, 1) 100%);
 
         .start-text {
             // text-align: center;
@@ -923,7 +923,7 @@ section {
     width: 100%;
     // height: 100vh;
     background-color: #FFFFFF;
-    padding-top: 100px;
+    // padding-top: 100px;
     padding-bottom: 0;
     z-index: -1;
 
@@ -931,16 +931,16 @@ section {
     .container {
         .joinas-image {
             max-width: 800px;
-            max-height: 40vh;
+            // max-height: 40vh;
             object-fit: contain;
             display: block;
             margin: 0 auto;
-            margin-bottom: 30vh;
+            margin-bottom: 250px;
         }
     }
 
     .avatar-line {
-        margin-bottom: 70px;
+        margin-bottom: 40px;
 
         .scroll-avatar {
             .scroll-avatar-wrap {
@@ -952,7 +952,8 @@ section {
                     padding: 0;
 
                     .scroll-avatar-item {
-                        width: calc(100vw / 30);
+                        // width: calc(100vw / 30);
+                        width: 60px;
 
                         img {
                             width: 100%;
@@ -962,7 +963,7 @@ section {
 
                 .scroll-avatar-list-left {
                     animation: infinity-scroll-left 50s infinite linear 0.5s both;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                 }
 
                 .scroll-avatar-list-right {
@@ -975,7 +976,7 @@ section {
 
 .contact-btn-area {
     position: relative;
-    height: 100vh;
+    height: 450px;
     width: 100%;
 }
 
@@ -984,7 +985,7 @@ section {
     justify-content: center;
     gap: 10%;
     position: absolute;
-    bottom: 25%;
+    // bottom: 25%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -992,8 +993,8 @@ section {
     .line-btn-wrapper {
         .btn-text {
             text-align: center;
-            font-size: 28px;
-            margin-bottom: 30px;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
         .line-btn {
@@ -1001,15 +1002,13 @@ section {
             justify-content: center;
             align-items: center;
             width: 380px;
-            height: 150px;
+            height: 120px;
             background-color: #06C655;
             border-radius: 999px;
 
             .line-logo {
                 width: 80px;
                 height: 80px;
-                // border: 2px solid #FFFFFF;
-                // border-radius: 20px;
                 margin-right: 20px;
             }
 
@@ -1023,15 +1022,13 @@ section {
     .metaleaf-btn-wrapper {
         .btn-text {
             text-align: center;
-            font-size: 28px;
-            margin-bottom: 30px;
-            height: 80px;
-            line-height: 80px;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
         .metaleaf-btn {
             width: 380px;
-            height: 150px;
+            height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1046,12 +1043,12 @@ section {
     }
 }
 
-.fadein {
+.btn-fadein {
     opacity: 0;
-    transition: all 0.8s ease;
+    transition: all 1s ease;
 }
 
-.show {
+.btn-show {
     opacity: 1;
 }
 
