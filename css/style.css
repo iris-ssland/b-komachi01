@@ -639,12 +639,15 @@ section {
   background-color: #FFFFFF;
   padding-top: 150px;
 }
-.faq .faq-items .faq-item {
+.faq .container {
+  padding: 0 20px;
+}
+.faq .container .faq-items .faq-item {
   margin-bottom: 20px;
   border: 1px solid #189a3a;
   border-radius: 15px;
 }
-.faq .faq-items .faq-item summary {
+.faq .container .faq-items .faq-item summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -655,7 +658,7 @@ section {
   position: relative;
   font-size: 24px;
 }
-.faq .faq-items .faq-item summary::before {
+.faq .container .faq-items .faq-item summary::before {
   content: "Q";
   position: absolute;
   top: 50%;
@@ -663,10 +666,10 @@ section {
   transform: translateY(-50%);
   color: #189A3A;
 }
-.faq .faq-items .faq-item summary::-webkit-details-marker {
+.faq .container .faq-items .faq-item summary::-webkit-details-marker {
   display: none;
 }
-.faq .faq-items .faq-item summary::after {
+.faq .container .faq-items .faq-item summary::after {
   margin-left: 10px;
   content: "";
   width: 0;
@@ -676,7 +679,7 @@ section {
   border-width: 11.26px 8px 0px 8px;
   transition: transform 0.3s;
 }
-.faq .faq-items .faq-item p {
+.faq .container .faq-items .faq-item p {
   background-color: rgba(143, 206, 156, 0.3);
   transform: translateY(-10px);
   opacity: 0;
@@ -687,7 +690,7 @@ section {
   transition: transform 0.5s, opacity 0.5s;
   position: relative;
 }
-.faq .faq-items .faq-item p::before {
+.faq .container .faq-items .faq-item p::before {
   content: "A";
   position: absolute;
   top: 50%;
@@ -701,10 +704,10 @@ section {
   line-height: 30px;
   border-radius: 50%;
 }
-.faq .faq-items .faq-item[open] summary::after {
+.faq .container .faq-items .faq-item[open] summary::after {
   transform: rotate(180deg);
 }
-.faq .faq-items .faq-item[open] p {
+.faq .container .faq-items .faq-item[open] p {
   transform: none;
   opacity: 1;
 }
@@ -735,6 +738,11 @@ section {
   font-weight: bold;
   transform: translateY(2em);
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 900px) {
+  .joinus .joinus-start .start-text .textanimation {
+    font-size: 36px;
+  }
 }
 .joinus .joinus-start .start-text .textanimation.text-show {
   animation: textanimation 1s forwards;
@@ -879,7 +887,7 @@ section {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-bottom: 170px;
+  margin-bottom: 160px;
   max-width: 850px;
   font-size: 24px;
 }
@@ -912,10 +920,13 @@ section {
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
   animation: infinity-scroll-right 50s infinite linear 0.5s both;
 }
+.contact .avatar-line .scroll-avatar-1 {
+  margin-bottom: -10px;
+}
 
 .contact-btn-area {
   position: relative;
-  height: 300px;
+  height: 290px;
   width: 100%;
 }
 
@@ -1304,4 +1315,24 @@ footer {
 }
 footer p {
   font-size: 12px;
+}
+
+#mouse-stalker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  /* 画像サイズに合わせて調整 */
+  height: 40px;
+  transition: transform 0.2s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* クリックの邪魔をしない */
+  z-index: 9999;
+}
+
+#mouse-stalker img {
+  width: 100%;
+  height: auto;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
