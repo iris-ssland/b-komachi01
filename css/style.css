@@ -134,6 +134,7 @@ section {
   transition: background-color 0.3s;
   gap: 12px;
   margin-left: 32px;
+  cursor: pointer;
 }
 #header .header-inner .nav .contact-btn:hover {
   background-color: #148232;
@@ -461,15 +462,16 @@ section {
   margin-bottom: 100px;
 }
 .content .content-title h2 {
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 32px;
+}
+.content .content-title h3 {
   font-size: 48px;
   font-weight: 500;
 }
-.content .content-title h2 strong {
+.content .content-title h3 strong {
   font-weight: 700;
-}
-.content .content-title p {
-  font-size: 32px;
-  margin-bottom: 8px;
 }
 .content .content-list {
   display: flex;
@@ -569,41 +571,49 @@ section {
 
 /* =======voice========================================= */
 .voice {
-  padding: 80px 20px 0 20px;
-  background-color: #fff;
-  text-align: center;
   min-height: 100vh;
-  height: auto;
-  width: 100%;
   background-image: url("../img/voice_bgimg.png");
   background-size: cover;
-  background-position: left center;
+  background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+}
+.voice .voice-inner {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
 }
 .voice .voice-title {
-  margin-bottom: 60px;
   color: #fff;
 }
-.voice .voice-title p {
-  font-size: 32px;
-}
 .voice .voice-title h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.voice .voice-title h3 {
   font-size: 48px;
   font-weight: 400;
   margin-top: 8px;
 }
-.voice .voice-title h2 strong {
+.voice .voice-title h3 strong {
   font-weight: 700;
 }
 .voice .voice-list {
   display: flex;
-  gap: 24px;
-  justify-content: center;
   flex-wrap: nowrap;
+  justify-content: center;
+  gap: 24px;
   width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+  box-sizing: border-box;
 }
 .voice .voice-item {
   background: #fff;
@@ -611,7 +621,7 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 34px;
   text-align: center;
-  height: 420px;
+  height: auto;
   width: 360px;
   display: flex;
   flex-direction: column;
@@ -651,12 +661,15 @@ section {
   background-color: #FFFFFF;
   padding-top: 150px;
 }
-.faq .faq-items .faq-item {
+.faq .container {
+  padding: 0 20px;
+}
+.faq .container .faq-items .faq-item {
   margin-bottom: 20px;
   border: 1px solid #189a3a;
   border-radius: 15px;
 }
-.faq .faq-items .faq-item summary {
+.faq .container .faq-items .faq-item summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -667,7 +680,7 @@ section {
   position: relative;
   font-size: 24px;
 }
-.faq .faq-items .faq-item summary::before {
+.faq .container .faq-items .faq-item summary::before {
   content: "Q";
   position: absolute;
   top: 50%;
@@ -675,10 +688,10 @@ section {
   transform: translateY(-50%);
   color: #189A3A;
 }
-.faq .faq-items .faq-item summary::-webkit-details-marker {
+.faq .container .faq-items .faq-item summary::-webkit-details-marker {
   display: none;
 }
-.faq .faq-items .faq-item summary::after {
+.faq .container .faq-items .faq-item summary::after {
   margin-left: 10px;
   content: "";
   width: 0;
@@ -688,7 +701,7 @@ section {
   border-width: 11.26px 8px 0px 8px;
   transition: transform 0.3s;
 }
-.faq .faq-items .faq-item p {
+.faq .container .faq-items .faq-item p {
   background-color: rgba(143, 206, 156, 0.3);
   transform: translateY(-10px);
   opacity: 0;
@@ -699,7 +712,7 @@ section {
   transition: transform 0.5s, opacity 0.5s;
   position: relative;
 }
-.faq .faq-items .faq-item p::before {
+.faq .container .faq-items .faq-item p::before {
   content: "A";
   position: absolute;
   top: 50%;
@@ -713,10 +726,10 @@ section {
   line-height: 30px;
   border-radius: 50%;
 }
-.faq .faq-items .faq-item[open] summary::after {
+.faq .container .faq-items .faq-item[open] summary::after {
   transform: rotate(180deg);
 }
-.faq .faq-items .faq-item[open] p {
+.faq .container .faq-items .faq-item[open] p {
   transform: none;
   opacity: 1;
 }
@@ -744,7 +757,14 @@ section {
 }
 .joinus .joinus-start .start-text .textanimation {
   font-size: 64px;
+  font-weight: bold;
   transform: translateY(2em);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 900px) {
+  .joinus .joinus-start .start-text .textanimation {
+    font-size: 36px;
+  }
 }
 .joinus .joinus-start .start-text .textanimation.text-show {
   -webkit-animation: textanimation 1s forwards;
@@ -823,29 +843,68 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  -webkit-animation: joinus 2s steps(1) infinite;
-          animation: joinus 2s steps(1) infinite;
+
+  -webkit-animation: avatar-rerote 2s steps(1) infinite;
+          animation: avatar-rerote 2s steps(1) infinite;
 }
 
 @-webkit-keyframes textanimation {
   0% {
     transform: translateY(2em);
-    opacity: 0;
+
+  }
+  50% {
+    transform: translateY(-0.5em);
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+
   }
 }
 
 @keyframes textanimation {
   0% {
     transform: translateY(2em);
-    opacity: 0;
+  }
+  50% {
+    transform: translateY(-0.5em);
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+  }
+}
+@-webkit-keyframes avatar-rerote {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes avatar-rerote {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 .contact {
@@ -859,17 +918,18 @@ section {
 }
 .contact .container .joinas-image {
   max-width: 800px;
+  max-height: 40vh;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: -10px;
 }
 .contact .container .btn-text-area {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-bottom: 220px;
+  margin-bottom: 160px;
   max-width: 850px;
   font-size: 24px;
 }
@@ -878,7 +938,7 @@ section {
   text-align: center;
 }
 .contact .avatar-line {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap {
   display: flex;
@@ -889,7 +949,7 @@ section {
   padding: 0;
 }
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item {
-  width: 60px;
+  width: 50px;
 }
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list .scroll-avatar-item img {
   width: 100%;
@@ -903,10 +963,13 @@ section {
   -webkit-animation: infinity-scroll-right 50s infinite linear 0.5s both;
           animation: infinity-scroll-right 50s infinite linear 0.5s both;
 }
+.contact .avatar-line .scroll-avatar-1 {
+  margin-bottom: -10px;
+}
 
 .contact-btn-area {
   position: relative;
-  height: 380px;
+  height: 290px;
   width: 100%;
 }
 
@@ -937,8 +1000,8 @@ section {
   transform: rotateX(360deg);
 }
 .contact-btn-wrapper .line-btn-wrapper .line-btn .line-logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin-right: 20px;
 }
 .contact-btn-wrapper .line-btn-wrapper .line-btn p {
@@ -1044,12 +1107,14 @@ section {
             animation-timing-function: cubic-bezier(0.2, 0, 0.9, 1);
     /* 再落下：加速 */
   }
+
   80% {
     top: 0;
     /* 地面着地2回目 */
     -webkit-animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
             animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
     /* 小さく跳ね上がり */
+
   }
   90% {
     top: -20%;
@@ -1063,49 +1128,12 @@ section {
     /* 完全に着地して静止 */
   }
 }
-@keyframes textanimation {
-  0% {
-    transform: translateY(2em);
+@-webkit-keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
   }
-  50% {
-    transform: translateY(-0.5em);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes joinus {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes joinus {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  to {
+    transform: translateX(-100%);
   }
 }
 @-webkit-keyframes infinity-scroll-left {
@@ -1425,5 +1453,27 @@ footer {
 footer p {
   font-size: 12px;
   margin-block: 15px;
+}
+
+
+
+#mouse-stalker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  /* 画像サイズに合わせて調整 */
+  height: 40px;
+  transition: transform 0.2s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* クリックの邪魔をしない */
+  z-index: 9999;
+}
+
+#mouse-stalker img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
