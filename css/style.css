@@ -462,15 +462,16 @@ section {
   margin-bottom: 100px;
 }
 .content .content-title h2 {
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 32px;
+}
+.content .content-title h3 {
   font-size: 48px;
   font-weight: 500;
 }
-.content .content-title h2 strong {
+.content .content-title h3 strong {
   font-weight: 700;
-}
-.content .content-title p {
-  font-size: 32px;
-  margin-bottom: 8px;
 }
 .content .content-list {
   display: flex;
@@ -570,11 +571,12 @@ section {
 
 /* =======voice========================================= */
 .voice {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
   padding: 80px 20px 0 20px;
   background-color: #fff;
   text-align: center;
-  min-height: 100vh;
-  height: auto;
   width: 100%;
   background-image: url("../img/voice_bgimg.png");
   background-size: cover;
@@ -586,15 +588,17 @@ section {
   margin-bottom: 60px;
   color: #fff;
 }
-.voice .voice-title p {
-  font-size: 32px;
-}
 .voice .voice-title h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.voice .voice-title h3 {
   font-size: 48px;
   font-weight: 400;
   margin-top: 8px;
 }
-.voice .voice-title h2 strong {
+.voice .voice-title h3 strong {
   font-weight: 700;
 }
 .voice .voice-list {
@@ -826,7 +830,20 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  animation: avatar-rerote 2s steps(1) infinite;
+  -webkit-animation: avatar-rerote 2s steps(1) infinite;
+          animation: avatar-rerote 2s steps(1) infinite;
+}
+
+@-webkit-keyframes textanimation {
+  0% {
+    transform: translateY(2em);
+  }
+  50% {
+    transform: translateY(-0.5em);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes textanimation {
@@ -838,6 +855,23 @@ section {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes avatar-rerote {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 @keyframes avatar-rerote {
@@ -903,7 +937,8 @@ section {
   width: 100%;
 }
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
-  animation: infinity-scroll-left 50s infinite linear 0.5s both;
+  -webkit-animation: infinity-scroll-left 50s infinite linear 0.5s both;
+          animation: infinity-scroll-left 50s infinite linear 0.5s both;
   margin-bottom: 20px;
 }
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
@@ -1068,6 +1103,14 @@ section {
   100% {
     top: 0;
     /* 完全に着地して静止 */
+  }
+}
+@-webkit-keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 @keyframes infinity-scroll-left {
