@@ -11,6 +11,22 @@ $("#nav a").on("click", function () {
   $("#header").removeClass("open");
 });
 
+// ページ内リンクのスムーススクロール
+$('a[href^="#"]').on('click', function (e) {
+  const speed = 500;
+  const href = $(this).attr("href");
+  const $target = $(href === "#" || href === "" ? "html" : href);
+
+  if ($target.length) {
+    e.preventDefault();
+
+    const headerHeight = $("#header").outerHeight();
+    const position = $target.offset().top - headerHeight;
+
+    $("html, body").animate({ scrollTop: position }, speed, "swing");
+  }
+});
+
 // voice
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -42,9 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // スクロールバーとヘッダー
 $(window).scroll(function () {
-  let scroll = $(window).scrollTop(); 
-  let joinusOffset = $(".joinus").offset().top; 
-  let windowHeight = $(window).height(); 
+  let scroll = $(window).scrollTop();
+  let joinusOffset = $(".joinus").offset().top;
+  let windowHeight = $(window).height();
 
   if (scroll + windowHeight > joinusOffset + 100) {
     $("#header").fadeOut();
@@ -88,13 +104,13 @@ $(window).on('load scroll', function () {
 // joinus  textanimation
 
 $(window).on('load scroll', function () {
-    const windowHeight = $(window).height();
+  const windowHeight = $(window).height();
 
   $(".textanimation").each(function () {
-    const $this = $(this); 
-    const scroll = $(window).scrollTop(); 
-    const targetTop = $this.offset().top; 
-    const targetBottom = targetTop + $this.outerHeight(); 
+    const $this = $(this);
+    const scroll = $(window).scrollTop();
+    const targetTop = $this.offset().top;
+    const targetBottom = targetTop + $this.outerHeight();
 
     const shouldShow = scroll > targetTop - windowHeight;
 
