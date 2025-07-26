@@ -501,17 +501,18 @@ section {
         margin-bottom: 100px;
 
         h2 {
+            margin-bottom: 12px;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        h3 {
             font-size: 48px;
             font-weight: 500;
 
             strong {
                 font-weight: 700;
             }
-        }
-
-        p {
-            font-size: 32px;
-            margin-bottom: 8px;
         }
     }
 
@@ -627,11 +628,12 @@ section {
 
 /* =======voice========================================= */
 .voice {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
     padding: 80px 20px 0 20px;
     background-color: #fff;
     text-align: center;
-    min-height: 100vh;
-    height: auto;
     width: 100%;
     background-image: url("../img/voice_bgimg.png");
     background-size: cover;
@@ -643,11 +645,14 @@ section {
         margin-bottom: 60px;
         color: #fff;
 
-        p {
-            font-size: 32px;
-        }
 
         h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        h3 {
             font-size: 48px;
             font-weight: 400;
             margin-top: 8px;
