@@ -843,6 +843,7 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
+
   -webkit-animation: avatar-rerote 2s steps(1) infinite;
           animation: avatar-rerote 2s steps(1) infinite;
 }
@@ -850,12 +851,14 @@ section {
 @-webkit-keyframes textanimation {
   0% {
     transform: translateY(2em);
+
   }
   50% {
     transform: translateY(-0.5em);
   }
   100% {
     transform: translateY(0);
+
   }
 }
 
@@ -1104,12 +1107,14 @@ section {
             animation-timing-function: cubic-bezier(0.2, 0, 0.9, 1);
     /* 再落下：加速 */
   }
+
   80% {
     top: 0;
     /* 地面着地2回目 */
     -webkit-animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
             animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
     /* 小さく跳ね上がり */
+
   }
   90% {
     top: -20%;
@@ -1121,6 +1126,14 @@ section {
   100% {
     top: 0;
     /* 完全に着地して静止 */
+  }
+}
+@-webkit-keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 @-webkit-keyframes infinity-scroll-left {
@@ -1168,7 +1181,7 @@ CONTENT
   position: relative;
   overflow: hidden;
 }
-.main-visual h2 {
+.main-visual .page-title {
   position: relative;
   top: -70px;
   left: 1%;
@@ -1176,6 +1189,10 @@ CONTENT
   font-size: 30px;
   font-weight: 700;
   margin: 0 0 32px 15%;
+}
+.main-visual .page-title.text-show {
+  -webkit-animation: textanimation 1s forwards;
+          animation: textanimation 1s forwards;
 }
 .main-visual::before {
   content: "CONTENTS";
@@ -1189,6 +1206,29 @@ CONTENT
 }
 
 /* ——— Section ——— */
+.contentfadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+.contentfadein2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+.contentfadein3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .detail-contents {
   padding: 400px 24px 120px;
   line-height: 2;
@@ -1412,7 +1452,10 @@ footer {
 }
 footer p {
   font-size: 12px;
+  margin-block: 15px;
 }
+
+
 
 #mouse-stalker {
   position: fixed;
