@@ -330,8 +330,7 @@ section {
   height: 11px;
   border-radius: 50%;
   background: #333;
-  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
-          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+  animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
 }
 .mv .scroll_down span {
   position: absolute;
@@ -345,34 +344,12 @@ section {
   text-decoration: none;
   text-transform: uppercase;
 }
-@-webkit-keyframes circlemove {
-  0% {
-    bottom: 160px;
-  }
-  100% {
-    bottom: 0px;
-  }
-}
 @keyframes circlemove {
   0% {
     bottom: 160px;
   }
   100% {
     bottom: 0px;
-  }
-}
-@-webkit-keyframes cirlemovehide {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes cirlemovehide {
@@ -723,10 +700,10 @@ section {
 /* =======joinus========================================= */
 .joinus {
   padding-bottom: 0;
-  margin-bottom: 100vh;
+  margin-bottom: 50vh;
 }
 .joinus .joinus-start {
-  height: 110vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -741,75 +718,60 @@ section {
   display: flex;
   overflow: hidden;
 }
-.joinus .joinus-start .start-text p {
+.joinus .joinus-start .start-text .textanimation {
   font-size: 64px;
   transform: translateY(2em);
-  -webkit-animation: textanimation 1s forwards;
-          animation: textanimation 1s forwards;
 }
-.joinus .joinus-start .start-text p:nth-child(1) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+.joinus .joinus-start .start-text .textanimation.text-show {
+  animation: textanimation 1s forwards;
 }
-.joinus .joinus-start .start-text p:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+.joinus .joinus-start .start-text .textanimation:nth-child(1) {
+  animation-delay: 0.1s;
 }
-.joinus .joinus-start .start-text p:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+.joinus .joinus-start .start-text .textanimation:nth-child(2) {
+  animation-delay: 0.2s;
 }
-.joinus .joinus-start .start-text p:nth-child(4) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+.joinus .joinus-start .start-text .textanimation:nth-child(3) {
+  animation-delay: 0.3s;
 }
-.joinus .joinus-start .start-text p:nth-child(5) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+.joinus .joinus-start .start-text .textanimation:nth-child(4) {
+  animation-delay: 0.4s;
 }
-.joinus .joinus-start .start-text p:nth-child(6) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+.joinus .joinus-start .start-text .textanimation:nth-child(5) {
+  animation-delay: 0.5s;
 }
-.joinus .joinus-start .start-text p:nth-child(7) {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+.joinus .joinus-start .start-text .textanimation:nth-child(6) {
+  animation-delay: 0.6s;
 }
-.joinus .joinus-start .start-text p:nth-child(8) {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+.joinus .joinus-start .start-text .textanimation:nth-child(7) {
+  animation-delay: 0.7s;
 }
-.joinus .joinus-start .start-text p:nth-child(9) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+.joinus .joinus-start .start-text .textanimation:nth-child(8) {
+  animation-delay: 0.8s;
 }
-.joinus .joinus-start .start-text p:nth-child(10) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+.joinus .joinus-start .start-text .textanimation:nth-child(9) {
+  animation-delay: 0.9s;
 }
-.joinus .joinus-start .start-text p:nth-child(11) {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
+.joinus .joinus-start .start-text .textanimation:nth-child(10) {
+  animation-delay: 1s;
 }
-.joinus .joinus-start .start-text p:nth-child(12) {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+.joinus .joinus-start .start-text .textanimation:nth-child(11) {
+  animation-delay: 1.1s;
 }
-.joinus .joinus-start .start-text p:nth-child(13) {
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
+.joinus .joinus-start .start-text .textanimation:nth-child(12) {
+  animation-delay: 1.2s;
 }
-.joinus .joinus-start .start-text p:nth-child(14) {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
+.joinus .joinus-start .start-text .textanimation:nth-child(13) {
+  animation-delay: 1.3s;
 }
-.joinus .joinus-start .start-text p:nth-child(15) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+.joinus .joinus-start .start-text .textanimation:nth-child(14) {
+  animation-delay: 1.4s;
 }
-.joinus .joinus-start .start-text p:nth-child(16) {
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
+.joinus .joinus-start .start-text .textanimation:nth-child(15) {
+  animation-delay: 1.5s;
+}
+.joinus .joinus-start .start-text .textanimation:nth-child(16) {
+  animation-delay: 1.6s;
 }
 .joinus .joinus-start .start-avatar {
   display: flex;
@@ -820,10 +782,19 @@ section {
 }
 .joinus .joinus-start .start-avatar img {
   height: 100px;
-  -webkit-animation: joinus 2s steps(1) infinite;
-          animation: joinus 2s steps(1) infinite;
+  animation: joinus 2s steps(1) infinite;
 }
 
+@keyframes textanimation {
+  0% {
+    transform: translateY(2em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .contact {
   position: fixed;
   bottom: 0;
@@ -839,7 +810,19 @@ section {
      object-fit: contain;
   display: block;
   margin: 0 auto;
-  margin-bottom: 250px;
+  margin-bottom: 30px;
+}
+.contact .container .btn-text-area {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 220px;
+  max-width: 850px;
+  font-size: 24px;
+}
+.contact .container .btn-text-area .btn-text {
+  width: 380px;
+  text-align: center;
 }
 .contact .avatar-line {
   margin-bottom: 40px;
@@ -861,16 +844,14 @@ section {
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
   animation: infinity-scroll-left 50s infinite linear 0.5s both;
   margin-bottom: 20px;
-
 }
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {
-  -webkit-animation: infinity-scroll-right 50s infinite linear 0.5s both;
-          animation: infinity-scroll-right 50s infinite linear 0.5s both;
+  animation: infinity-scroll-right 50s infinite linear 0.5s both;
 }
 
 .contact-btn-area {
   position: relative;
-  height: 450px;
+  height: 380px;
   width: 100%;
 }
 
@@ -884,7 +865,6 @@ section {
   z-index: 3;
 }
 .contact-btn-wrapper .line-btn-wrapper .btn-text {
-  text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -896,6 +876,10 @@ section {
   height: 120px;
   background-color: #06C655;
   border-radius: 999px;
+  transition: all 1.5s;
+}
+.contact-btn-wrapper .line-btn-wrapper .line-btn:hover {
+  transform: rotateX(360deg);
 }
 .contact-btn-wrapper .line-btn-wrapper .line-btn .line-logo {
   width: 80px;
@@ -920,32 +904,61 @@ section {
   background-color: #FFFFFF;
   border: 7px solid #06C655;
   border-radius: 999px;
+  transition: all 1.5s;
+}
+.contact-btn-wrapper .metaleaf-btn-wrapper .metaleaf-btn:hover {
+  transform: rotateX(360deg);
 }
 .contact-btn-wrapper .metaleaf-btn-wrapper .metaleaf-btn img {
   max-width: 280px;
 }
 
-.btn-fadein {
+.btn-drop {
   opacity: 0;
-  transition: all 1s ease;
 }
 
-.btn-show {
+.drop {
   opacity: 1;
+  animation: rakka 2s forwards;
 }
 
-@-webkit-keyframes textanimation {
+@keyframes rakka {
   0% {
-    transform: translateY(2em);
+    top: -150%;
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.2, 0, 0.9, 1);
+    /* 落下加速 */
   }
-  50% {
-    transform: translateY(-0.5em);
+  45% {
+    top: 0%;
+    opacity: 0.8;
+    /* 地面着地1回目 */
+    animation-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+    /* バウンド：減速上昇 */
+  }
+  65% {
+    top: -50%;
+    /* バウンド頂点 */
+    animation-timing-function: cubic-bezier(0.2, 0, 0.9, 1);
+    /* 再落下：加速 */
+  }
+  80% {
+    top: 0;
+    /* 地面着地2回目 */
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    /* 小さく跳ね上がり */
+  }
+  90% {
+    top: -20%;
+    /* 小さな跳ね返りの頂点 */
+    animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1);
+    /* 再落下：加速 */
   }
   100% {
-    transform: translateY(0);
+    top: 0;
+    /* 完全に着地して静止 */
   }
 }
-
 @keyframes textanimation {
   0% {
     transform: translateY(2em);
@@ -955,23 +968,6 @@ section {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes joinus {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes joinus {
@@ -991,28 +987,12 @@ section {
     transform: rotate(0deg);
   }
 }
-@-webkit-keyframes infinity-scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 @keyframes infinity-scroll-left {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
-  }
-}
-@-webkit-keyframes infinity-scroll-right {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
   }
 }
 @keyframes infinity-scroll-right {
@@ -1229,5 +1209,4 @@ footer {
 }
 footer p {
   font-size: 14px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

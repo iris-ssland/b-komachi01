@@ -87,12 +87,12 @@ $(window).on('load scroll', function () {
 
 
 
-// fadein
+// textanimation
 
 $(window).on('load scroll', function () {
     const windowHeight = $(window).height();
 
-  $(".btn-fadein").each(function () {
+  $(".textanimation").each(function () {
     const $this = $(this); 
     const scroll = $(window).scrollTop(); 
     const targetTop = $this.offset().top; 
@@ -103,9 +103,48 @@ $(window).on('load scroll', function () {
     const isCompletelyOutOfView = (scroll > targetBottom) || (scroll + windowHeight < targetTop);
 
     if (shouldShow && !isCompletelyOutOfView) {
-      $this.addClass("btn-show");
+      $this.addClass("text-show");
     } else {
-      $this.removeClass("btn-show");
+      $this.removeClass("text-show");
     }
   });
 });
+
+
+// drop
+
+$(window).on('load scroll', function () {
+  const windowHeight = $(window).height();
+
+  $(".btn-drop").each(function () {
+    const $this = $(this);
+    const scroll = $(window).scrollTop();
+    const targetTop = $this.offset().top;
+    const targetBottom = targetTop + $this.outerHeight();
+
+    const shouldShow = scroll > targetTop - windowHeight;
+
+    const isCompletelyOutOfView = (scroll > targetBottom) || (scroll + windowHeight < targetTop);
+
+    if (shouldShow && !isCompletelyOutOfView) {
+      $this.addClass("drop");
+    } else {
+      $this.removeClass("drop");
+    }
+  });
+});
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const mono = document.querySelector('.btn-fadein');
+
+//   const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         mono.classList.add('drop');
+//         // 一度アニメーションしたら監視解除
+//       }
+//     });
+//   }, { threshold: 0.5 }); // 要素の半分以上が見えたら反応
+
+//   observer.observe(mono);
+// });
