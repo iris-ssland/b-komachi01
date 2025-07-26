@@ -85,12 +85,12 @@ $(window).on('load scroll', function () {
 
 
 
-// fadein
+// textanimation
 
 $(window).on('load scroll', function () {
     const windowHeight = $(window).height();
 
-  $(".btn-fadein").each(function () {
+  $(".textanimation").each(function () {
     const $this = $(this); 
     const scroll = $(window).scrollTop(); 
     const targetTop = $this.offset().top; 
@@ -101,9 +101,33 @@ $(window).on('load scroll', function () {
     const isCompletelyOutOfView = (scroll > targetBottom) || (scroll + windowHeight < targetTop);
 
     if (shouldShow && !isCompletelyOutOfView) {
-      $this.addClass("btn-show");
+      $this.addClass("text-show");
     } else {
-      $this.removeClass("btn-show");
+      $this.removeClass("text-show");
+    }
+  });
+});
+
+
+// drop
+
+$(window).on('load scroll', function () {
+  const windowHeight = $(window).height();
+
+  $(".btn-drop").each(function () {
+    const $this = $(this);
+    const scroll = $(window).scrollTop();
+    const targetTop = $this.offset().top;
+    const targetBottom = targetTop + $this.outerHeight();
+
+    const shouldShow = scroll > targetTop - windowHeight;
+
+    const isCompletelyOutOfView = (scroll > targetBottom) || (scroll + windowHeight < targetTop);
+
+    if (shouldShow && !isCompletelyOutOfView) {
+      $this.addClass("drop");
+    } else {
+      $this.removeClass("drop");
     }
   });
 });
