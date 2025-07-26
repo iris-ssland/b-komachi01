@@ -972,18 +972,18 @@ section {
     .container {
         .joinas-image {
             max-width: 800px;
-            // max-height: 40vh;
+            max-height: 40vh;
             object-fit: contain;
             display: block;
             margin: 0 auto;
-            // margin-bottom: 20px;
+            margin-bottom: -10px;
         }
 
         .btn-text-area {
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
-            margin-bottom: 180px;
+            margin-bottom: 170px;
             max-width: 850px;
             font-size: 24px;
 
@@ -1008,7 +1008,7 @@ section {
 
                     .scroll-avatar-item {
                         // width: calc(100vw / 30);
-                        width: 60px;
+                        width: 50px;
 
                         img {
                             width: 100%;
@@ -1031,7 +1031,7 @@ section {
 
 .contact-btn-area {
     position: relative;
-    height: 340px;
+    height: 300px;
     width: 100%;
 }
 
@@ -1066,8 +1066,8 @@ section {
             }
 
             .line-logo {
-                width: 80px;
-                height: 80px;
+                width: 70px;
+                height: 70px;
                 margin-right: 20px;
             }
 
@@ -1517,6 +1517,5 @@ footer {
 
     p {
         font-size: 12px;
-        margin-block: 15px;
     }
 }
