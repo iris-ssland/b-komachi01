@@ -829,7 +829,9 @@ section {
 
             .textanimation {
                 font-size: 64px;
+                font-weight: bold;
                 transform: translateY(2em);
+                text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 
                 &.text-show {
                     animation: textanimation 1s forwards;
@@ -911,7 +913,7 @@ section {
 
             img {
                 height: 100px;
-                animation: joinus 2s steps(1) infinite;
+                animation: avatar-rerote 2s steps(1) infinite;
             }
         }
     }
@@ -920,12 +922,37 @@ section {
 @keyframes textanimation {
     0% {
         transform: translateY(2em);
-        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-0.5em);
     }
 
     100% {
         transform: translateY(0);
-        opacity: 1;
+    }
+}
+
+
+@keyframes avatar-rerote {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }
 
@@ -949,14 +976,14 @@ section {
             object-fit: contain;
             display: block;
             margin: 0 auto;
-            margin-bottom: 30px;
+            // margin-bottom: 20px;
         }
 
         .btn-text-area {
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
-            margin-bottom: 220px;
+            margin-bottom: 180px;
             max-width: 850px;
             font-size: 24px;
 
@@ -968,7 +995,7 @@ section {
     }
 
     .avatar-line {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
 
         .scroll-avatar {
             .scroll-avatar-wrap {
@@ -1004,7 +1031,7 @@ section {
 
 .contact-btn-area {
     position: relative;
-    height: 380px;
+    height: 340px;
     width: 100%;
 }
 
@@ -1132,42 +1159,6 @@ section {
     }
 }
 
-@keyframes textanimation {
-    0% {
-        transform: translateY(2em);
-    }
-
-    50% {
-        transform: translateY(-0.5em);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes joinus {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(-20deg);
-    }
-
-    50% {
-        transform: rotate(0deg);
-    }
-
-    75% {
-        transform: rotate(20deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
 
 @keyframes infinity-scroll-left {
     from {

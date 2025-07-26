@@ -101,7 +101,7 @@ $(window).on('load scroll', function () {
 
 
 
-// textanimation
+// joinus  textanimation
 
 $(window).on('load scroll', function () {
   const windowHeight = $(window).height();
@@ -125,7 +125,7 @@ $(window).on('load scroll', function () {
 });
 
 
-// drop
+// contact-btn  drop
 
 $(window).on('load scroll', function () {
   const windowHeight = $(window).height();
