@@ -998,7 +998,6 @@ section {
 /* -----------------------------
 CONTENT
 ----------------------------- */
-/* ——— Header ——— */
 /* Main Visual */
 .main-visual {
   margin-top: 90px;
@@ -1032,6 +1031,7 @@ CONTENT
 /* ——— Section ——— */
 .detail-contents {
   padding: 400px 24px 120px;
+  line-height: 2;
 }
 .detail-contents .item {
   display: flex;
@@ -1089,16 +1089,19 @@ CONTENT
 .detail-contents .ellipse.blur {
   width: 260px;
   height: 260px;
+  z-index: -10;
   background: url("../img/green_ellipse_1.png") center/contain no-repeat;
 }
 .detail-contents .ellipse.outline {
   width: 420px;
   height: 420px;
+  z-index: -10;
   background: url("../img/green_ellipse_2.png") center/contain no-repeat;
 }
 .detail-contents .ellipse.solid {
   width: 200px;
   height: 200px;
+  z-index: -10;
   background: url("../img/green_ellipse_3.png") center/contain no-repeat;
 }
 .detail-contents .con-1 {
@@ -1148,6 +1151,11 @@ CONTENT
   top: 55%;
   left: 40%;
 }
+.detail-contents .con-2 .ellipse.solid {
+  position: absolute;
+  top: 55%;
+  left: 0;
+}
 .detail-contents .con-3 {
   position: relative;
 }
@@ -1168,8 +1176,11 @@ CONTENT
 .detail-contents .con-3 .item1 .item-text {
   margin-bottom: 10%;
 }
-.detail-contents .con-3 .item2 .ite-body {
-  margin-left: 10%;
+.detail-contents .con-3 .item2 {
+  margin-bottom: 50px;
+}
+.detail-contents .con-3 .item2 .item-body {
+  margin-bottom: 0;
 }
 .detail-contents .con-3 .item2 .item-img .con3_img2 {
   margin-top: -10%;
@@ -1178,27 +1189,68 @@ CONTENT
 .detail-contents .con-3 .item2 .item-text {
   margin-left: 10%;
 }
+.detail-contents .con-3 .item3 .item-img .con3_img3 {
+  margin-left: 10%;
+  width: 80%;
+}
+.detail-contents .con-3 .item3 .item-text {
+  margin-bottom: 10%;
+}
+.detail-contents .con-3 .ellipse.outline {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.detail-contents .con-3 .ellipse.solid {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+}
 .detail-contents .con-3 .ellipse.blur {
+  position: absolute;
+  top: 80%;
+  left: 55%;
+}
+.detail-contents .con-4 {
+  position: relative;
+}
+.detail-contents .con-4 .item .item-img .con4_img1 {
+  width: 70%;
+  margin-left: 25%;
+  z-index: -1;
+}
+.detail-contents .con-4 .item .item-img .con4_img2 {
+  width: 60%;
+  margin-top: -20%;
+  position: relative;
+}
+.detail-contents .con-4 .item .item-img .con4_img3 {
+  width: 70%;
+  margin-left: 40%;
+  margin-top: -30%;
+  z-index: -1;
+}
+.detail-contents .con-4 .ellipse.blur {
   position: absolute;
   top: 30%;
   left: 0;
 }
-.detail-contents .con-3 .ellipse.outline {
+.detail-contents .con-4 .ellipse.outline {
   position: absolute;
   top: 55%;
-  left: 40%;
+  left: 20%;
 }
-.detail-contents .con-3 .ellipse.solid {
+.detail-contents .con-4 .ellipse.solid {
   position: absolute;
-  top: 5%;
-  left: 55%;
+  top: 10%;
+  left: 60%;
 }
 
-/* ---------- ヒーロー（グラデ） ---------- */
 footer {
   text-align: center;
   padding-bottom: 10px;
 }
 footer p {
   font-size: 14px;
-}/*# sourceMappingURL=style.css.map */
+}
+

@@ -1186,70 +1186,6 @@ section {
 CONTENT
 ----------------------------- */
 
-/* ——— Header ——— */
-// .header {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     background: #fff;
-//     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-//     z-index: 1000;
-// }
-
-// .header .inner {
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     padding: 12px 24px;
-//     display: flex;
-//     align-items: center;
-//     gap: 32px;
-// }
-
-// .logo img {
-//     height: 32px;
-// }
-
-// .nav {
-//     display: flex;
-//     gap: 32px;
-//     margin-left: auto;
-// }
-
-// .nav a {
-//     font-size: 14px;
-//     position: relative;
-//     padding-bottom: 4px;
-// }
-
-// .nav a::after {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     width: 0;
-//     height: 2px;
-//     background: #0abf6f;
-//     transition: width 0.3s ease;
-// }
-
-// .nav a:hover::after {
-//     width: 100%;
-// }
-
-// .cta {
-//     display: flex;
-//     align-items: center;
-//     gap: 8px;
-//     padding: 8px 20px;
-//     border-radius: 24px;
-//     background: #0abf6f;
-//     font-size: 14px;
-//     color: #fff;
-// }
-
-
-
 /* Main Visual */
 .main-visual {
     margin-top: 90px;
@@ -1288,6 +1224,7 @@ CONTENT
 /* ——— Section ——— */
 .detail-contents {
     padding: 400px 24px 120px;
+    line-height: 2;
 
     .item {
         display: flex;
@@ -1354,18 +1291,21 @@ CONTENT
     .ellipse.blur {
         width: 260px;
         height: 260px;
+        z-index: -10;
         background: url("../img/green_ellipse_1.png") center/contain no-repeat;
     }
 
     .ellipse.outline {
         width: 420px;
         height: 420px;
+        z-index: -10;
         background: url("../img/green_ellipse_2.png") center/contain no-repeat;
     }
 
     .ellipse.solid {
         width: 200px;
         height: 200px;
+        z-index: -10;
         background: url("../img/green_ellipse_3.png") center/contain no-repeat;
     }
 
@@ -1436,11 +1376,11 @@ CONTENT
             left: 40%;
         }
 
-        // .ellipse.solid {
-        //     position: absolute;
-        //     top: 5%;
-        //     left: 55%;
-        // }
+        .ellipse.solid {
+            position: absolute;
+            top: 55%;
+            left: 0;
+        }
     }
 
     // Content3
@@ -1472,9 +1412,10 @@ CONTENT
         }
 
         .item2 {
-            .ite-body {
-                // margin-right: 0;
-                margin-left: 10%;
+            margin-bottom: 50px;
+
+            .item-body {
+                margin-bottom: 0;
             }
 
             .item-img {
@@ -1489,6 +1430,65 @@ CONTENT
             }
         }
 
+        .item3 {
+            .item-img {
+                .con3_img3 {
+                    margin-left: 10%;
+                    width: 80%;
+                }
+            }
+
+            .item-text {
+                margin-bottom: 10%;
+            }
+        }
+
+        .ellipse.outline {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+        }
+
+        .ellipse.solid {
+            position: absolute;
+            top: 10%;
+            left: 60%;
+        }
+
+        .ellipse.blur {
+            position: absolute;
+            top: 80%;
+            left: 55%;
+        }
+    }
+
+    // Content4
+    .con-4 {
+        position: relative;
+
+        .item {
+            .item-img {
+                .con4_img1 {
+                    width: 70%;
+                    margin-left: 25%;
+                    z-index: -1;
+                }
+
+                .con4_img2 {
+                    width: 60%;
+                    margin-top: -20%;
+                    position: relative;
+                }
+
+                .con4_img3 {
+                    width: 70%;
+                    margin-left: 40%;
+                    margin-top: -30%;
+                    z-index: -1;
+                }
+            }
+        }
+
         .ellipse.blur {
             position: absolute;
             top: 30%;
@@ -1498,109 +1498,16 @@ CONTENT
         .ellipse.outline {
             position: absolute;
             top: 55%;
-            left: 40%;
+            left: 20%;
         }
 
         .ellipse.solid {
             position: absolute;
-            top: 5%;
-            left: 55%;
+            top: 10%;
+            left: 60%;
         }
     }
 }
-
-
-// 参考！！！！
-/* ---------- ヒーロー（グラデ） ---------- */
-// .hero {
-//     padding: 6rem 5vw 3rem;
-//     background: linear-gradient(180deg, #b5e79a 0%, #d1f17a 40%, transparent 100%);
-//     position: relative;
-//     overflow: hidden;
-// }
-
-// .hero h1.big {
-//     font-size: 10vw;
-//     /* ビューポート幅に応じて可変 */
-//     font-weight: 900;
-//     color: rgba(0, 0, 0, .06);
-//     letter-spacing: .1em;
-// }
-
-// .hero h2.sub {
-//     font-size: 1.2rem;
-//     font-weight: 700;
-//     position: absolute;
-//     top: calc(6rem + 5vw);
-//     /* h1 の左上に重ねる */
-//     left: 5vw;
-// }
-
-// /* ---------- セクション 01 ---------- */
-// .section {
-//     position: relative;
-//     padding: 6rem 5vw;
-// }
-
-// .section .index {
-//     font-size: .9rem;
-//     letter-spacing: .2em;
-//     color: #666;
-// }
-
-// .section h3 {
-//     margin: .5rem 0 3rem;
-//     font-size: 1.35rem;
-//     font-weight: 600;
-// }
-
-// .section .inner {
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 3rem;
-// }
-
-// /* ---------- 画像エリア ---------- */
-// .mockups {
-//     flex: 1 1 340px;
-//     position: relative;
-// }
-
-// .mockups img:nth-child(2) {
-//     position: absolute;
-//     bottom: -2rem;
-//     left: 4rem;
-//     width: 75%;
-//     box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
-// }
-
-// .mockups img {
-//     border-radius: 12px;
-//     box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
-// }
-
-// /* ---------- テキストブロック ---------- */
-// .copy {
-//     flex: 1 1 280px;
-//     font-size: .95rem;
-//     position: relative;
-// }
-
-// .copy p:first-of-type::first-letter {
-//     font-size: 180%;
-//     line-height: 1;
-// }
-
-// /* ---------- 装飾エリプス（添付 PNG） ---------- */
-// .ellipse {
-//     position: absolute;
-//     pointer-events: none;
-//     z-index: -1;
-// }
-
-
-
-
 
 // =====footer=======================
 footer {
@@ -1608,6 +1515,7 @@ footer {
     padding-bottom: 10px;
 
     p {
-        font-size: 14px;
+        font-size: 12px;
+        margin-block: 15px;
     }
 }
