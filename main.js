@@ -133,18 +133,3 @@ $(window).on('load scroll', function () {
     }
   });
 });
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const mono = document.querySelector('.btn-fadein');
-
-//   const observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         mono.classList.add('drop');
-//         // 一度アニメーションしたら監視解除
-//       }
-//     });
-//   }, { threshold: 0.5 }); // 要素の半分以上が見えたら反応
-
-//   observer.observe(mono);
-// });
