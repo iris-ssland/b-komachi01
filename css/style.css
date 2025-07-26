@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
 html {
   font-size: 100%;
   color: #333333;
@@ -109,7 +110,7 @@ section {
   transition: opacity 0.2s;
   position: relative;
 }
-#header .header-inner .nav .nav-menu aa:hover {
+#header .header-inner .nav .nav-menu a:hover {
   opacity: 0.7;
 }
 #header .header-inner .nav .nav-menu a::after {
@@ -241,7 +242,6 @@ section {
   position: relative;
   overflow: hidden;
   margin-top: 98px;
-  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
 }
 @media screen and (max-width: 900px) {
   .mv {
@@ -524,8 +524,8 @@ section {
   transform: scale(1.02);
 }
 .content .more-link {
-  margin-top: 60px;
-  font-size: 24px;
+  margin-top: 40px;
+  font-size: 26px;
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -546,7 +546,7 @@ section {
 
 /* =======voice========================================= */
 .voice {
-  padding: 80px 20px;
+  padding: 80px 20px 0 20px;
   background-color: #fff;
   text-align: center;
   min-height: 100vh;
@@ -608,10 +608,11 @@ section {
   margin: 0 auto;
   margin-bottom: 20px;
 }
-.voice .voice-item h3 {
+.voice .voice-item .item-title {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
 }
 .voice .voice-item p {
   font-size: 16px;
@@ -842,7 +843,8 @@ section {
   width: 100%;
 }
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-left {
-  animation: infinity-scroll-left 50s infinite linear 0.5s both;
+  -webkit-animation: infinity-scroll-left 50s infinite linear 0.5s both;
+          animation: infinity-scroll-left 50s infinite linear 0.5s both;
   margin-bottom: 20px;
 }
 .contact .avatar-line .scroll-avatar .scroll-avatar-wrap .scroll-avatar-list-right {

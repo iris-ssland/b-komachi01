@@ -42,16 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // スクロールバーとヘッダー
 $(window).scroll(function () {
-  let scroll = $(window).scrollTop(); // 現在のスクロール位置
-  let joinusOffset = $(".joinus").offset().top; // .joinusの位置
-  let windowHeight = $(window).height(); // 画面の高さ
+  let scroll = $(window).scrollTop(); 
+  let joinusOffset = $(".joinus").offset().top; 
+  let windowHeight = $(window).height(); 
 
   if (scroll + windowHeight > joinusOffset + 100) {
-    // joinusが画面内に入ったら
     $("#header").fadeOut();
     $(".scroll_down").fadeOut();
   } else {
-    // joinusから離れたら表示
     $("#header").fadeIn();
     $(".scroll_down").fadeIn();
   }
