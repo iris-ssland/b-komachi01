@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@use './parts/mixin' as m;
+@use './parts/mixin'as m;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 @include m.sp {}
@@ -1218,7 +1218,7 @@ CONTENT
     position: relative;
     overflow: hidden;
 
-    h2 {
+    .page-title {
         position: relative;
         top: -70px;
         left: 1%;
@@ -1226,24 +1226,69 @@ CONTENT
         font-size: 30px;
         font-weight: 700;
         margin: 0 0 32px 15%;
-    }
 
-    &::before {
-        content: "CONTENTS";
-        position: absolute;
-        top: 40%;
-        left: 15%;
-        font-size: 120px;
-        font-weight: 700;
-        line-height: 1;
-        color: rgba(0, 0, 0, 0.06);
+        // &.text-show {
+        //     animation: textanimation 1s forwards;
     }
+}
 
+// .textanimation:nth-child(1) {
+//     animation-delay: 0.1s
+// }
+
+// .textanimation:nth-child(2) {
+//     animation-delay: 0.2s
+// }
+
+// .textanimation:nth-child(3) {
+//     animation-delay: 0.3s
+// }
+
+// .textanimation:nth-child(4) {
+//     animation-delay: 0.4s
+// }
+
+// .textanimation:nth-child(5) {
+//     animation-delay: 0.5s
+// }
+
+&::before {
+    content: "CONTENTS";
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.06);
 }
 
 
 
 /* ——— Section ——— */
+.contentfadein {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.contentfadein2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.contentfadein3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.is-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .detail-contents {
     padding: 400px 24px 120px;
     line-height: 2;
@@ -1251,7 +1296,7 @@ CONTENT
     .item {
         display: flex;
         justify-content: center;
-        margin-bottom: 200px;
+        margin-bottom: 500px;
 
         .item-img {
             width: 50%;
@@ -1366,6 +1411,7 @@ CONTENT
             top: 55%;
             left: 0;
         }
+
     }
 
     // Content2
