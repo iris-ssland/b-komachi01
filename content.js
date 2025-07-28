@@ -1,5 +1,38 @@
 // contact.html
 
+// ハンバーガーメニュー
+$(".hamburger").on("click", function () {
+  $("#header").toggleClass("open");
+});
+
+$("#mask").on("click", function () {
+  $("#header").removeClass("open");
+});
+
+$("#nav a").on("click", function () {
+  $("#header").removeClass("open");
+});
+
+// ページ内リンクのスムーススクロール
+$('a[href^="#"]').on('click', function (e) {
+  const speed = 500;
+  const href = $(this).attr("href");
+  const $target = $(href === "#" || href === "" ? "html" : href);
+
+  if ($target.length) {
+    e.preventDefault();
+
+    const headerHeight = $("#header").outerHeight();
+    const position = $target.offset().top - headerHeight;
+
+    $("html, body").animate({ scrollTop: position }, speed, "swing");
+  }
+});
+
+
+
+
+
 // スクロール時のイベント
 $(window).scroll(function () {
   // 画面がスクロールされた時に実行する
