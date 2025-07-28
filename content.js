@@ -1,5 +1,38 @@
 // contact.html
 
+// ハンバーガーメニュー
+$(".hamburger").on("click", function () {
+  $("#header").toggleClass("open");
+});
+
+$("#mask").on("click", function () {
+  $("#header").removeClass("open");
+});
+
+$("#nav a").on("click", function () {
+  $("#header").removeClass("open");
+});
+
+// ページ内リンクのスムーススクロール
+$('a[href^="#"]').on('click', function (e) {
+  const speed = 500;
+  const href = $(this).attr("href");
+  const $target = $(href === "#" || href === "" ? "html" : href);
+
+  if ($target.length) {
+    e.preventDefault();
+
+    const headerHeight = $("#header").outerHeight();
+    const position = $target.offset().top - headerHeight;
+
+    $("html, body").animate({ scrollTop: position }, speed, "swing");
+  }
+});
+
+
+
+
+
 // スクロール時のイベント
 $(window).scroll(function () {
   // 画面がスクロールされた時に実行する
@@ -82,7 +115,6 @@ $(window).scroll(function () {
       $(this).addClass('is-show');   // CSS だけでアニメ完結
     }
   });
-
 });
 
 // スクロール時のイベント
@@ -113,25 +145,20 @@ $(window).scroll(function () {
 
 });
 
-// textanimation
 
-// $(window).on('load scroll', function () {
-//     const windowHeight = $(window).height();
+// mouse-stalker
 
-//   $(".textanimation").each(function () {
-//     const $this = $(this); 
-//     const scroll = $(window).scrollTop(); 
-//     const targetTop = $this.offset().top; 
-//     const targetBottom = targetTop + $this.outerHeight(); 
+const stalker = document.getElementById("mouse-stalker");
 
-//     const shouldShow = scroll > targetTop - windowHeight;
+document.addEventListener("mousemove", (e) => {
+  // 追従座標
+  stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 
-//     const isCompletelyOutOfView = (scroll > targetBottom) || (scroll + windowHeight < targetTop);
-
-//     if (shouldShow && !isCompletelyOutOfView) {
-//       $this.addClass("text-show");
-//     } else {
-//       $this.removeClass("text-show");
-//     }
-//   });
-// });
+  // 画面の中央より右なら反転
+  const center = window.innerWidth / 2;
+  if (e.clientX > center) {
+    stalker.classList.add("flip");
+  } else {
+    stalker.classList.remove("flip");
+  }
+});
