@@ -45,37 +45,65 @@ li {
 .opening-animation {
     width: 100vw;
     height: 100vh;
-    background: #FFFFFF;
-    animation: openingAnimation 0.5s linear 3s forwards;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
 
-    .opening-text {
-        margin: 0 auto 100px auto;
+    .shutter {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #FFFFFF;
+        z-index: 9999;
+        animation: byeShutter 4s forwards;
 
-        .opening-text-letter {
-            width: 34.3ch;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid #333333;
-            font-size: 64px;
-            font-family: monospace;
-            color: #444;
-            animation: typing 2s steps(17), typingEffect .5s step-end infinite alternate;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: #f9f6a2;
+            width: 0;
+            height: 5px;
+            animation: shutterOpen 4s forwards;
+        }
 
-            @include m.sp {
-                font-size: 36px;
+        .shuttersection {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .opening-text {
+                margin: 0 auto 200px auto;
+
+                .opening-text-letter {
+                    width: 34.3ch;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    border-right: 3px solid #1e1e1e;
+                    font-size: 64px;
+                    font-family: monospace;
+                    color: #1e1e1e;
+                    animation: typing 2s steps(17), typingEffect .5s step-end infinite alternate;
+
+                    @include m.sp {
+                        font-size: 36px;
+                    }
+                }
+            }
+
+            .loading {
+                text-align: center;
+                color: #1e1e1e;
+                letter-spacing: 0.5rem;
             }
         }
-    }
-
-    .loading {
-        text-align: center;
     }
 }
 
@@ -91,14 +119,38 @@ li {
     }
 }
 
-@keyframes openingAnimation {
-    0% {
+
+@keyframes byeShutter {
+    80% {
         opacity: 1;
     }
 
     100% {
         opacity: 0;
-        visibility: hidden;
+        display: none;
+        z-index: -1;
+    }
+}
+
+@keyframes shutterOpen {
+    0% {
+        width: 0;
+        height: 5px;
+    }
+
+    70% {
+        width: 100%;
+        height: 5px;
+    }
+
+    90% {
+        width: 100%;
+        height: 100%;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -644,6 +696,7 @@ li {
             }
 
             h2 {
+
                 font-size: 26px;
                 margin-bottom: 12px;
                 text-align: center;
@@ -683,6 +736,7 @@ li {
                 gap: 40px;
             }
 
+
             .content-link {
                 display: flex;
                 flex-direction: column;
@@ -710,6 +764,9 @@ li {
                     margin-bottom: 12px;
 
                     @include m.sp {
+
+                        flex-direction: column;
+                        align-items: flex-start;
                         margin: 0 auto;
                         gap: 10px;
                     }
@@ -733,7 +790,6 @@ li {
                             transform: translateY(-5px) scale(1.05);
                             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
                         }
-
                     }
 
                     .text {
@@ -1239,7 +1295,6 @@ li {
 
     .container {
         .joinas-image {
-            // max-width: 800px;
             max-height: 40vh;
             object-fit: contain;
             display: block;

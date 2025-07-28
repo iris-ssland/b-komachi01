@@ -138,14 +138,26 @@ $(window).on('load scroll', function () {
 
 // mouse-stalker
 
-document.addEventListener('DOMContentLoaded', () => {
-  const stalker = document.getElementById("mouse-stalker");
+const stalker = document.getElementById("mouse-stalker");
 
-  if (stalker) { // stalker要素が存在するか確認
-    document.addEventListener("mousemove", (e) => {
-      // CSSのtransform: translate(-50%, -50%); と組み合わせる場合
-      // 単純にマウス座標を要素の左上として設定
-      stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-    });
+let prevX = 0;                    // 前回の X 座標を保持
+const threshold = 4;              // 少しだけ動いた時のガタツキ防止
+
+document.addEventListener("mousemove", (e) => {
+  // 位置を追従
+  stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+
+  // 向きの判定
+  const diffX = e.clientX - prevX;
+
+  if (Math.abs(diffX) > threshold) {
+    if (diffX > 0) {
+      // → に動いた
+      stalker.classList.remove("flip");   // 右向き
+    } else {
+      // ← に動いた
+      stalker.classList.add("flip");      // 左向き
+    }
   }
+  prevX = e.clientX;   // 今回の座標を次回の比較用に保存
 });

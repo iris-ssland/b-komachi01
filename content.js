@@ -150,15 +150,24 @@ $(window).scroll(function () {
 
 const stalker = document.getElementById("mouse-stalker");
 
+let prevX = 0;                    // 前回の X 座標を保持
+const threshold = 4;              // 少しだけ動いた時のガタツキ防止
+
 document.addEventListener("mousemove", (e) => {
-  // 追従座標
+  // 位置を追従
   stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 
-  // 画面の中央より右なら反転
-  const center = window.innerWidth / 2;
-  if (e.clientX > center) {
-    stalker.classList.add("flip");
-  } else {
-    stalker.classList.remove("flip");
+  // 向きの判定
+  const diffX = e.clientX - prevX;
+
+  if (Math.abs(diffX) > threshold) {
+    if (diffX > 0) {
+      // → に動いた
+      stalker.classList.remove("flip");   // 右向き
+    } else {
+      // ← に動いた
+      stalker.classList.add("flip");      // 左向き
+    }
   }
+  prevX = e.clientX;   // 今回の座標を次回の比較用に保存
 });
