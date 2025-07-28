@@ -132,11 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // CSSのtransform: translate(-50%, -50%); と組み合わせる場合
       // 単純にマウス座標を要素の左上として設定
       stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-
-      // または、CSSにtranslate(-50%, -50%)を設定せず、JSだけで中心に合わせる場合
-      // const stalkerWidth = stalker.offsetWidth; // または stalker.clientWidth
-      // const stalkerHeight = stalker.offsetHeight; // または stalker.clientHeight
-      // stalker.style.transform = `translate(${e.clientX - stalkerWidth / 2}px, ${e.clientY - stalkerHeight / 2}px)`;
     });
   }
 });
