@@ -1473,7 +1473,7 @@ CONTENT
 
     .page-title {
         position: relative;
-        top: -70px;
+        top: -55px;
         left: 1%;
         z-index: 1;
         font-size: 30px;
@@ -1483,9 +1483,6 @@ CONTENT
         @include m.sp {
             top: -100px;
         }
-
-        // &.text-show {
-        //     animation: textanimation 1s forwards;
     }
 
     &::before {
@@ -1694,7 +1691,7 @@ CONTENT
         .ellipse.outline {
             position: absolute;
             top: 55%;
-            left: 40%;
+            left: 60%;
         }
 
         .ellipse.solid {
@@ -1853,14 +1850,14 @@ CONTENT
 
         .ellipse.blur {
             position: absolute;
-            top: 30%;
-            left: 0;
+            top: 90%;
+            left: 60%;
         }
 
         .ellipse.outline {
             position: absolute;
-            top: 55%;
-            left: 20%;
+            top: 35%;
+            left: 5%;
         }
 
         .ellipse.solid {
@@ -1911,4 +1908,9 @@ footer {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* flip クラスが付いたときだけ左右反転 */
+#mouse-stalker.flip img {
+    transform: scaleX(-1);
 }

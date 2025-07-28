@@ -1469,7 +1469,7 @@ CONTENT
 }
 .main-visual .page-title {
   position: relative;
-  top: -70px;
+  top: -55px;
   left: 1%;
   z-index: 1;
   font-size: 30px;
@@ -1653,7 +1653,7 @@ CONTENT
 .detail-contents .con-1 .ellipse.outline {
   position: absolute;
   top: 55%;
-  left: 40%;
+  left: 60%;
 }
 .detail-contents .con-1 .ellipse.solid {
   position: absolute;
@@ -1765,13 +1765,13 @@ CONTENT
 }
 .detail-contents .con-4 .ellipse.blur {
   position: absolute;
-  top: 30%;
-  left: 0;
+  top: 90%;
+  left: 60%;
 }
 .detail-contents .con-4 .ellipse.outline {
   position: absolute;
-  top: 55%;
-  left: 20%;
+  top: 35%;
+  left: 5%;
 }
 .detail-contents .con-4 .ellipse.solid {
   position: absolute;
@@ -1811,5 +1811,10 @@ footer p {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* flip クラスが付いたときだけ左右反転 */
+#mouse-stalker.flip img {
+  transform: scaleX(-1);
 }
 /*# sourceMappingURL=style.css.map */
