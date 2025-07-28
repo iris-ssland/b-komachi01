@@ -283,7 +283,6 @@ li {
                 align-items: center;
                 transition: background-color 0.3s;
                 gap: 12px;
-                margin-left: 32px;
                 cursor: pointer;
 
                 &:hover {
@@ -723,7 +722,7 @@ li {
 
             h2 {
 
-                font-size: 26px;
+                font-size: 32px;
                 margin-bottom: 12px;
                 text-align: center;
 
@@ -733,7 +732,7 @@ li {
             }
 
             h3 {
-                font-size: 32px;
+                font-size: 48px;
                 font-weight: 500;
 
                 @include m.sp {
@@ -931,7 +930,7 @@ li {
         color: #fff;
 
         h2 {
-            font-size: 26px;
+            font-size: 32px;
             margin-bottom: 12px;
             text-align: center;
 
@@ -941,7 +940,7 @@ li {
         }
 
         h3 {
-            font-size: 32px;
+            font-size: 48px;
             font-weight: 400;
             margin-top: 8px;
 
