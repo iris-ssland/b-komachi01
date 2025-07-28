@@ -1280,9 +1280,27 @@ li {
 CONTENT
 ----------------------------- */
 
+#header.is-static {
+    position: static;
+    background: #a0dca0;
+
+    .header-inner {
+        .nav {
+            .contact-btn {
+                &:hover {
+                    background-color: #148232;
+                }
+
+                @include m.sp {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
 /* Main Visual */
 .main-visual {
-    margin-top: 90px;
     height: 45vh;
     background: linear-gradient(to bottom, #a0dca0, #f9f6a2, #fff);
     display: flex;
@@ -1306,7 +1324,7 @@ CONTENT
     &::before {
         content: "CONTENTS";
         position: absolute;
-        top: 40%;
+        top: 48%;
         left: 15%;
         font-size: 120px;
         font-weight: 700;
@@ -1343,19 +1361,25 @@ CONTENT
 .contentfadein {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .contentfadein2 {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .contentfadein3 {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 1s;
+    transition: all 2s;
+}
+
+.contentfadein4 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 2.5s;
 }
 
 .is-show {
@@ -1372,7 +1396,7 @@ CONTENT
         justify-content: center;
         margin-bottom: 500px;
 
-        .item-img {
+        & .item-img {
             width: 50%;
         }
 
@@ -1568,6 +1592,7 @@ CONTENT
             }
 
             .item-text {
+                margin-top: 10%;
                 margin-left: 10%;
             }
         }
@@ -1582,6 +1607,7 @@ CONTENT
 
             .item-text {
                 margin-bottom: 10%;
+                margin-top: 15%;
             }
         }
 
@@ -1612,19 +1638,20 @@ CONTENT
             .item-img {
                 .con4_img1 {
                     width: 70%;
-                    margin-left: 25%;
+                    margin-left: 30%;
                     z-index: -1;
                 }
 
                 .con4_img2 {
                     width: 60%;
                     margin-top: -20%;
+                    margin-left: -10%;
                     position: relative;
                 }
 
                 .con4_img3 {
                     width: 70%;
-                    margin-left: 40%;
+                    margin-left: 30%;
                     margin-top: -30%;
                     z-index: -1;
                 }
@@ -1651,6 +1678,14 @@ CONTENT
     }
 }
 
+.contact.contact-is-static {
+    position: static;
+
+    .btn-text-area {
+        margin-bottom: 30px;
+    }
+}
+
 // =====footer=======================
 footer {
     text-align: center;
@@ -1658,6 +1693,7 @@ footer {
 
     p {
         font-size: 12px;
+        margin-block: 5px;
     }
 }
 
