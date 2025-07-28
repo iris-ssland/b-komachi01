@@ -370,7 +370,7 @@ li {
 
         &.row-top {
             justify-content: flex-end;
-            margin-bottom: 60px;
+            margin-bottom: 10px;
         }
 
         &.row-bottom {
@@ -383,7 +383,7 @@ li {
             letter-spacing: 0.15em;
 
             @include m.sp {
-                font-size: 36px;
+                font-size: 100px;
                 text-align: center;
             }
         }
@@ -398,6 +398,7 @@ li {
             @include m.sp {
                 width: 100%;
                 height: auto;
+                border-radius: 0;
             }
         }
     }
@@ -518,6 +519,7 @@ li {
 .about {
     background-color: #fff;
     scroll-margin-top: 120px;
+    padding-bottom: 150px;
 
     @include m.sp {
         padding: 80px 16px;
@@ -547,7 +549,7 @@ li {
             text-align: center;
 
             @include m.sp {
-                font-size: 32px;
+                font-size: 28px;
             }
 
             span {
@@ -626,69 +628,69 @@ li {
         scroll-margin-top: 120px;
         padding-bottom: 150px;
 
-    @include m.sp {
-        padding: 60px 16px;
-    }
-
-
-    .content-title {
-        margin-bottom: 100px;
-
         @include m.sp {
-            margin-bottom: 60px;
+            padding: 60px 16px;
         }
 
-        h2 {
-            margin-bottom: 12px;
-            text-align: center;
-            font-size: 32px;
+
+        .content-title {
+            margin-bottom: 100px;
 
             @include m.sp {
-                font-size: 24px;
+                margin-bottom: 60px;
             }
-        }
+
+            h2 {
+                font-size: 26px;
+                margin-bottom: 12px;
+                text-align: center;
+
+                @include m.sp {
+                    font-size: 24px;
+                }
+            }
 
             h3 {
-                font-size: 48px;
+                font-size: 32px;
                 font-weight: 500;
-              
-            @include m.sp {
-                font-size: 28px;
-                line-height: 1.4;
-            }
 
-            strong {
-                font-weight: 700;
+                @include m.sp {
+                    font-size: 28px;
+                    line-height: 1.4;
+                }
+
+                strong {
+                    font-weight: 700;
+                }
             }
         }
-      }
 
 
-    .content-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 40px;
-        max-width: 1140px;
-        margin: 0 auto;
-
-        @include m.sp {
+        .content-list {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
             gap: 40px;
-        }
+            max-width: 1140px;
+            margin: 0 auto;
 
-        .content-link {
+            @include m.sp {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .content-link {
                 display: flex;
                 flex-direction: column;
                 width: calc(48%);
                 text-decoration: none;
                 color: inherit;
                 height: auto;
-          
-               @include m.sp {
-                width: 100%;
-            }
+
+                @include m.sp {
+                    width: 100%;
+                }
 
                 .content-item {
                     display: flex;
@@ -703,11 +705,11 @@ li {
                     align-items: center;
                     gap: 20px;
                     margin-bottom: 12px;
-                  
-              @include m.sp {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
+
+                    @include m.sp {
+                        margin: 0 auto;
+                        gap: 10px;
+                    }
 
                     .number {
                         font-size: 36px;
@@ -728,7 +730,7 @@ li {
                             transform: translateY(-5px) scale(1.05);
                             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
                         }
->>>>>
+
                     }
 
                     .text {
@@ -738,10 +740,10 @@ li {
                         text-align: left;
                         transition: transform 0.3s ease, color 0.3s ease;
 
-                    @include m.sp {
-                        font-size: 18px;
-                        text-align: left;
-                    }
+                        @include m.sp {
+                            font-size: 18px;
+                            text-align: left;
+                        }
 
                         &:hover {
                             transform: scale(1.05);
@@ -753,8 +755,8 @@ li {
                     width: 100%;
                     border-radius: 12px;
                     overflow: hidden;
-                  
-           img {
+
+                    img {
                         width: 100%;
                         height: auto;
                         object-fit: cover;
@@ -762,11 +764,11 @@ li {
                         opacity: 1;
                         transition: opacity 0.3s, transform 0.3s;
 
-             
-                    @include m.sp {
-                        border-radius: 8px;
-                    }
-             
+
+                        @include m.sp {
+                            border-radius: 8px;
+                        }
+
                         &:hover {
                             opacity: 0.8;
                             transform: scale(1.02);
@@ -783,26 +785,26 @@ li {
             position: relative;
             display: inline-block;
 
-        @include m.sp {
-            font-size: 20px;
-            margin-top: 32px;
-        }
+            @include m.sp {
+                font-size: 20px;
+                margin-top: 32px;
+            }
 
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background: #333;
-            transition: width 0.3s ease;
-        }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background: #333;
+                transition: width 0.3s ease;
+            }
 
             &:hover::after {
                 width: 100%;
             }
-        
+        }
     }
 }
 
@@ -818,6 +820,12 @@ li {
     justify-content: center;
     padding: 0;
 
+    @include m.sp {
+        flex-direction: column;
+        padding: 60px 16px;
+        background-position: top;
+    }
+
     .voice-inner {
         width: 100%;
         max-width: 1440px;
@@ -827,21 +835,36 @@ li {
         flex-direction: column;
         align-items: center;
         gap: 60px;
+
+        @include m.sp {
+            padding: 40px 16px;
+            gap: 40px;
+        }
     }
 
     .voice-title {
         color: #fff;
 
         h2 {
-            font-size: 32px;
+            font-size: 26px;
             margin-bottom: 12px;
             text-align: center;
+
+            @include m.sp {
+                font-size: 24px;
+            }
         }
 
         h3 {
-            font-size: 48px;
+            font-size: 32px;
             font-weight: 400;
             margin-top: 8px;
+
+            @include m.sp {
+                font-size: 28px;
+                line-height: 1.4;
+            }
+
 
             strong {
                 font-weight: 700;
@@ -856,6 +879,12 @@ li {
         gap: 24px;
         width: 100%;
         box-sizing: border-box;
+
+        @include m.sp {
+            display: block;
+            gap: 24px;
+            align-items: center;
+        }
     }
 
     .voice-item {
@@ -872,6 +901,15 @@ li {
         transform: translateX(300px);
         transition: all 0.8s ease-out;
 
+        @include m.sp {
+            width: 100%;
+            max-width: 100%;
+            padding: 24px;
+            transform: none !important;
+            opacity: 1 !important;
+            margin-bottom: 10px;
+        }
+
         &.show {
             opacity: 1;
             transform: translateX(0);
@@ -883,6 +921,11 @@ li {
             object-fit: contain;
             margin: 0 auto;
             margin-bottom: 20px;
+
+            @include m.sp {
+                width: 120px;
+                height: 120px;
+            }
         }
 
         .item-title {
@@ -890,12 +933,21 @@ li {
             font-weight: bold;
             margin-bottom: 20px;
             text-align: center;
+
+            @include m.sp {
+                font-size: 20px;
+            }
         }
 
         p {
             font-size: 16px;
             line-height: 2;
             text-align: left;
+
+            @include m.sp {
+                font-size: 14px;
+                line-height: 1.8;
+            }
         }
 
         &:hover {

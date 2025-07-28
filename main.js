@@ -29,6 +29,19 @@ $('a[href^="#"]').on('click', function (e) {
 
 // voice
 document.addEventListener("DOMContentLoaded", () => {
+  const windowWidth = window.innerWidth;
+
+  // 430px以下：アニメーション無効で静止表示
+  if (windowWidth <= 430) {
+    const items = document.querySelectorAll(".voice-item");
+    items.forEach((item) => {
+      item.style.opacity = "1";
+      item.style.transform = "translateX(0)";
+    });
+    return;
+  }
+
+  // 431px以上：GSAPアニメーション実行
   gsap.registerPlugin(ScrollTrigger);
 
   const items = gsap.utils.toArray(".voice-item");
@@ -53,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       index * itemDuration
     );
   });
+
   tl.to({}, { duration: 3 });
 });
 
