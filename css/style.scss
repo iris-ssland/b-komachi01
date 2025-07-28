@@ -2,7 +2,7 @@
 @use './parts/mixin' as m;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
-@include m.sp {}
+// @include m.sp {}
 
 html {
     font-size: 100%;
@@ -344,6 +344,9 @@ li {
 
     @include m.sp {
         margin-top: 78px;
+        display: block;
+        height: auto;
+        padding: 80px 16px 40px;
     }
 
     .mv-inner {
@@ -352,12 +355,22 @@ li {
         padding: 0 20px;
         margin: 0 auto;
         position: relative;
+
+        @include m.sp {
+            padding: 0;
+        }
     }
 
     .mv-row {
         display: flex;
         align-items: center;
         gap: 40px;
+
+        @include m.sp {
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
 
         &.row-top {
             justify-content: flex-end;
@@ -372,6 +385,11 @@ li {
             font-size: 120px;
             font-weight: bold;
             letter-spacing: 0.15em;
+
+            @include m.sp {
+                font-size: 36px;
+                text-align: center;
+            }
         }
 
         .mv-video {
@@ -380,6 +398,11 @@ li {
             background: #ddd;
             border-radius: 10px;
             object-fit: cover;
+
+            @include m.sp {
+                width: 100%;
+                height: auto;
+            }
         }
     }
 
@@ -390,6 +413,10 @@ li {
         width: 100%;
         height: 100%;
         pointer-events: none;
+
+        @include m.sp {
+            display: none;
+        }
 
         img {
             position: absolute;
@@ -419,6 +446,10 @@ li {
         bottom: 20px;
         right: 45px;
         z-index: 999;
+
+        @include m.sp {
+            display: none;
+        }
 
         &::after {
             content: "";
@@ -491,22 +522,37 @@ li {
 .about {
     background-color: #fff;
     scroll-margin-top: 120px;
-    padding-bottom: 150px;
+
+    @include m.sp {
+        padding: 80px 16px;
+    }
 
     .about-title {
         text-align: center;
         margin-bottom: 100px;
 
+        @include m.sp {
+            margin-bottom: 60px;
+        }
+
         h2 {
             font-size: 32px;
             margin-bottom: 12px;
             text-align: center;
+
+            @include m.sp {
+                font-size: 24px;
+            }
         }
 
         h3 {
             font-size: 48px;
             font-weight: bold;
             text-align: center;
+
+            @include m.sp {
+                font-size: 32px;
+            }
 
             span {
                 color: #189A3A;
@@ -519,11 +565,20 @@ li {
         flex-wrap: wrap;
         align-items: center;
         gap: 40px;
+
+        @include m.sp {
+            display: block;
+            gap: 24px;
+        }
     }
 
     .about-image {
         flex: 1 1 50%;
         position: relative;
+
+        @include m.sp {
+            width: 100%;
+        }
 
         img {
             width: 100%;
@@ -552,6 +607,12 @@ li {
         justify-content: center;
         margin: 0 0 30px 30px;
 
+        @include m.sp {
+            margin: 0;
+            text-align: center;
+            font-size: 18px;
+        }
+
 
         .highlight {
             color: #189A3A;
@@ -569,41 +630,69 @@ li {
         scroll-margin-top: 120px;
         padding-bottom: 150px;
 
-        .content-title {
-            margin-bottom: 100px;
+    @include m.sp {
+        padding: 60px 16px;
+    }
 
-            h2 {
-                margin-bottom: 12px;
-                text-align: center;
-                font-size: 32px;
+
+    .content-title {
+        margin-bottom: 100px;
+
+        @include m.sp {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            margin-bottom: 12px;
+            text-align: center;
+            font-size: 32px;
+
+            @include m.sp {
+                font-size: 24px;
             }
+        }
 
             h3 {
                 font-size: 48px;
                 font-weight: 500;
+              
+            @include m.sp {
+                font-size: 28px;
+                line-height: 1.4;
+            }
 
-                strong {
-                    font-weight: 700;
-                }
+            strong {
+                font-weight: 700;
             }
         }
+      }
 
 
-        .content-list {
+    .content-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        max-width: 1140px;
+        margin: 0 auto;
+
+        @include m.sp {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
             gap: 40px;
-            max-width: 1140px;
-            margin: 0 auto;
+        }
 
-            .content-link {
+        .content-link {
                 display: flex;
                 flex-direction: column;
                 width: calc(48%);
                 text-decoration: none;
                 color: inherit;
                 height: auto;
+          
+               @include m.sp {
+                width: 100%;
+            }
 
                 .content-item {
                     display: flex;
@@ -612,11 +701,17 @@ li {
                     flex: 1;
                 }
 
+
                 .text-wrap {
                     display: flex;
                     align-items: center;
                     gap: 20px;
                     margin-bottom: 12px;
+                  
+              @include m.sp {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
 
                     .number {
                         font-size: 36px;
@@ -637,6 +732,7 @@ li {
                             transform: translateY(-5px) scale(1.05);
                             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
                         }
+>>>>>
                     }
 
                     .text {
@@ -645,6 +741,11 @@ li {
                         line-height: 1.6;
                         text-align: left;
                         transition: transform 0.3s ease, color 0.3s ease;
+
+                    @include m.sp {
+                        font-size: 18px;
+                        text-align: left;
+                    }
 
                         &:hover {
                             transform: scale(1.05);
@@ -656,8 +757,8 @@ li {
                     width: 100%;
                     border-radius: 12px;
                     overflow: hidden;
-
-                    img {
+                  
+           img {
                         width: 100%;
                         height: auto;
                         object-fit: cover;
@@ -665,6 +766,11 @@ li {
                         opacity: 1;
                         transition: opacity 0.3s, transform 0.3s;
 
+             
+                    @include m.sp {
+                        border-radius: 8px;
+                    }
+             
                         &:hover {
                             opacity: 0.8;
                             transform: scale(1.02);
@@ -681,21 +787,26 @@ li {
             position: relative;
             display: inline-block;
 
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 2px;
-                background: #333;
-                transition: width 0.3s ease;
-            }
+        @include m.sp {
+            font-size: 20px;
+            margin-top: 32px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s ease;
+        }
 
             &:hover::after {
                 width: 100%;
             }
-        }
+        
     }
 }
 
