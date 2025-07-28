@@ -29,6 +29,19 @@ $('a[href^="#"]').on('click', function (e) {
 
 // voice
 document.addEventListener("DOMContentLoaded", () => {
+  const windowWidth = window.innerWidth;
+
+  // 430px以下：アニメーション無効で静止表示
+  if (windowWidth <= 430) {
+    const items = document.querySelectorAll(".voice-item");
+    items.forEach((item) => {
+      item.style.opacity = "1";
+      item.style.transform = "translateX(0)";
+    });
+    return;
+  }
+
+  // 431px以上：GSAPアニメーション実行
   gsap.registerPlugin(ScrollTrigger);
 
   const items = gsap.utils.toArray(".voice-item");
@@ -53,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       index * itemDuration
     );
   });
+
   tl.to({}, { duration: 3 });
 });
 
@@ -124,7 +138,14 @@ $(window).on('load scroll', function () {
 
 // mouse-stalker
 
-const stalker = document.getElementById("mouse-stalker");
-document.addEventListener("mousemove", (e) => {
-  stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+document.addEventListener('DOMContentLoaded', () => {
+  const stalker = document.getElementById("mouse-stalker");
+
+  if (stalker) { // stalker要素が存在するか確認
+    document.addEventListener("mousemove", (e) => {
+      // CSSのtransform: translate(-50%, -50%); と組み合わせる場合
+      // 単純にマウス座標を要素の左上として設定
+      stalker.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+    });
+  }
 });
