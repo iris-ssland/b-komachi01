@@ -27,10 +27,6 @@ li {
     list-style: none;
 }
 
-// section {
-//     padding-bottom: 150px;
-// }
-
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -823,6 +819,10 @@ li {
                     position: relative;
                     font-size: 24px;
 
+                    @include m.sp {
+                        font-size: 14px;
+                    }
+
                     &::before {
                         content: "Q";
                         position: absolute;
@@ -845,6 +845,10 @@ li {
                         border-color: #333333 transparent transparent transparent;
                         border-width: 11.26px 8px 0px 8px;
                         transition: transform .3s;
+
+                        @include m.sp {
+                            border-width: 8.66px 6px 0px 6px;
+                        }
                     }
                 }
 
@@ -858,6 +862,10 @@ li {
                     font-size: 24px;
                     transition: transform .5s, opacity .5s;
                     position: relative;
+
+                    @include m.sp {
+                        font-size: 14px;
+                    }
 
                     &::before {
                         content: "A";
@@ -1004,6 +1012,10 @@ li {
             img {
                 height: 100px;
                 animation: avatar-rerote 2s steps(1) infinite;
+
+                @include m.sp {
+                    height: 70px;
+                }
             }
         }
     }
@@ -1061,7 +1073,7 @@ li {
 
     .container {
         .joinas-image {
-            max-width: 800px;
+            // max-width: 800px;
             max-height: 40vh;
             object-fit: contain;
             display: block;
@@ -1073,9 +1085,14 @@ li {
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
-            margin-bottom: 170px;
+            margin-bottom: 160px;
             max-width: 850px;
             font-size: 24px;
+
+            @include m.sp {
+                flex-direction: column;
+                font-size: 16px;
+            }
 
             .btn-text {
                 width: 380px;
@@ -1097,7 +1114,7 @@ li {
                     padding: 0;
 
                     .scroll-avatar-item {
-                        width: 1100px;
+                        width: 275px;
 
                         img {
                             width: 100%;
@@ -1108,7 +1125,7 @@ li {
 
                 .scroll-avatar-list-left {
                     animation: infinity-scroll-left 50s infinite linear 0.5s both;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                 }
 
                 .scroll-avatar-list-right {
@@ -1116,16 +1133,12 @@ li {
                 }
             }
         }
-
-        .scroll-avatar-1 {
-            margin-bottom: -10px;
-        }
     }
 }
 
 .contact-btn-area {
     position: relative;
-    height: 290px;
+    height: 300px;
     width: 100%;
 }
 
@@ -1668,12 +1681,10 @@ footer {
     top: 0;
     left: 0;
     width: 40px;
-    /* 画像サイズに合わせて調整 */
     height: 40px;
     transition: transform 0.3s;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    /* クリックの邪魔をしない */
     z-index: 1000;
 }
 
