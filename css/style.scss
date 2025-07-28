@@ -127,8 +127,6 @@ li {
         gap: 32px;
 
         .site-title {
-            // margin-right: auto;
-
             img {
                 @include m.sp {
                     height: 40px;
@@ -370,7 +368,11 @@ li {
 
         &.row-top {
             justify-content: flex-end;
-            margin-bottom: 10px;
+            margin-bottom: 60px;
+
+            @include m.sp {
+                margin-bottom: 10px;
+            }
         }
 
         &.row-bottom {
@@ -383,7 +385,8 @@ li {
             letter-spacing: 0.15em;
 
             @include m.sp {
-                font-size: 100px;
+                font-size: 150px;
+                letter-spacing: 0.3em;
                 text-align: center;
             }
         }
@@ -539,7 +542,7 @@ li {
             text-align: center;
 
             @include m.sp {
-                font-size: 24px;
+                font-size: 28px;
             }
         }
 
@@ -549,7 +552,7 @@ li {
             text-align: center;
 
             @include m.sp {
-                font-size: 28px;
+                font-size: 32px;
             }
 
             span {
@@ -646,7 +649,7 @@ li {
                 text-align: center;
 
                 @include m.sp {
-                    font-size: 24px;
+                    font-size: 26px;
                 }
             }
 
@@ -655,7 +658,7 @@ li {
                 font-weight: 500;
 
                 @include m.sp {
-                    font-size: 28px;
+                    font-size: 32px;
                     line-height: 1.4;
                 }
 
@@ -823,7 +826,7 @@ li {
     @include m.sp {
         flex-direction: column;
         padding: 60px 16px;
-        background-position: top;
+        background-position: center 40%;
     }
 
     .voice-inner {
