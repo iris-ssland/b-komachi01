@@ -1155,10 +1155,14 @@ li {
 
         @include m.tab {
             gap: 0;
+            max-width: 980px;
+            padding: 80px 200px;
         }
 
         @include m.sp {
             gap: 0;
+            max-width: 430px;
+
         }
     }
 
