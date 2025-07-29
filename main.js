@@ -31,8 +31,8 @@ $('a[href^="#"]').on('click', function (e) {
 document.addEventListener("DOMContentLoaded", () => {
   const windowWidth = window.innerWidth;
 
-  // 900px以下：アニメーション無効で静止表示
-  if (windowWidth <= 900) {
+  // 430px以下：アニメーション無効で静止表示
+  if (windowWidth <= 980) {
     const items = document.querySelectorAll(".voice-item");
     items.forEach((item) => {
       item.style.opacity = "1";
@@ -41,33 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // 901px以上：GSAPアニメーション実行
+  // 431px以上：GSAPアニメーション実行
   gsap.registerPlugin(ScrollTrigger);
 
   const items = gsap.utils.toArray(".voice-item");
   const itemDuration = 1;
+  const headerHeight = document.querySelector("#header").offsetHeight;
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#voice",
+      start: () => `top-=${headerHeight} top`,
+      end: () => `+=${items.length * 1000 + 500}`,
+      pin: true,
+      scrub: true,
+      markers: false
+    }
+  });
 
   items.forEach((item, index) => {
-    gsap.fromTo(
-      item,
-      {
-        opacity: 0,
-        x: 300
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: itemDuration,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%", // 画面の80%でスタート
-          toggleActions: "play none none reverse" // 戻ったら非表示にもできる
-        }
-      }
+    tl.fromTo(item,
+      { opacity: 0, x: 300 },
+      { opacity: 1, x: 0, duration: itemDuration, ease: "power2.out" },
+      index * itemDuration
     );
   });
+
+  tl.to({}, { duration: 3 });
 });
+
+
 
 // スクロールバーとヘッダー
 $(window).scroll(function () {

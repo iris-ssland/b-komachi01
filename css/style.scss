@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 // @include m.sp {}
+// @include m.tab {}
+
 
 html {
     font-size: 100%;
@@ -174,6 +176,10 @@ li {
 
         .site-title {
             img {
+                @include m.tab {
+                    height: 40px;
+                }
+
                 @include m.sp {
                     height: 40px;
                 }
@@ -185,16 +191,33 @@ li {
             align-items: center;
             gap: 32px;
 
-            @include m.sp {
+            @include m.tab {
                 flex-direction: column;
                 align-items: flex-start;
-                transform: translateX(-100%);
+                transform: translateX(100%);
                 width: 300px;
                 background: #fff;
                 padding: 25px;
                 position: fixed;
                 top: 0;
-                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                overflow-y: auto;
+                transition: 0.5s;
+                z-index: 20;
+            }
+
+            @include m.sp {
+                flex-direction: column;
+                align-items: flex-start;
+                transform: translateX(100%);
+                width: 300px;
+                background: #fff;
+                padding: 25px;
+                position: fixed;
+                top: 0;
+                right: 0;
                 bottom: 0;
                 opacity: 0;
                 overflow-y: auto;
@@ -206,6 +229,13 @@ li {
                 display: flex;
                 gap: 32px;
 
+                @include m.tab {
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    gap: 5px;
+                }
+
                 @include m.sp {
                     flex-direction: column;
                     align-items: center;
@@ -214,6 +244,10 @@ li {
                 }
 
                 li {
+                    @include m.tab {
+                        padding: 10px 0;
+                    }
+
                     @include m.sp {
                         padding: 10px 0;
                     }
@@ -253,12 +287,16 @@ li {
                 gap: 12px;
                 cursor: pointer;
 
-                &:hover {
-                    background-color: #148232;
+                @include m.tab {
+                    margin: 0 auto;
                 }
 
                 @include m.sp {
                     margin: 0 auto;
+                }
+
+                &:hover {
+                    background-color: #148232;
                 }
             }
 
@@ -280,6 +318,39 @@ li {
     }
 
     .hamburger {
+        @include m.tab {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: relative;
+            position: fixed;
+            top: 22px;
+            right: 18px;
+            transition: all 0.5s;
+            z-index: 20;
+
+            span {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #121212;
+                transition: all 0.5s;
+            }
+
+            span:nth-child(1) {
+                top: 10%;
+            }
+
+            span:nth-child(2) {
+                top: 47%;
+            }
+
+            span:nth-child(3) {
+                bottom: 10%;
+            }
+        }
+
         @include m.sp {
             width: 30px;
             height: 30px;
@@ -326,6 +397,9 @@ li {
         opacity: 0.8;
         z-index: 10;
 
+        @include m.tab {
+            cursor: pointer;
+        }
 
         @include m.sp {
             cursor: pointer;
@@ -335,6 +409,11 @@ li {
 
 #header.open {
     .nav {
+        @include m.tab {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
         @include m.sp {
             transform: translateX(0);
             opacity: 1;
@@ -342,9 +421,29 @@ li {
     }
 
     .hamburger {
+        @include m.tab {
+            span {
+                background: #333;
+            }
+
+            span:nth-child(1) {
+                transform: rotate(-45deg);
+                top: 50%;
+            }
+
+            span:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(3) {
+                transform: rotate(45deg);
+                top: 50%;
+            }
+        }
+
         @include m.sp {
             span {
-                background: #fff;
+                background: #333;
             }
 
             span:nth-child(1) {
@@ -381,11 +480,18 @@ li {
     overflow: hidden;
     margin-top: 98px;
 
-    @include m.sp {
+    @include m.tab {
         margin-top: 78px;
         display: block;
         height: auto;
-        padding: 80px 16px 40px;
+        padding: 0 16px 60px 0;
+    }
+
+    @include m.sp {
+        margin-top: 76px;
+        display: block;
+        height: auto;
+        padding: 0 16px 60px;
     }
 
     .mv-inner {
@@ -394,6 +500,10 @@ li {
         padding: 0 20px;
         margin: 0 auto;
         position: relative;
+
+        @include m.tab {
+            padding: 0;
+        }
 
         @include m.sp {
             padding: 0;
@@ -405,6 +515,12 @@ li {
         align-items: center;
         gap: 40px;
 
+        @include m.tab {
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
         @include m.sp {
             flex-direction: column;
             align-items: center;
@@ -414,6 +530,10 @@ li {
         &.row-top {
             justify-content: flex-end;
             margin-bottom: 60px;
+
+            @include m.tab {
+                margin-bottom: 10px;
+            }
 
             @include m.sp {
                 margin-bottom: 10px;
@@ -429,8 +549,14 @@ li {
             font-weight: bold;
             letter-spacing: 0.15em;
 
-            @include m.sp {
+            @include m.tab {
                 font-size: 150px;
+                letter-spacing: 0.3em;
+                text-align: center;
+            }
+
+            @include m.sp {
+                font-size: 100px;
                 letter-spacing: 0.3em;
                 text-align: center;
             }
@@ -442,6 +568,12 @@ li {
             background: #ddd;
             border-radius: 10px;
             object-fit: cover;
+
+            @include m.tab {
+                width: 100%;
+                height: auto;
+                border-radius: 0;
+            }
 
             @include m.sp {
                 width: 100%;
@@ -458,6 +590,10 @@ li {
         width: 100%;
         height: 100%;
         pointer-events: none;
+
+        @include m.tab {
+            display: none;
+        }
 
         @include m.sp {
             display: none;
@@ -491,6 +627,10 @@ li {
         bottom: 20px;
         right: 45px;
         z-index: 999;
+
+        @include m.tab {
+            display: none;
+        }
 
         @include m.sp {
             display: none;
@@ -569,16 +709,25 @@ li {
     scroll-margin-top: 120px;
     padding-bottom: 150px;
 
+    @include m.tab {
+        padding-bottom: 60px;
+
+    }
+
     @include m.sp {
-        padding: 80px 16px;
+        padding-bottom: 60px;
     }
 
     .about-title {
         text-align: center;
         margin-bottom: 100px;
 
-        @include m.sp {
+        @include m.tab {
             margin-bottom: 60px;
+        }
+
+        @include m.sp {
+            margin-bottom: 40px;
         }
 
         h2 {
@@ -586,8 +735,12 @@ li {
             margin-bottom: 12px;
             text-align: center;
 
-            @include m.sp {
+            @include m.tab {
                 font-size: 28px;
+            }
+
+            @include m.sp {
+                font-size: 20px;
             }
         }
 
@@ -596,8 +749,12 @@ li {
             font-weight: bold;
             text-align: center;
 
-            @include m.sp {
+            @include m.tab {
                 font-size: 32px;
+            }
+
+            @include m.sp {
+                font-size: 24px;
             }
 
             span {
@@ -612,6 +769,12 @@ li {
         align-items: center;
         gap: 40px;
 
+
+        @include m.tab {
+            display: block;
+            gap: 24px;
+        }
+
         @include m.sp {
             display: block;
             gap: 24px;
@@ -621,6 +784,10 @@ li {
     .about-image {
         flex: 1 1 50%;
         position: relative;
+
+        @include m.tab {
+            width: 100%;
+        }
 
         @include m.sp {
             width: 100%;
@@ -653,10 +820,16 @@ li {
         justify-content: center;
         margin: 0 0 30px 30px;
 
-        @include m.sp {
+        @include m.tab {
             margin: 0;
             text-align: center;
             font-size: 18px;
+        }
+
+        @include m.sp {
+            margin: 0;
+            text-align: center;
+            font-size: 16px;
         }
 
 
@@ -676,26 +849,37 @@ li {
         scroll-margin-top: 120px;
         padding-bottom: 150px;
 
+        @include m.tab {
+            padding-bottom: 60px;
+        }
+
         @include m.sp {
-            padding: 60px 16px;
+            padding-bottom: 60px;
         }
 
 
         .content-title {
             margin-bottom: 100px;
 
-            @include m.sp {
+            @include m.tab {
                 margin-bottom: 60px;
             }
 
-            h2 {
+            @include m.sp {
+                margin-bottom: 40px;
+            }
 
+            h2 {
                 font-size: 32px;
                 margin-bottom: 12px;
                 text-align: center;
 
+                @include m.tab {
+                    font-size: 28px;
+                }
+
                 @include m.sp {
-                    font-size: 26px;
+                    font-size: 20px;
                 }
             }
 
@@ -703,8 +887,13 @@ li {
                 font-size: 48px;
                 font-weight: 500;
 
-                @include m.sp {
+                @include m.tab {
                     font-size: 32px;
+                    line-height: 1.4;
+                }
+
+                @include m.sp {
+                    font-size: 24px;
                     line-height: 1.4;
                 }
 
@@ -714,7 +903,6 @@ li {
             }
         }
 
-
         .content-list {
             display: flex;
             flex-wrap: wrap;
@@ -723,107 +911,142 @@ li {
             max-width: 1140px;
             margin: 0 auto;
 
-            @include m.sp {
+            @include m.tab {
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
-            }
 
-
-            .content-link {
-                display: flex;
-                flex-direction: column;
-                width: calc(48%);
-                text-decoration: none;
-                color: inherit;
-                height: auto;
 
                 @include m.sp {
-                    width: 100%;
-                }
-
-                .content-item {
                     display: flex;
                     flex-direction: column;
-                    height: 100%;
-                    flex: 1;
+                    gap: 40px;
                 }
 
 
-                .text-wrap {
+                .content-link {
                     display: flex;
-                    align-items: center;
-                    gap: 20px;
-                    margin-bottom: 12px;
+                    flex-direction: column;
+                    width: calc(48%);
+                    text-decoration: none;
+                    color: inherit;
+                    height: auto;
+
+                    @include m.tab {
+                        width: 100%;
+                    }
 
                     @include m.sp {
-
-                        flex-direction: column;
-                        align-items: flex-start;
-                        margin: 0 auto;
-                        gap: 10px;
-                    }
-
-                    .number {
-                        font-size: 36px;
-                        font-weight: bold;
-                        color: #007f3e;
-                        background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
-                        border-radius: 50%;
-                        width: 100px;
-                        height: 100px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        transition: all 0.3s ease;
-
-                        &:hover {
-                            background: #007f3e;
-                            color: #fff;
-                            transform: translateY(-5px) scale(1.05);
-                            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-                        }
-                    }
-
-                    .text {
-                        font-size: 24px;
-                        font-weight: bold;
-                        line-height: 1.6;
-                        text-align: left;
-                        transition: transform 0.3s ease, color 0.3s ease;
-
-                        @include m.sp {
-                            font-size: 18px;
-                            text-align: left;
-                        }
-
-                        &:hover {
-                            transform: scale(1.05);
-                        }
-                    }
-                }
-
-                .image-box {
-                    width: 100%;
-                    border-radius: 12px;
-                    overflow: hidden;
-
-                    img {
                         width: 100%;
-                        height: auto;
-                        object-fit: cover;
-                        display: block;
-                        opacity: 1;
-                        transition: opacity 0.3s, transform 0.3s;
+                    }
+
+                    .content-item {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        flex: 1;
+
+                        .text-wrap {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                            margin-bottom: 12px;
+
+                            @include m.tab {
+                                align-items: flex-start;
+                                margin: 0 auto;
+                                gap: 10px;
+                            }
+
+                            @include m.sp {
+                                align-items: flex-start;
+                                margin: 0 auto;
+                                gap: 10px;
+                                margin-bottom: 10px;
+                            }
+
+                            .number {
+                                font-size: 36px;
+                                font-weight: bold;
+                                color: #007f3e;
+                                background: radial-gradient(circle at center, #a3ebae 40%, transparent 60%);
+                                border-radius: 50%;
+                                width: 100px;
+                                height: 100px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: all 0.3s ease;
+
+                                @include m.tab {
+                                    font-size: 28px;
+                                    text-align: left;
+                                    width: 80px;
+                                    height: 80px;
+                                }
+
+                                @include m.sp {
+                                    font-size: 24px;
+                                    text-align: left;
+                                    width: 60px;
+                                    height: 60px;
+                                }
+
+                                &:hover {
+                                    background: #007f3e;
+                                    color: #fff;
+                                    transform: translateY(-5px) scale(1.05);
+                                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                                }
+                            }
+
+                            .text {
+                                font-size: 24px;
+                                font-weight: bold;
+                                line-height: 1.6;
+                                text-align: left;
+                                transition: transform 0.3s ease, color 0.3s ease;
 
 
-                        @include m.sp {
-                            border-radius: 8px;
+                                @include m.tab {
+                                    font-size: 18px;
+                                    text-align: left;
+                                }
+
+                                @include m.sp {
+                                    font-size: 18px;
+                                    text-align: left;
+                                }
+
+                                &:hover {
+                                    transform: scale(1.05);
+                                }
+                            }
                         }
 
-                        &:hover {
-                            opacity: 0.8;
-                            transform: scale(1.02);
+                        .image-box {
+                            width: 100%;
+                            border-radius: 12px;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                                object-fit: cover;
+                                display: block;
+                                opacity: 1;
+                                transition: opacity 0.3s, transform 0.3s;
+
+
+                                @include m.sp {
+                                    border-radius: 8px;
+                                }
+
+                                &:hover {
+                                    opacity: 0.8;
+                                    transform: scale(1.02);
+                                }
+                            }
                         }
                     }
                 }
@@ -837,8 +1060,13 @@ li {
             position: relative;
             display: inline-block;
 
-            @include m.sp {
+            @include m.tab {
                 font-size: 20px;
+                margin-top: 32px;
+            }
+
+            @include m.sp {
+                font-size: 18px;
                 margin-top: 32px;
             }
 
@@ -872,11 +1100,16 @@ li {
     justify-content: center;
     padding: 0;
 
+    @include m.tab {
+        flex-direction: column;
+        padding: 0 16px 60px 0;
+    }
+
     @include m.sp {
         flex-direction: column;
-        padding: 60px 16px;
-        background-position: center 40%;
+        padding: 0 16px 60px 0;
     }
+
 
     .voice-inner {
         width: 100%;
@@ -888,22 +1121,37 @@ li {
         align-items: center;
         gap: 60px;
 
+        @include m.tab {
+            gap: 0;
+        }
+
         @include m.sp {
-            padding: 40px 16px;
-            gap: 40px;
+            gap: 0;
         }
     }
 
     .voice-title {
         color: #fff;
 
+        @include m.tab {
+            margin-bottom: 60px;
+        }
+
+        @include m.sp {
+            margin-bottom: 40px;
+        }
+
         h2 {
             font-size: 32px;
             margin-bottom: 12px;
             text-align: center;
 
+            @include m.tab {
+                font-size: 28px;
+            }
+
             @include m.sp {
-                font-size: 24px;
+                font-size: 20px;
             }
         }
 
@@ -912,8 +1160,13 @@ li {
             font-weight: 400;
             margin-top: 8px;
 
+            @include m.tab {
+                font-size: 32px;
+                line-height: 1.4;
+            }
+
             @include m.sp {
-                font-size: 28px;
+                font-size: 24px;
                 line-height: 1.4;
             }
 
@@ -931,6 +1184,12 @@ li {
         gap: 24px;
         width: 100%;
         box-sizing: border-box;
+
+        @include m.tab {
+            display: block;
+            gap: 24px;
+            align-items: center;
+        }
 
         @include m.sp {
             display: block;
@@ -953,13 +1212,22 @@ li {
         transform: translateX(300px);
         transition: all 0.8s ease-out;
 
+        @include m.tab {
+            width: 100%;
+            max-width: 100%;
+            padding: 24px;
+            transform: none !important;
+            opacity: 1 !important;
+            margin-bottom: 20px;
+        }
+
         @include m.sp {
             width: 100%;
             max-width: 100%;
             padding: 24px;
             transform: none !important;
             opacity: 1 !important;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         &.show {
@@ -974,9 +1242,14 @@ li {
             margin: 0 auto;
             margin-bottom: 20px;
 
-            @include m.sp {
+            @include m.tab {
                 width: 120px;
                 height: 120px;
+            }
+
+            @include m.sp {
+                width: 100px;
+                height: 100px;
             }
         }
 
@@ -986,8 +1259,12 @@ li {
             margin-bottom: 20px;
             text-align: center;
 
+            @include m.tab {
+                font-size: 22px;
+            }
+
             @include m.sp {
-                font-size: 20px;
+                font-size: 22px;
             }
         }
 
@@ -995,6 +1272,11 @@ li {
             font-size: 16px;
             line-height: 2;
             text-align: left;
+
+            @include m.tab {
+                font-size: 14px;
+                line-height: 1.8;
+            }
 
             @include m.sp {
                 font-size: 14px;
