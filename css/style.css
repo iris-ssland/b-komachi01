@@ -1186,11 +1186,14 @@ li {
 @media screen and (max-width: 980px) {
   .voice .voice-inner {
     gap: 0;
+    max-width: 980px;
+    padding: 80px 200px;
   }
 }
 @media screen and (max-width: 430px) {
   .voice .voice-inner {
     gap: 0;
+    max-width: 430px;
   }
 }
 .voice .voice-title {
