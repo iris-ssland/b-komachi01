@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@use './parts/mixin'as m;
+@use './parts/mixin' as m;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 // @include m.sp {}
@@ -1907,8 +1907,6 @@ li {
         transform: translateX(0%);
     }
 }
-
-
 
 /* -----------------------------
 CONTENT
