@@ -1,4 +1,4 @@
-$sp: 900px;
+$sp: 980px;
 
 @mixin sp {
   @media screen and (max-width: #{$sp}) {
