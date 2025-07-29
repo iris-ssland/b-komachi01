@@ -94,7 +94,7 @@ $(window).scroll(function () {
 $(window).on('load scroll', function () {
   const windowHeight = $(window).height();
 
-  $(".textanimation").each(function () {
+  $(".textanimation, .textanimation-sp").each(function () {
     const $this = $(this);
     const scroll = $(window).scrollTop();
     const targetTop = $this.offset().top;
