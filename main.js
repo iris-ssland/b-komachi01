@@ -31,7 +31,7 @@ $('a[href^="#"]').on('click', function (e) {
 document.addEventListener("DOMContentLoaded", () => {
   const windowWidth = window.innerWidth;
 
-  // 980px以下：アニメーション無効で静止表示
+  // 980px以下：アニメーション無効で静止表示＋ScrollTriggerの影響も除去
   if (windowWidth <= 980) {
     const items = document.querySelectorAll(".voice-item");
     items.forEach((item) => {
@@ -39,11 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
       item.style.transform = "translateX(0)";
     });
 
-    // 念のためScrollTriggerの影響を完全リセット（GSAP v3.10.0以降）
-    if (ScrollTrigger && ScrollTrigger.getAll) {
+    // ←この位置に入れるのが正解！
+    if (typeof ScrollTrigger !== "undefined" && ScrollTrigger.getAll) {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     }
-    return;
+
+    return; // これでGSAPのアニメーション処理へ進まないようにする
   }
 
   // 980px超え：GSAPアニメーション実行

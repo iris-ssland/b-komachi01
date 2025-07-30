@@ -1164,11 +1164,17 @@ li {
 @media screen and (max-width: 980px) {
   .voice {
     flex-direction: column;
+    height: auto;
+    overflow: visible;
+    position: static;
   }
 }
 @media screen and (max-width: 430px) {
   .voice {
     flex-direction: column;
+    height: auto;
+    overflow: visible;
+    position: static;
   }
 }
 .voice .voice-inner {
