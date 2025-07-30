@@ -1164,17 +1164,21 @@ li {
 @media screen and (max-width: 980px) {
   .voice {
     flex-direction: column;
-    height: auto;
-    overflow: visible;
-    position: static;
+    position: static !important;
+    transform: none !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 }
 @media screen and (max-width: 430px) {
   .voice {
     flex-direction: column;
-    height: auto;
-    overflow: visible;
-    position: static;
+    position: static !important;
+    transform: none !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 }
 .voice .voice-inner {
