@@ -2092,7 +2092,7 @@ CONTENT
     }
 
     @include m.sp {
-        padding: 100px 10px 100px;
+        padding: 100px 10px 80px;
     }
 
     .item {
@@ -2112,6 +2112,11 @@ CONTENT
         @include m.tab {
             display: block;
             margin-bottom: 250px;
+        }
+
+        @include m.tab {
+            display: block;
+            margin-bottom: 150px;
         }
 
         .item-body {
@@ -2181,7 +2186,7 @@ CONTENT
 
             @include m.sp {
                 font-size: 26px;
-                top: -40%;
+                top: -60%;
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -2248,7 +2253,8 @@ CONTENT
                     }
 
                     @include m.sp {
-                        display: none;
+                        width: 60%;
+                        margin-left: 10%;
                     }
                 }
 
@@ -2264,8 +2270,9 @@ CONTENT
                     }
 
                     @include m.sp {
-                        width: 100vw;
-                        margin: auto;
+                        width: 60%;
+                        margin: auto auto auto 30%;
+                        margin-top: -10%;
                     }
                 }
             }
@@ -2347,6 +2354,11 @@ CONTENT
             &::before {
                 @include m.tab {
                     left: 10%;
+                }
+
+                @include m.sp {
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
 

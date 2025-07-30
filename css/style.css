@@ -2154,7 +2154,7 @@ CONTENT
 }
 @media screen and (max-width: 430px) {
   .detail-contents {
-    padding: 100px 10px 100px;
+    padding: 100px 10px 80px;
   }
 }
 .detail-contents .item {
@@ -2175,6 +2175,12 @@ CONTENT
   .detail-contents .item {
     display: block;
     margin-bottom: 250px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .detail-contents .item {
+    display: block;
+    margin-bottom: 150px;
   }
 }
 .detail-contents .item .item-body {
@@ -2247,7 +2253,7 @@ CONTENT
 @media screen and (max-width: 430px) {
   .detail-contents .item-title::before {
     font-size: 26px;
-    top: -40%;
+    top: -60%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -2310,7 +2316,8 @@ CONTENT
 }
 @media screen and (max-width: 430px) {
   .detail-contents .con-1 .item .item-img .con1_img1 {
-    display: none;
+    width: 60%;
+    margin-left: 10%;
   }
 }
 .detail-contents .con-1 .item .item-img .con1_img2 {
@@ -2327,8 +2334,9 @@ CONTENT
 }
 @media screen and (max-width: 430px) {
   .detail-contents .con-1 .item .item-img .con1_img2 {
-    width: 100vw;
-    margin: auto;
+    width: 60%;
+    margin: auto auto auto 30%;
+    margin-top: -10%;
   }
 }
 .detail-contents .con-1 .ellipse.blur {
@@ -2391,6 +2399,12 @@ CONTENT
 @media screen and (max-width: 980px) {
   .detail-contents .con-3 .item-title::before {
     left: 10%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .detail-contents .con-3 .item-title::before {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 980px) {
