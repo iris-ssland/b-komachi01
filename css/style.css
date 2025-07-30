@@ -1152,7 +1152,7 @@ li {
 /* =======voice========================================= */
 .voice {
   min-height: 100vh;
-  background-image: url("../img/voice_bgimg.png");
+  background-image: url("../img/voice_bgimg-1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1194,6 +1194,7 @@ li {
   .voice .voice-inner {
     gap: 0;
     max-width: 430px;
+    padding: 80px 10px;
   }
 }
 .voice .voice-title {
