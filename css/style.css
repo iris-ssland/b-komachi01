@@ -502,12 +502,12 @@ li {
 }
 @media screen and (max-width: 980px) {
   .mv .mv-inner {
-    padding: 0;
+    max-width: 980;
   }
 }
 @media screen and (max-width: 430px) {
   .mv .mv-inner {
-    padding: 0;
+    max-width: 430;
   }
 }
 .mv .mv-row {
@@ -561,7 +561,7 @@ li {
 @media screen and (max-width: 430px) {
   .mv .mv-row .mv-text {
     font-size: 100px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
     text-align: center;
   }
 }
@@ -824,7 +824,7 @@ li {
   .about .about-text {
     margin: 0;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .about .about-text .highlight {
@@ -1125,13 +1125,14 @@ li {
   .voice .voice-inner {
     gap: 0;
     max-width: 980px;
-    padding: 80px 200px;
+    width: 70%;
   }
 }
 @media screen and (max-width: 430px) {
   .voice .voice-inner {
     gap: 0;
     max-width: 430px;
+    width: 100%;
   }
 }
 .voice .voice-title {
