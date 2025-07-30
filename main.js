@@ -31,6 +31,7 @@ $('a[href^="#"]').on('click', function (e) {
 window.addEventListener("load", () => {
   const windowWidth = window.innerWidth;
 
+
   if (windowWidth <= 980) {
     const items = document.querySelectorAll(".voice-item");
     items.forEach((item) => {
@@ -42,6 +43,7 @@ window.addEventListener("load", () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       ScrollTrigger.refresh();
     }
+
 
     return;
   }
