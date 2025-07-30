@@ -28,10 +28,9 @@ $('a[href^="#"]').on('click', function (e) {
 });
 
 // voice
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const windowWidth = window.innerWidth;
 
-  // 980px以下：アニメーション無効で静止表示
   if (windowWidth <= 980) {
     const items = document.querySelectorAll(".voice-item");
     items.forEach((item) => {
@@ -39,14 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
       item.style.transform = "translateX(0)";
     });
 
-    // 念のためScrollTriggerの影響を完全リセット（GSAP v3.10.0以降）
-    if (ScrollTrigger && ScrollTrigger.getAll) {
+    if (typeof ScrollTrigger !== "undefined" && ScrollTrigger.getAll) {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.refresh();
     }
+
     return;
   }
 
-  // 980px超え：GSAPアニメーション実行
   gsap.registerPlugin(ScrollTrigger);
 
   const items = gsap.utils.toArray(".voice-item");
