@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@use './parts/mixin' as m;
+@use './parts/mixin'as m;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 // @include m.sp {}
@@ -29,6 +29,10 @@ li {
     list-style: none;
 }
 
+// section {
+//     margin-bottom: -2px;
+// }
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -40,7 +44,7 @@ li {
     margin-bottom: 100px;
     text-align: center;
 
-    @include m.sp {
+    @include m.tab {
         font-size: 28px;
         margin-bottom: 60px;
     }
@@ -50,7 +54,6 @@ li {
 /* =======opening-animation========================================= */
 
 .opening-animation {
-
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -84,6 +87,14 @@ li {
         .opening-text {
             margin: 0 auto 200px auto;
 
+            @include m.tab {
+                margin: 0 auto 120px auto;
+            }
+
+            @include m.sp {
+                margin: 0 auto 70px auto;
+            }
+
             .opening-text-letter {
                 width: 31ch;
                 white-space: nowrap;
@@ -93,8 +104,12 @@ li {
                 color: #1e1e1e;
                 animation: typing 2s steps(17), typingEffect .5s step-end infinite alternate;
 
+                @include m.tab {
+                    font-size: 40px;
+                }
+
                 @include m.sp {
-                    font-size: 36px;
+                    font-size: 22px;
                 }
             }
         }
@@ -104,6 +119,10 @@ li {
             color: #1e1e1e;
             letter-spacing: 0.5rem;
             overflow: hidden;
+
+            @include m.sp {
+                font-size: 14px;
+            }
 
             span {
                 opacity: 0;
@@ -149,7 +168,6 @@ li {
     100% {
         opacity: 0;
         display: none;
-        z-index: -1;
     }
 }
 
@@ -190,6 +208,7 @@ li {
 #header {
     background: #fff;
     padding: 15px 0;
+    margin-bottom: -1px;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -1130,6 +1149,7 @@ li {
     align-items: center;
     justify-content: center;
     padding: 0;
+    box-sizing: content-box;
 
     @include m.tab {
         flex-direction: column;
@@ -1139,7 +1159,6 @@ li {
     @include m.sp {
         flex-direction: column;
         padding: 0 16px 60px 0;
-
     }
 
 
@@ -1356,8 +1375,12 @@ li {
                     position: relative;
                     font-size: 24px;
 
-                    @include m.sp {
+                    @include m.tab {
                         font-size: 14px;
+                    }
+
+                    @include m.sp {
+                        padding: 10px 20px 10px 50px;
                     }
 
                     &::before {
@@ -1367,6 +1390,10 @@ li {
                         left: 40px;
                         transform: translateY(-50%);
                         color: #189A3A;
+
+                        @include m.sp {
+                            left: 20px;
+                        }
                     }
 
                     &::-webkit-details-marker {
@@ -1383,7 +1410,7 @@ li {
                         border-width: 11.26px 8px 0px 8px;
                         transition: transform .3s;
 
-                        @include m.sp {
+                        @include m.tab {
                             border-width: 8.66px 6px 0px 6px;
                         }
                     }
@@ -1400,8 +1427,12 @@ li {
                     transition: transform .5s, opacity .5s;
                     position: relative;
 
-                    @include m.sp {
+                    @include m.tab {
                         font-size: 14px;
+                    }
+
+                    @include m.sp {
+                        padding: 10px 20px 10px 50px;
                     }
 
                     &::before {
@@ -1417,6 +1448,10 @@ li {
                         text-align: center;
                         line-height: 30px;
                         border-radius: 50%;
+
+                        @include m.sp {
+                            left: 7px;
+                        }
                     }
                 }
             }
@@ -1468,7 +1503,7 @@ li {
                 transform: translateY(2em);
                 text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 
-                @include m.sp {
+                @include m.tab {
                     font-size: 36px;
                 }
 
@@ -1556,14 +1591,11 @@ li {
                 justify-content: center;
 
                 .textanimation-sp {
-                    font-size: 64px;
+                    font-size: 36px;
                     font-weight: bold;
                     transform: translateY(2em);
                     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 
-                    @include m.sp {
-                        font-size: 36px;
-                    }
 
                     &.text-show {
                         animation: textanimation 1s forwards;
@@ -1607,13 +1639,17 @@ li {
 
             li {
                 margin-right: 30px;
+
+                @include m.sp {
+                    margin-right: 20px;
+                }
             }
 
             img {
                 height: 100px;
                 animation: avatar-rerote 2s steps(1) infinite;
 
-                @include m.sp {
+                @include m.tab {
                     height: 70px;
                 }
             }
@@ -1688,19 +1724,34 @@ li {
             max-width: 850px;
             font-size: 24px;
 
-            @include m.sp {
+            @include m.tab {
                 // flex-direction: column;
                 max-width: 550px;
                 font-size: 16px;
-                margin-bottom: 110px;
+                margin-bottom: 120px;
+            }
+
+            @include m.sp {
+                flex-direction: column;
+                margin-bottom: 75px;
             }
 
             .btn-text {
                 width: 380px;
                 text-align: center;
 
-                @include m.sp {
+                @include m.tab {
                     width: 250px;
+                }
+
+                @include m.sp {
+                    margin: 0 auto;
+                }
+            }
+
+            .btn-text-line {
+                @include m.sp {
+                    margin-bottom: 90px;
                 }
             }
         }
@@ -1721,8 +1772,12 @@ li {
                     .scroll-avatar-item {
                         width: 275px;
 
-                        @include m.sp {
+                        @include m.tab {
                             width: 180px;
+                        }
+
+                        @include m.sp {
+                            width: 150px;
                         }
 
                         img {
@@ -1750,8 +1805,12 @@ li {
     height: 300px;
     width: 100%;
 
-    @include m.sp {
+    @include m.tab {
         height: 200px;
+    }
+
+    @include m.sp {
+        height: 260px;
     }
 }
 
@@ -1764,6 +1823,10 @@ li {
     transform: translateX(-50%);
     z-index: 3;
 
+    @include m.sp {
+        flex-direction: column;
+    }
+
     .line-btn-wrapper {
         .line-btn {
             display: flex;
@@ -1775,9 +1838,15 @@ li {
             border-radius: 999px;
             transition: all 1.5s;
 
-            @include m.sp {
+            @include m.tab {
                 width: 250px;
                 height: 80px;
+            }
+
+            @include m.sp {
+                width: 320px;
+                height: 60px;
+                margin-bottom: 50px;
             }
 
             &:hover {
@@ -1789,10 +1858,15 @@ li {
                 height: 50px;
                 margin-right: 20px;
 
-                @include m.sp {
+                @include m.tab {
                     width: 50px;
                     height: 50px;
                     margin-right: 10px;
+                }
+
+                @include m.sp {
+                    width: 40px;
+                    height: 40px;
                 }
             }
 
@@ -1800,7 +1874,7 @@ li {
                 font-size: 40px;
                 color: #FFFFFF;
 
-                @include m.sp {
+                @include m.tab {
                     font-size: 24px;
                 }
             }
@@ -1819,9 +1893,14 @@ li {
             border-radius: 999px;
             transition: all 1.5s;
 
-            @include m.sp {
+            @include m.tab {
                 width: 250px;
                 height: 80px;
+            }
+
+            @include m.sp {
+                width: 320px;
+                height: 60px;
             }
 
             &:hover {
@@ -1831,7 +1910,7 @@ li {
             img {
                 max-width: 280px;
 
-                @include m.sp {
+                @include m.tab {
                     width: 180px;
                 }
             }
@@ -1933,15 +2012,20 @@ CONTENT
 
     .page-title {
         position: relative;
-        top: -55px;
+        top: -20%;
         left: 1%;
         z-index: 1;
         font-size: 30px;
         font-weight: 700;
         margin: 0 0 32px 15%;
 
+        @include m.tab {
+            top: -160px;
+        }
+
         @include m.sp {
-            top: -100px;
+            top: -30%;
+            font-size: 20px;
         }
     }
 
@@ -1955,8 +2039,12 @@ CONTENT
         line-height: 1;
         color: rgba(0, 0, 0, 0.06);
 
-        @include m.sp {
+        @include m.tab {
             font-size: 80px;
+        }
+
+        @include m.sp {
+            font-size: 40px;
         }
     }
 }
@@ -2004,8 +2092,12 @@ CONTENT
     padding: 400px 24px 120px;
     line-height: 1.5;
 
-    @include m.sp {
+    @include m.tab {
         padding: 200px 30px 120px;
+    }
+
+    @include m.sp {
+        padding: 100px 10px 100px;
     }
 
     .item {
@@ -2017,12 +2109,12 @@ CONTENT
         & .item-img {
             width: 50%;
 
-            @include m.sp {
+            @include m.tab {
                 width: 100%;
             }
         }
 
-        @include m.sp {
+        @include m.tab {
             display: block;
             margin-bottom: 250px;
         }
@@ -2030,14 +2122,22 @@ CONTENT
         .item-body {
             width: 50%;
 
-            @include m.sp {
+            @include m.tab {
                 width: 100%;
                 text-align: center;
+            }
+
+            @include m.sp {
+                text-align: left;
             }
 
             p {
                 margin-bottom: 18px;
                 font-size: 18px;
+
+                @include m.sp {
+                    font-size: 16px;
+                }
             }
 
             .item-number {
@@ -2059,9 +2159,14 @@ CONTENT
         line-height: 1.5;
         padding-left: 6.5rem;
 
-        @include m.sp {
+        @include m.tab {
             font-size: 36px;
             text-align: center;
+        }
+
+        @include m.sp {
+            font-size: 28px;
+            padding: 0;
         }
 
         &::before {
@@ -2074,9 +2179,16 @@ CONTENT
             font-weight: 700;
             line-height: 1;
 
-            @include m.sp {
+            @include m.tab {
                 font-size: 36px;
                 left: 15%;
+            }
+
+            @include m.sp {
+                font-size: 26px;
+                top: -40%;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
 
@@ -2090,8 +2202,12 @@ CONTENT
             height: 2px;
             background: currentColor;
 
-            @include m.sp {
+            @include m.tab {
                 left: 25%;
+            }
+
+            @include m.sp {
+                display: none;
             }
         }
     }
@@ -2122,7 +2238,7 @@ CONTENT
         position: relative;
 
         .item {
-            @include m.sp {
+            @include m.tab {
                 display: flex;
                 flex-direction: column-reverse;
             }
@@ -2131,9 +2247,13 @@ CONTENT
                 .con1_img1 {
                     width: 80%;
 
-                    @include m.sp {
+                    @include m.tab {
                         width: 60%;
                         margin-left: 10%;
+                    }
+
+                    @include m.sp {
+                        display: none;
                     }
                 }
 
@@ -2142,10 +2262,15 @@ CONTENT
                     margin: 0 auto;
                     margin-top: -50px;
 
-                    @include m.sp {
+                    @include m.tab {
                         width: 60%;
                         margin: auto auto auto 30%;
                         margin-top: -10%;
+                    }
+
+                    @include m.sp {
+                        width: 100vw;
+                        margin: auto;
                     }
                 }
             }
@@ -2180,7 +2305,7 @@ CONTENT
                 .con2_img1 {
                     width: 80%;
 
-                    @include m.sp {
+                    @include m.tab {
                         width: 60%;
                         margin-left: 10%;
                     }
@@ -2191,7 +2316,7 @@ CONTENT
                     margin-left: 15%;
                     margin-top: -10px;
 
-                    @include m.sp {
+                    @include m.tab {
                         width: 35%;
                         margin-top: -15%;
                         margin-left: 50%;
@@ -2225,13 +2350,13 @@ CONTENT
 
         .item-title {
             &::before {
-                @include m.sp {
+                @include m.tab {
                     left: 10%;
                 }
             }
 
             &::after {
-                @include m.sp {
+                @include m.tab {
                     left: 20%;
                     width: 1rem;
                 }
@@ -2241,7 +2366,7 @@ CONTENT
         .img-title {
             margin-bottom: 5%;
 
-            @include m.sp {
+            @include m.tab {
                 display: none;
             }
         }
@@ -2249,7 +2374,7 @@ CONTENT
         .img-title-sp {
             display: none;
 
-            @include m.sp {
+            @include m.tab {
                 display: block;
                 margin-bottom: 3%;
             }
@@ -2258,7 +2383,7 @@ CONTENT
         .item1 {
             margin-bottom: 0;
 
-            @include m.sp {
+            @include m.tab {
                 display: flex;
                 flex-direction: column-reverse;
             }
@@ -2268,7 +2393,7 @@ CONTENT
                     margin-left: 10%;
                     width: 80%;
 
-                    @include m.sp {
+                    @include m.tab {
                         margin: 0 auto;
                         width: 60%;
                     }
@@ -2283,7 +2408,7 @@ CONTENT
             .item-text {
                 margin-bottom: 10%;
 
-                @include m.sp {
+                @include m.tab {
                     margin-bottom: 5%;
                 }
             }
@@ -2305,7 +2430,7 @@ CONTENT
                     margin-top: -10%;
                     width: 80%;
 
-                    @include m.sp {
+                    @include m.tab {
                         margin-top: auto;
                         margin-inline: auto;
                         width: 60%;
@@ -2317,7 +2442,7 @@ CONTENT
                 margin-top: 10%;
                 margin-left: 10%;
 
-                @include m.sp {
+                @include m.tab {
                     margin-top: auto;
                     margin-left: auto;
                     margin-bottom: 5%;
@@ -2326,7 +2451,7 @@ CONTENT
         }
 
         .item3 {
-            @include m.sp {
+            @include m.tab {
                 display: flex;
                 flex-direction: column-reverse;
             }
@@ -2336,7 +2461,7 @@ CONTENT
                     margin-left: 10%;
                     width: 80%;
 
-                    @include m.sp {
+                    @include m.tab {
                         margin-top: auto;
                         margin-inline: auto;
                         width: 60%;
@@ -2348,7 +2473,7 @@ CONTENT
                 margin-bottom: 10%;
                 margin-top: 15%;
 
-                @include m.sp {
+                @include m.tab {
                     margin-top: auto;
                     margin-left: auto;
                     margin-bottom: 5%;
@@ -2382,7 +2507,7 @@ CONTENT
         .item {
             .item-body {
                 .item-text {
-                    @include m.sp {
+                    @include m.tab {
                         margin-bottom: 5%;
                     }
                 }
@@ -2394,7 +2519,7 @@ CONTENT
                     margin-left: 30%;
                     z-index: -1;
 
-                    @include m.sp {
+                    @include m.tab {
                         width: 60%;
                         margin-left: 10%;
                     }
@@ -2406,7 +2531,7 @@ CONTENT
                     margin-left: -10%;
 
                     // position: relative;
-                    @include m.sp {
+                    @include m.tab {
                         display: none;
                     }
 
@@ -2418,7 +2543,7 @@ CONTENT
                     margin-top: -30%;
                     z-index: -1;
 
-                    @include m.sp {
+                    @include m.tab {
                         width: 60%;
                         margin-top: -5%;
                         margin-left: 35%;
