@@ -1929,7 +1929,7 @@ CONTENT
 
     .page-title {
         position: relative;
-        top: -55px;
+        top: -20%;
         left: 1%;
         z-index: 1;
         font-size: 30px;
@@ -1937,7 +1937,12 @@ CONTENT
         margin: 0 0 32px 15%;
 
         @include m.tab {
-            top: -100px;
+            top: -160px;
+        }
+
+        @include m.sp {
+            top: -30%;
+            font-size: 20px;
         }
     }
 
@@ -1953,6 +1958,10 @@ CONTENT
 
         @include m.tab {
             font-size: 80px;
+        }
+
+        @include m.sp {
+            font-size: 40px;
         }
     }
 }
@@ -2004,6 +2013,10 @@ CONTENT
         padding: 200px 30px 120px;
     }
 
+    @include m.sp {
+        padding: 100px 10px 100px;
+    }
+
     .item {
         display: flex;
         justify-content: center;
@@ -2031,9 +2044,17 @@ CONTENT
                 text-align: center;
             }
 
+            @include m.sp {
+                text-align: left;
+            }
+
             p {
                 margin-bottom: 18px;
                 font-size: 18px;
+
+                @include m.sp {
+                    font-size: 16px;
+                }
             }
 
             .item-number {
@@ -2060,6 +2081,11 @@ CONTENT
             text-align: center;
         }
 
+        @include m.sp {
+            font-size: 28px;
+            padding: 0;
+        }
+
         &::before {
             content: attr(data-num);
             position: absolute;
@@ -2073,6 +2099,13 @@ CONTENT
             @include m.tab {
                 font-size: 36px;
                 left: 15%;
+            }
+
+            @include m.sp {
+                font-size: 26px;
+                top: -40%;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
 
@@ -2088,6 +2121,10 @@ CONTENT
 
             @include m.tab {
                 left: 25%;
+            }
+
+            @include m.sp {
+                display: none;
             }
         }
     }
@@ -2131,6 +2168,10 @@ CONTENT
                         width: 60%;
                         margin-left: 10%;
                     }
+
+                    @include m.sp {
+                        display: none;
+                    }
                 }
 
                 .con1_img2 {
@@ -2142,6 +2183,11 @@ CONTENT
                         width: 60%;
                         margin: auto auto auto 30%;
                         margin-top: -10%;
+                    }
+
+                    @include m.sp {
+                        width: 100vw;
+                        margin: auto;
                     }
                 }
             }
