@@ -553,11 +553,11 @@ li {
         position: relative;
 
         @include m.tab {
-            max-width: 980;
+            max-width: 980px;
         }
 
         @include m.sp {
-            max-width: 430;
+            max-width: 430px;
         }
     }
 
@@ -607,7 +607,7 @@ li {
             }
 
             @include m.sp {
-                font-size: 100px;
+                font-size: 80px;
                 letter-spacing: 0.2em;
                 text-align: center;
             }
@@ -774,7 +774,7 @@ li {
         margin-bottom: 100px;
 
         @include m.tab {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         @include m.sp {
@@ -874,7 +874,7 @@ li {
         @include m.tab {
             margin: 0;
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         @include m.sp {
@@ -913,7 +913,7 @@ li {
             margin-bottom: 100px;
 
             @include m.tab {
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
 
             @include m.sp {
@@ -1004,16 +1004,15 @@ li {
                             margin-bottom: 12px;
 
                             @include m.tab {
-                                align-items: flex-start;
                                 margin: 0 auto;
                                 gap: 10px;
+                                margin-bottom: 5px;
                             }
 
                             @include m.sp {
-                                align-items: flex-start;
                                 margin: 0 auto;
                                 gap: 10px;
-                                margin-bottom: 10px;
+                                margin-bottom: 5px;
                             }
 
                             .number {
@@ -1190,7 +1189,7 @@ li {
         color: #fff;
 
         @include m.tab {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         @include m.sp {
