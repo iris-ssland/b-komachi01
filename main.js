@@ -58,7 +58,7 @@ window.addEventListener("load", () => {
     scrollTrigger: {
       trigger: "#voice",
       start: () => `top-=${headerHeight} top`,
-      end: () => `+=${items.length * 1000 + 500}`,
+      end: () => `+=${items.length * 600 + 300}`,
       pin: true,
       scrub: true,
       markers: false
