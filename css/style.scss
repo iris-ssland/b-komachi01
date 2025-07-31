@@ -2254,6 +2254,11 @@ CONTENT
         height: 260px;
         z-index: -10;
         background: url("../img/green_ellipse_1.png") center/contain no-repeat;
+
+        @include m.sp {
+            width: 130px;
+            height: 130px;
+        }
     }
 
     .ellipse.outline {
@@ -2261,6 +2266,11 @@ CONTENT
         height: 420px;
         z-index: -10;
         background: url("../img/green_ellipse_2.png") center/contain no-repeat;
+
+        @include m.sp {
+            width: 210px;
+            height: 210px;
+        }
     }
 
     .ellipse.solid {
@@ -2268,6 +2278,11 @@ CONTENT
         height: 200px;
         z-index: -10;
         background: url("../img/green_ellipse_3.png") center/contain no-repeat;
+
+        @include m.sp {
+            width: 130px;
+            height: 130px;
+        }
     }
 
     // Content1
@@ -2317,18 +2332,40 @@ CONTENT
             position: absolute;
             top: 5%;
             left: 55%;
+
+            @include m.tab {
+                left: 60%;
+            }
+
+            @include m.sp {
+                top: 0;
+            }
         }
 
         .ellipse.outline {
             position: absolute;
             top: 55%;
             left: 60%;
+
+            @include m.sp {
+                top: 20%;
+                left: 0;
+            }
         }
 
         .ellipse.solid {
             position: absolute;
             top: 55%;
             left: 0;
+
+            @include m.tab {
+                top: 40%;
+            }
+
+            @include m.sp {
+                top: 55%;
+                left: 60%;
+            }
         }
 
     }
@@ -2366,18 +2403,24 @@ CONTENT
             position: absolute;
             top: 30%;
             left: 0;
+
+            @include m.tab {
+                top: 20%;
+            }
         }
 
         .ellipse.outline {
             position: absolute;
             top: 55%;
             left: 40%;
-        }
 
-        .ellipse.solid {
-            position: absolute;
-            top: 55%;
-            left: 0;
+            @include m.tab {
+                top: 40%;
+            }
+
+            @include m.sp {
+                top: 60%;
+            }
         }
     }
 
@@ -2522,18 +2565,45 @@ CONTENT
             position: absolute;
             top: 30%;
             left: 10%;
+
+            @include m.tab {
+                top: 35%;
+                left: 5%;
+            }
+
+            @include m.sp {
+                top: 15px;
+            }
         }
 
         .ellipse.solid {
             position: absolute;
             top: 10%;
             left: 60%;
+
+            @include m.tab {
+                left: 70%;
+            }
+
+            @include m.sp {
+                top: 36%;
+                left: 60%;
+            }
         }
 
         .ellipse.blur {
             position: absolute;
             top: 80%;
             left: 55%;
+
+            @include m.tab {
+                top: 75%;
+            }
+
+            @include m.sp {
+                top: 65%;
+                left: 5%;
+            }
         }
     }
 
@@ -2567,7 +2637,6 @@ CONTENT
                     margin-top: -20%;
                     margin-left: -10%;
 
-                    // position: relative;
                     @include m.tab {
                         display: none;
                     }
@@ -2593,18 +2662,32 @@ CONTENT
             position: absolute;
             top: 90%;
             left: 60%;
+
+            @include m.tab {
+                top: 8%;
+            }
         }
 
         .ellipse.outline {
             position: absolute;
             top: 35%;
             left: 5%;
+
+            @include m.sp {
+                top: 60%;
+                left: 55%;
+            }
         }
 
         .ellipse.solid {
             position: absolute;
-            top: 10%;
-            left: 60%;
+            top: 65%;
+            left: 65%;
+
+            @include m.sp {
+                top: 38%;
+                left: 5%;
+            }
         }
     }
 }
