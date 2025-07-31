@@ -259,6 +259,17 @@ li {
     padding: 0 20px 0 10px;
   }
 }
+#header .header-inner .site-title {
+  text-align: center;
+}
+#header .header-inner .site-title a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#header .header-inner .site-title img {
+  display: block;
+}
 @media screen and (max-width: 980px) {
   #header .header-inner .site-title img {
     height: 40px;
@@ -419,7 +430,7 @@ li {
     cursor: pointer;
     position: relative;
     position: fixed;
-    top: 22px;
+    top: 15px;
     right: 18px;
     transition: all 0.5s;
     z-index: 20;
