@@ -2125,7 +2125,7 @@ CONTENT
 }
 @media screen and (max-width: 430px) {
   .main-visual .page-title {
-    top: -30%;
+    top: -33%;
     font-size: 20px;
   }
 }
@@ -2205,18 +2205,13 @@ CONTENT
     text-align: center;
   }
 }
-@media screen and (max-width: 430px) {
-  .detail-contents .item .item-body {
-    text-align: left;
-  }
-}
 .detail-contents .item .item-body p {
   margin-bottom: 18px;
   font-size: 18px;
 }
 @media screen and (max-width: 430px) {
   .detail-contents .item .item-body p {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 .detail-contents .item .item-body .item-number {
@@ -2345,11 +2340,6 @@ CONTENT
     margin-left: 10%;
   }
 }
-@media screen and (max-width: 430px) {
-  .detail-contents .con-1 .item .item-img .con1_img1 {
-    display: none;
-  }
-}
 .detail-contents .con-1 .item .item-img .con1_img2 {
   width: 80%;
   margin: 0 auto;
@@ -2358,14 +2348,14 @@ CONTENT
 @media screen and (max-width: 980px) {
   .detail-contents .con-1 .item .item-img .con1_img2 {
     width: 60%;
-    margin: auto auto auto 30%;
+    margin-left: 30%;
     margin-top: -10%;
   }
 }
 @media screen and (max-width: 430px) {
   .detail-contents .con-1 .item .item-img .con1_img2 {
-    width: 100vw;
-    margin: auto;
+    margin-top: -15%;
+    margin-left: 30%;
   }
 }
 .detail-contents .con-1 .ellipse.blur {
@@ -2465,6 +2455,14 @@ CONTENT
 @media screen and (max-width: 980px) {
   .detail-contents .con-3 .item-title::before {
     left: 10%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .detail-contents .con-3 .item-title::before {
+    font-size: 26px;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 980px) {
@@ -2688,7 +2686,7 @@ CONTENT
 @media screen and (max-width: 430px) {
   .detail-contents .con-4 .ellipse.outline {
     top: 60%;
-    left: 55%;
+    left: 50%;
   }
 }
 .detail-contents .con-4 .ellipse.solid {
@@ -2699,7 +2697,7 @@ CONTENT
 @media screen and (max-width: 430px) {
   .detail-contents .con-4 .ellipse.solid {
     top: 38%;
-    left: 5%;
+    left: 3%;
   }
 }
 

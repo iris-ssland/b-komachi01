@@ -2028,6 +2028,8 @@ li {
     }
 }
 
+
+
 /* -----------------------------
 CONTENT
 ----------------------------- */
@@ -2061,7 +2063,7 @@ CONTENT
         }
 
         @include m.sp {
-            top: -30%;
+            top: -33%;
             font-size: 20px;
         }
     }
@@ -2139,7 +2141,7 @@ CONTENT
             }
 
             @include m.sp {
-                text-align: left;
+                // text-align: left;
             }
 
             p {
@@ -2147,7 +2149,7 @@ CONTENT
                 font-size: 18px;
 
                 @include m.sp {
-                    font-size: 16px;
+                    font-size: 12px;
                 }
             }
 
@@ -2277,10 +2279,6 @@ CONTENT
                         width: 60%;
                         margin-left: 10%;
                     }
-
-                    @include m.sp {
-                        display: none;
-                    }
                 }
 
                 .con1_img2 {
@@ -2290,13 +2288,13 @@ CONTENT
 
                     @include m.tab {
                         width: 60%;
-                        margin: auto auto auto 30%;
+                        margin-left: 30%;
                         margin-top: -10%;
                     }
 
                     @include m.sp {
-                        width: 100vw;
-                        margin: auto;
+                        margin-top: -15%;
+                        margin-left: 30%;
                     }
                 }
             }
@@ -2406,6 +2404,13 @@ CONTENT
             &::before {
                 @include m.tab {
                     left: 10%;
+                }
+
+                @include m.sp {
+                    font-size: 26px;
+                    top: -40%;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
 
@@ -2649,7 +2654,7 @@ CONTENT
 
             @include m.sp {
                 top: 60%;
-                left: 55%;
+                left: 50%;
             }
         }
 
@@ -2660,7 +2665,7 @@ CONTENT
 
             @include m.sp {
                 top: 38%;
-                left: 5%;
+                left: 3%;
             }
         }
     }
