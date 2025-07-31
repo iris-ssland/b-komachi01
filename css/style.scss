@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@use './parts/mixin'as m;
+@use './parts/mixin' as m;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 // @include m.sp {}
@@ -943,7 +943,7 @@ li {
         padding-bottom: 150px;
 
         @include m.tab {
-            padding-bottom: 150px;
+            padding-bottom: 70px;
         }
 
         @include m.sp {
@@ -1397,6 +1397,10 @@ li {
 .faq {
     background-color: #FFFFFF;
     padding: 150px 0;
+
+    @include m.tab {
+        padding: 70px 0;
+    }
 
     @include m.sp {
         padding: 60px 0;
