@@ -2111,7 +2111,7 @@ CONTENT
 }
 .main-visual .page-title {
   position: relative;
-  top: -20%;
+  top: -15%;
   left: 1%;
   z-index: 1;
   font-size: 30px;
@@ -2151,10 +2151,7 @@ CONTENT
 }
 
 /* ——— Section ——— */
-.contentfadein,
-.contentfadein2,
-.contentfadein3,
-.contentfadein4 {
+.contentfadein {
   opacity: 0;
   transform: translateY(20px);
   transition: all 2.5s;
