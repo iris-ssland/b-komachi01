@@ -259,6 +259,17 @@ li {
     padding: 0 20px 0 10px;
   }
 }
+#header .header-inner .site-title {
+  text-align: center;
+}
+#header .header-inner .site-title a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#header .header-inner .site-title img {
+  display: block;
+}
 @media screen and (max-width: 980px) {
   #header .header-inner .site-title img {
     height: 40px;
@@ -370,6 +381,9 @@ li {
   position: relative;
   overflow: hidden;
   transition: color 0.3s ease;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
 }
 #header .header-inner .nav .contact-btn::after {
   position: absolute;
@@ -419,7 +433,7 @@ li {
     cursor: pointer;
     position: relative;
     position: fixed;
-    top: 22px;
+    top: 15px;
     right: 18px;
     transition: all 0.5s;
     z-index: 20;
@@ -943,12 +957,12 @@ li {
 }
 @media screen and (max-width: 980px) {
   .content .container {
-    padding-bottom: 150px;
+    padding-bottom: 70px;
   }
 }
 @media screen and (max-width: 430px) {
   .content .container {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 }
 .content .container .content-title {
@@ -1229,6 +1243,7 @@ li {
     gap: 0;
     max-width: 430px;
     width: 90%;
+    padding: 60px 20px 50px 20px;
   }
 }
 .voice .voice-title {
@@ -1401,9 +1416,14 @@ li {
   background-color: #FFFFFF;
   padding: 150px 0;
 }
+@media screen and (max-width: 980px) {
+  .faq {
+    padding: 70px 0;
+  }
+}
 @media screen and (max-width: 430px) {
   .faq {
-    padding: 60px 0;
+    padding: 10px 0;
   }
 }
 .faq .container {
