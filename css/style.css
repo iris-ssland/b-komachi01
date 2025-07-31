@@ -957,7 +957,7 @@ li {
 }
 @media screen and (max-width: 980px) {
   .content .container {
-    padding-bottom: 150px;
+    padding-bottom: 70px;
   }
 }
 @media screen and (max-width: 430px) {
@@ -1415,6 +1415,11 @@ li {
 .faq {
   background-color: #FFFFFF;
   padding: 150px 0;
+}
+@media screen and (max-width: 980px) {
+  .faq {
+    padding: 70px 0;
+  }
 }
 @media screen and (max-width: 430px) {
   .faq {

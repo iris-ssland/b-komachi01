@@ -946,7 +946,7 @@ li {
         padding-bottom: 150px;
 
         @include m.tab {
-            padding-bottom: 150px;
+            padding-bottom: 70px;
         }
 
         @include m.sp {
@@ -1401,6 +1401,10 @@ li {
 .faq {
     background-color: #FFFFFF;
     padding: 150px 0;
+
+    @include m.tab {
+        padding: 70px 0;
+    }
 
     @include m.sp {
         padding: 10px 0;
