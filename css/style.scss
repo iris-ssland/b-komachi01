@@ -234,7 +234,17 @@ li {
         }
 
         .site-title {
+            text-align: center;
+
+            a {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+
             img {
+                display: block;
+
                 @include m.tab {
                     height: 40px;
                 }
@@ -407,7 +417,7 @@ li {
             cursor: pointer;
             position: relative;
             position: fixed;
-            top: 22px;
+            top: 15px;
             right: 18px;
             transition: all 0.5s;
             z-index: 20;
