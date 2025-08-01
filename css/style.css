@@ -2567,13 +2567,6 @@ CONTENT
   }
 }
 
-.contact.contact-is-static {
-  position: static;
-}
-.contact.contact-is-static .btn-text-area {
-  margin-bottom: 30px;
-}
-
 footer {
   text-align: center;
   padding-bottom: 10px;
