@@ -250,10 +250,12 @@ li {
 
                 @include m.tab {
                     height: 40px;
+                    width: auto;
                 }
 
                 @include m.sp {
                     height: 40px;
+                    width: auto;
                 }
             }
         }
@@ -584,6 +586,8 @@ li {
         display: block;
         height: auto;
         padding-bottom: 150px;
+        width: 100%;
+        height: 100vh;
     }
 
     @include m.sp {
@@ -591,6 +595,8 @@ li {
         display: block;
         height: auto;
         padding-bottom: 60px;
+        width: 100%;
+        height: 100vh;
     }
 
     .mv-inner {
@@ -1711,6 +1717,7 @@ li {
 
                 @include m.tab {
                     height: 70px;
+                    width: auto;
                 }
             }
         }
