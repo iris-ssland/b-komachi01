@@ -2760,6 +2760,10 @@ footer {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 1000;
+
+    @include m.sp {
+        display: none;
+    }
 }
 
 #mouse-stalker img {
