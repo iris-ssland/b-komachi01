@@ -2084,42 +2084,41 @@ CONTENT
     overflow: hidden;
 
     .page-title {
-        position: relative;
-        top: -15%;
-        left: 1%;
+        position: absolute;
+        top: 60%;
+        left: 20%;
         z-index: 1;
         font-size: 30px;
         font-weight: 700;
-        margin: 0 0 32px 15%;
-
-        @include m.tab {
-            top: -60px;
-        }
 
         @include m.sp {
-            top: -33%;
+            left: 10%;
             font-size: 20px;
         }
+
+        &::before {
+            content: "CONTENTS";
+            position: absolute;
+            bottom: 0%;
+            left: -25%;
+            font-size: 120px;
+            font-weight: 700;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.06);
+
+            @include m.tab {
+                font-size: 80px;
+                left: -8%;
+                bottom: 20%;
+            }
+
+            @include m.sp {
+                font-size: 50px;
+            }
+        }
     }
 
-    &::before {
-        content: "CONTENTS";
-        position: absolute;
-        top: 48%;
-        left: 15%;
-        font-size: 120px;
-        font-weight: 700;
-        line-height: 1;
-        color: rgba(0, 0, 0, 0.06);
 
-        @include m.tab {
-            font-size: 80px;
-        }
-
-        @include m.sp {
-            font-size: 40px;
-        }
-    }
 }
 
 
@@ -2177,10 +2176,6 @@ CONTENT
             @include m.tab {
                 width: 100%;
                 text-align: center;
-            }
-
-            @include m.sp {
-                // text-align: left;
             }
 
             p {
