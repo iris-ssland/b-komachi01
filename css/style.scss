@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@use './parts/mixin' as m;
+@use './parts/mixin'as m;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 html {
@@ -2144,7 +2144,7 @@ CONTENT
     }
 
     @include m.sp {
-        padding: 100px 10px 100px;
+        padding: 70px 10px 100px;
     }
 
     .item {
@@ -2164,6 +2164,11 @@ CONTENT
         @include m.tab {
             display: block;
             margin-bottom: 250px;
+        }
+
+        @include m.sp {
+            display: block;
+            margin-bottom: 0px;
         }
 
         .item-body {
