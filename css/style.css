@@ -289,7 +289,7 @@ li {
 }
 @media screen and (max-width: 430px) {
   #header .header-inner .site-title img {
-    height: 30px;
+    height: 40px;
   }
 }
 #header .header-inner .nav {
