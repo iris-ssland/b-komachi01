@@ -2056,14 +2056,20 @@ li {
 /* -----------------------------
 CONTENT
 ----------------------------- */
+
+/* Opening animation */
 .loading-margin {
     margin-top: 200px;
 }
 
 
-#header.is-static {
-    position: static;
-    background: #a0dca0;
+/* Header */
+#header.for-content {
+    background: transparent;
+}
+
+.for-content-backcolor {
+    background: #FFFFFF;
 }
 
 /* Main Visual */
@@ -2144,7 +2150,7 @@ CONTENT
         display: flex;
         justify-content: center;
         margin-inline: auto;
-        margin-bottom: 500px;
+        margin-bottom: 300px;
 
         & .item-img {
             width: 50%;
@@ -2291,6 +2297,7 @@ CONTENT
     // Content1
     .con-1 {
         position: relative;
+        padding-top: 150px;
 
         .item {
             @include m.tab {
@@ -2372,6 +2379,7 @@ CONTENT
     // Content2
     .con-2 {
         position: relative;
+        padding-top: 150px;
 
         .item {
             .item-img {
@@ -2426,6 +2434,7 @@ CONTENT
     // Content3
     .con-3 {
         position: relative;
+        padding-top: 150px;
 
         .item-title {
             &::before {
@@ -2450,10 +2459,25 @@ CONTENT
 
         .img-title {
             margin-bottom: 5%;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -5%;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent transparent #333333;
+                border-width: 8px 8px 8px 10px;
+            }
 
             @include m.tab {
                 display: none;
             }
+
         }
 
         .img-title-sp {
@@ -2463,6 +2487,7 @@ CONTENT
                 display: block;
                 margin-bottom: 3%;
             }
+
         }
 
         .item1 {
@@ -2505,8 +2530,10 @@ CONTENT
             .item-body {
                 margin-bottom: 0;
 
-                .img-title-sp {
-                    margin-top: 3%;
+                @include m.tab {
+                    .img-title-sp {
+                        margin-top: 3%;
+                    }
                 }
             }
 
@@ -2615,6 +2642,7 @@ CONTENT
     // Content4
     .con-4 {
         position: relative;
+        padding-top: 150px;
 
         .item {
             .item-body {
@@ -2712,28 +2740,6 @@ CONTENT
 footer {
     text-align: center;
     padding-bottom: 10px;
-
-    .to-top {
-        width: 50px;
-        height: 50px;
-        background-color: #fff;
-        border: solid 1px #A0DB9F;
-        border-radius: 50%;
-        position: fixed;
-        right: 25px;
-        bottom: 25px;
-
-        &::after {
-            content: "";
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-            border-bottom: 7px solid #A0DB9F;
-            position: absolute;
-            left: 17px;
-            bottom: 21px;
-        }
-
-    }
 
     p {
         font-size: 12px;
