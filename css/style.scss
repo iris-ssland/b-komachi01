@@ -583,20 +583,14 @@ li {
 
     @include m.tab {
         margin-top: 78px;
-        display: block;
-        height: auto;
         padding-bottom: 150px;
-        width: 100%;
-        height: 100vh;
+        height: 100dvh;
     }
 
     @include m.sp {
         margin-top: 76px;
-        display: block;
-        height: auto;
         padding-bottom: 60px;
-        width: 100%;
-        height: 100vh;
+        height: 100dvh;
     }
 
     .mv-inner {
@@ -1717,7 +1711,7 @@ li {
 
                 @include m.tab {
                     height: 70px;
-                    width: auto;
+                    width: 54.63px;
                 }
             }
         }
