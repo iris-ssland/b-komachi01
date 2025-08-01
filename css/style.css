@@ -2015,7 +2015,7 @@ CONTENT
 }
 @media screen and (max-width: 430px) {
   .detail-contents {
-    padding: 100px 10px 100px;
+    padding: 70px 10px 100px;
   }
 }
 .detail-contents .item {
@@ -2036,6 +2036,12 @@ CONTENT
   .detail-contents .item {
     display: block;
     margin-bottom: 250px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .detail-contents .item {
+    display: block;
+    margin-bottom: 0px;
   }
 }
 .detail-contents .item .item-body {
