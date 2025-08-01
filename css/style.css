@@ -285,11 +285,13 @@ li {
 @media screen and (max-width: 980px) {
   #header .header-inner .site-title img {
     height: 40px;
+    width: auto;
   }
 }
 @media screen and (max-width: 430px) {
   #header .header-inner .site-title img {
     height: 40px;
+    width: auto;
   }
 }
 #header .header-inner .nav {
@@ -588,6 +590,8 @@ li {
     display: block;
     height: auto;
     padding-bottom: 150px;
+    width: 100%;
+    height: 100vh;
   }
 }
 @media screen and (max-width: 430px) {
@@ -596,6 +600,8 @@ li {
     display: block;
     height: auto;
     padding-bottom: 60px;
+    width: 100%;
+    height: 100vh;
   }
 }
 .mv .mv-inner {
