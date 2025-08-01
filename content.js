@@ -1,4 +1,18 @@
-// contact.html
+// contact.html用JQuery
+
+// スクロールイベント（headerの背景色変更）
+$(window).on('scroll', function () {
+  const over500   = $(this).scrollTop() > 400;  // 閾値判定
+  const $header   = $('header');                // 1回だけ取得
+
+  if (over500) {
+    $header.addClass('for-content-backcolor')
+            .removeClass('for-content');
+  } else {
+    $header.addClass('for-content')
+            .removeClass('for-content-backcolor');
+  }
+});
 
 // ハンバーガーメニュー
 $(".hamburger").on("click", function () {
@@ -12,6 +26,8 @@ $("#mask").on("click", function () {
 $("#nav a").on("click", function () {
   $("#header").removeClass("open");
 });
+
+
 
 // ページ内リンクのスムーススクロール
 $('a[href^="#"]').on('click', function (e) {
@@ -30,10 +46,7 @@ $('a[href^="#"]').on('click', function (e) {
 });
 
 
-
-
-
-// スクロール時のイベント
+// スクロールイベント（各itemのFadein）
 $(window).scroll(function () {
   // 画面がスクロールされた時に実行する
 
@@ -58,92 +71,10 @@ $(window).scroll(function () {
       $(this).addClass('is-show');   // CSS だけでアニメ完結
     }
   });
-
-});
-
-// スクロール時のイベント
-$(window).scroll(function () {
-  // 画面がスクロールされた時に実行する
-
-  $(".contentfadein2").each(function () {
-    // fadeinクラスに対して順に処理を行う
-    // .each()：個別に処理を行うためのメソッド。繰り返し処理を行いながら各要素に対して操作を実行することができる。
-
-
-    // スクロールした距離
-    let scroll = $(window).scrollTop();
-    // 現在のスクロール位置を取得する。
-    // scrollTop()：要素のスクロール位置を取得
-
-    // fadeinクラスの要素までの距離
-    let target = $(this).offset().top;
-
-    // 画面の高さ
-    let windowHeight = $(window).height();
-
-    // fadeinクラスの要素が画面内にきたタイミングで要素を表示
-    if (scroll > target - windowHeight + 500) {
-      $(this).addClass('is-show');   // CSS だけでアニメ完結
-    }
-  });
-
 });
 
 
-// スクロール時のイベント
-$(window).scroll(function () {
-  // 画面がスクロールされた時に実行する
 
-  $(".contentfadein3").each(function () {
-    // fadeinクラスに対して順に処理を行う
-    // .each()：個別に処理を行うためのメソッド。繰り返し処理を行いながら各要素に対して操作を実行することができる。
-
-
-    // スクロールした距離
-    let scroll = $(window).scrollTop();
-    // 現在のスクロール位置を取得する。
-    // scrollTop()：要素のスクロール位置を取得
-
-    // fadeinクラスの要素までの距離
-    let target = $(this).offset().top;
-
-    // 画面の高さ
-    let windowHeight = $(window).height();
-
-    // fadeinクラスの要素が画面内にきたタイミングで要素を表示
-    if (scroll > target - windowHeight + 700) {
-      $(this).addClass('is-show');   // CSS だけでアニメ完結
-    }
-  });
-});
-
-// スクロール時のイベント
-$(window).scroll(function () {
-  // 画面がスクロールされた時に実行する
-
-  $(".contentfadein4").each(function () {
-    // fadeinクラスに対して順に処理を行う
-    // .each()：個別に処理を行うためのメソッド。繰り返し処理を行いながら各要素に対して操作を実行することができる。
-
-
-    // スクロールした距離
-    let scroll = $(window).scrollTop();
-    // 現在のスクロール位置を取得する。
-    // scrollTop()：要素のスクロール位置を取得
-
-    // fadeinクラスの要素までの距離
-    let target = $(this).offset().top;
-
-    // 画面の高さ
-    let windowHeight = $(window).height();
-
-    // fadeinクラスの要素が画面内にきたタイミングで要素を表示
-    if (scroll > target - windowHeight + 100) {
-      $(this).addClass('is-show');   // CSS だけでアニメ完結
-    }
-  });
-
-});
 
 
 // mouse-stalker
@@ -171,3 +102,7 @@ document.addEventListener("mousemove", (e) => {
   }
   prevX = e.clientX;   // 今回の座標を次回の比較用に保存
 });
+
+
+
+

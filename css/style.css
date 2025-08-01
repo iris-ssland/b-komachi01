@@ -2128,13 +2128,18 @@ li {
 /* -----------------------------
 CONTENT
 ----------------------------- */
+/* Opening animation */
 .loading-margin {
   margin-top: 200px;
 }
 
-#header.is-static {
-  position: static;
-  background: #a0dca0;
+/* Header */
+#header.for-content {
+  background: transparent;
+}
+
+.for-content-backcolor {
+  background: #FFFFFF;
 }
 
 /* Main Visual */
@@ -2218,7 +2223,7 @@ CONTENT
   display: flex;
   justify-content: center;
   margin-inline: auto;
-  margin-bottom: 500px;
+  margin-bottom: 300px;
 }
 .detail-contents .item .item-img {
   width: 50%;
@@ -2362,6 +2367,7 @@ CONTENT
 }
 .detail-contents .con-1 {
   position: relative;
+  padding-top: 150px;
 }
 @media screen and (max-width: 980px) {
   .detail-contents .con-1 .item {
@@ -2440,6 +2446,7 @@ CONTENT
 }
 .detail-contents .con-2 {
   position: relative;
+  padding-top: 150px;
 }
 .detail-contents .con-2 .item .item-img .con2_img1 {
   width: 80%;
@@ -2489,6 +2496,7 @@ CONTENT
 }
 .detail-contents .con-3 {
   position: relative;
+  padding-top: 150px;
 }
 @media screen and (max-width: 980px) {
   .detail-contents .con-3 .item-title::before {
@@ -2510,6 +2518,19 @@ CONTENT
 }
 .detail-contents .con-3 .img-title {
   margin-bottom: 5%;
+  position: relative;
+}
+.detail-contents .con-3 .img-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent #333333;
+  border-width: 8px 8px 8px 10px;
 }
 @media screen and (max-width: 980px) {
   .detail-contents .con-3 .img-title {
@@ -2562,8 +2583,10 @@ CONTENT
 .detail-contents .con-3 .item2 .item-body {
   margin-bottom: 0;
 }
-.detail-contents .con-3 .item2 .item-body .img-title-sp {
-  margin-top: 3%;
+@media screen and (max-width: 980px) {
+  .detail-contents .con-3 .item2 .item-body .img-title-sp {
+    margin-top: 3%;
+  }
 }
 .detail-contents .con-3 .item2 .item-img .con3_img2 {
   margin-top: -10%;
@@ -2665,6 +2688,7 @@ CONTENT
 }
 .detail-contents .con-4 {
   position: relative;
+  padding-top: 150px;
 }
 @media screen and (max-width: 980px) {
   .detail-contents .con-4 .item .item-body .item-text {
