@@ -285,11 +285,13 @@ li {
 @media screen and (max-width: 980px) {
   #header .header-inner .site-title img {
     height: 40px;
+    width: auto;
   }
 }
 @media screen and (max-width: 430px) {
   #header .header-inner .site-title img {
     height: 40px;
+    width: auto;
   }
 }
 #header .header-inner .nav {
@@ -585,17 +587,15 @@ li {
 @media screen and (max-width: 980px) {
   .mv {
     margin-top: 78px;
-    display: block;
-    height: auto;
     padding-bottom: 150px;
+    height: 100dvh;
   }
 }
 @media screen and (max-width: 430px) {
   .mv {
     margin-top: 76px;
-    display: block;
-    height: auto;
     padding-bottom: 60px;
+    height: 100dvh;
   }
 }
 .mv .mv-inner {
@@ -1725,6 +1725,7 @@ li {
 @media screen and (max-width: 980px) {
   .joinus .joinus-start .start-avatar img {
     height: 70px;
+    width: 54.63px;
   }
 }
 
